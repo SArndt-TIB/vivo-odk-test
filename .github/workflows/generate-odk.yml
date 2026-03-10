@@ -16,13 +16,13 @@ jobs:
       - name: 2. Download the ODK instruction script
         run: wget https://raw.githubusercontent.com/INCATools/ontology-development-kit/v1.3.1/seed-via-docker.sh
 
-      - name: 3. Give the Robot a name so ODK doesn't crash
+      - name: 3. Give the outer Robot a name 
         run: |
           git config --global user.name "GitHub Actions Robot"
           git config --global user.email "actions@github.com"
 
-      - name: 4. Turn on the ODK machinery (Docker) to generate files
-        run: sh seed-via-docker.sh -u ${{ github.actor }} -t "VIVO Test Ontology" vivotest
+      - name: 4. Turn on ODK (Docker) and pass the name inside the box!
+        run: sh seed-via-docker.sh -u ${{ github.actor }} -t "VIVO Test Ontology" --gitname "GitHub Actions Robot" --gitemail "actions@github.com" vivotest
 
       - name: 5. Save the generated files back to GitHub
         run: |
