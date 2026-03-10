@@ -1,15 +1,13 @@
 name: Generate VIVO Ontology Files
 
-# The 'workflow_dispatch' trigger creates a manual "Start" button in GitHub!
 on: workflow_dispatch 
 
-# We have to give the robot permission to save files back to your repository
 permissions:
   contents: write
 
 jobs:
   run-odk-seed:
-    runs-on: ubuntu-latest # This cloud computer has Docker pre-installed!
+    runs-on: ubuntu-latest
     
     steps:
       - name: 1. Grab your empty repository
@@ -18,14 +16,16 @@ jobs:
       - name: 2. Download the ODK instruction script
         run: wget https://raw.githubusercontent.com/INCATools/ontology-development-kit/v1.3.1/seed-via-docker.sh
 
-      - name: 3. Turn on the ODK machinery (Docker) to generate files
-        # It uses your GitHub username automatically
-        run: sh seed-via-docker.sh -u ${{ github.actor }} -t "VIVO Test Ontology" vivotest
-
-      - name: 4. Save the generated files back to GitHub
+      - name: 3. Give the Robot a name so ODK doesn't crash
         run: |
           git config --global user.name "GitHub Actions Robot"
           git config --global user.email "actions@github.com"
+
+      - name: 4. Turn on the ODK machinery (Docker) to generate files
+        run: sh seed-via-docker.sh -u ${{ github.actor }} -t "VIVO Test Ontology" vivotest
+
+      - name: 5. Save the generated files back to GitHub
+        run: |
           git add .
           git commit -m "Generated ODK starter files automatically"
           git push
