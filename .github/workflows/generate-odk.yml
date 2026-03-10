@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: 2. Download the ODK instruction script
-        run: wget https://raw.githubusercontent.com/INCATools/ontology-development-kit/master/seed-via-docker.sh
+        run: wget https://raw.githubusercontent.com/INCATools/ontology-development-kit/v1.3.1/seed-via-docker.sh
 
       - name: 3. Turn on the ODK machinery (Docker) to generate files
         # It uses your GitHub username automatically
