@@ -21,11 +21,18 @@ jobs:
           git config --global user.name "GitHub Actions Robot"
           git config --global user.email "actions@github.com"
 
-      - name: 4. Turn on ODK (Docker) and pass the name inside the box!
+      - name: 4. Turn on ODK (Docker) to generate files
         run: sh seed-via-docker.sh -u ${{ github.actor }} -t "VIVO Test Ontology" --gitname "GitHub Actions Robot" --gitemail "actions@github.com" vivotest
 
-      - name: 5. Save the generated files back to GitHub
+      - name: 5.  Unpack the folder
+        run: |
+          rm -rf target/vivotest/.git
+          cp -a target/vivotest/. ./
+          rm -rf target
+          rm seed-via-docker.sh
+
+      - name: 6. Save the unpacked files to GitHub
         run: |
           git add .
-          git commit -m "Generated ODK starter files automatically"
+          git commit -m "Unpacked ODK starter files"
           git push
