@@ -24,13 +24,14 @@ jobs:
       - name: 4. Turn on ODK (Docker) to generate files
         run: sh seed-via-docker.sh -u ${{ github.actor }} -t "VIVO Test Ontology" --gitname "GitHub Actions Robot" --gitemail "actions@github.com" vivotest
 
-      - name: 5.  Unpack the folder
+      - name: 5. Unpack the folder
         run: |
+          sudo chown -R $USER target/  # This takes ownership back from Docker!
           rm -rf target/vivotest/.git
           cp -a target/vivotest/. ./
           rm -rf target
           rm seed-via-docker.sh
-
+          
       - name: 6. Save the unpacked files to GitHub
         run: |
           git add .
