@@ -1,12 +1,125 @@
-Prefix(:=<http://purl.obolibrary.org/obo//imports/bibo_import.owl>)
-Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(:=<http://purl.obolibrary.org/obo//imports/bibo_import.owl#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
-Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+
 
 Ontology(<http://purl.obolibrary.org/obo//imports/bibo_import.owl>
-# This is a placeholder, it will be regenerated when makefile is first executed.
+<http://purl.obolibrary.org/obo//releases/2026-03-23/imports/bibo_import.owl>
+Annotation(owl:versionInfo "2026-03-23")
+
+Declaration(Class(<http://purl.org/ontology/bibo/DocumentStatus>))
+Declaration(Class(<http://purl.org/ontology/bibo/ThesisDegree>))
+Declaration(Class(<http://xmlns.com/foaf/0.1/Person>))
+Declaration(ObjectProperty(<http://purl.org/dc/terms/title>))
+Declaration(DataProperty(<http://purl.org/dc/terms/description>))
+Declaration(DataProperty(<http://xmlns.com/foaf/0.1/name>))
+Declaration(NamedIndividual(<http://purl.org/ontology/bibo/bdarcus>))
+Declaration(NamedIndividual(<http://purl.org/ontology/bibo/fgiasson>))
+Declaration(NamedIndividual(<http://purl.org/ontology/bibo/degrees/ma>))
+Declaration(NamedIndividual(<http://purl.org/ontology/bibo/degrees/ms>))
+Declaration(NamedIndividual(<http://purl.org/ontology/bibo/degrees/phd>))
+Declaration(NamedIndividual(<http://purl.org/ontology/bibo/status/accepted>))
+Declaration(NamedIndividual(<http://purl.org/ontology/bibo/status/draft>))
+Declaration(NamedIndividual(<http://purl.org/ontology/bibo/status/forthcoming>))
+Declaration(NamedIndividual(<http://purl.org/ontology/bibo/status/legal>))
+Declaration(NamedIndividual(<http://purl.org/ontology/bibo/status/nonPeerReviewed>))
+Declaration(NamedIndividual(<http://purl.org/ontology/bibo/status/peerReviewed>))
+Declaration(NamedIndividual(<http://purl.org/ontology/bibo/status/published>))
+Declaration(NamedIndividual(<http://purl.org/ontology/bibo/status/rejected>))
+Declaration(NamedIndividual(<http://purl.org/ontology/bibo/status/unpublished>))
+
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.org/ontology/bibo/DocumentStatus> (Document Status)
+
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/DocumentStatus> "Document Status"@en)
+
+# Class: <http://purl.org/ontology/bibo/ThesisDegree> (Thesis degree)
+
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/ThesisDegree> "Thesis degree"@en)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://purl.org/ontology/bibo/bdarcus> (<http://purl.org/ontology/bibo/bdarcus>)
+
+ClassAssertion(<http://xmlns.com/foaf/0.1/Person> <http://purl.org/ontology/bibo/bdarcus>)
+DataPropertyAssertion(<http://xmlns.com/foaf/0.1/name> <http://purl.org/ontology/bibo/bdarcus> "Bruce D'Arcus")
+
+# Individual: <http://purl.org/ontology/bibo/fgiasson> (<http://purl.org/ontology/bibo/fgiasson>)
+
+ClassAssertion(<http://xmlns.com/foaf/0.1/Person> <http://purl.org/ontology/bibo/fgiasson>)
+DataPropertyAssertion(<http://xmlns.com/foaf/0.1/name> <http://purl.org/ontology/bibo/fgiasson> "Frederick Giasson")
+
+# Individual: <http://purl.org/ontology/bibo/degrees/ma> (M.A.)
+
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/degrees/ma> "M.A."@en)
+ClassAssertion(<http://purl.org/ontology/bibo/ThesisDegree> <http://purl.org/ontology/bibo/degrees/ma>)
+
+# Individual: <http://purl.org/ontology/bibo/degrees/ms> (M.S.)
+
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/degrees/ms> "M.S."@en)
+ClassAssertion(<http://purl.org/ontology/bibo/ThesisDegree> <http://purl.org/ontology/bibo/degrees/ms>)
+
+# Individual: <http://purl.org/ontology/bibo/degrees/phd> (PhD degree)
+
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/degrees/phd> "PhD degree"@en)
+ClassAssertion(<http://purl.org/ontology/bibo/ThesisDegree> <http://purl.org/ontology/bibo/degrees/phd>)
+
+# Individual: <http://purl.org/ontology/bibo/status/accepted> (accepted)
+
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/status/accepted> "accepted"@en)
+ClassAssertion(<http://purl.org/ontology/bibo/DocumentStatus> <http://purl.org/ontology/bibo/status/accepted>)
+
+# Individual: <http://purl.org/ontology/bibo/status/draft> (draft)
+
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/status/draft> "draft"@en)
+ClassAssertion(<http://purl.org/ontology/bibo/DocumentStatus> <http://purl.org/ontology/bibo/status/draft>)
+
+# Individual: <http://purl.org/ontology/bibo/status/forthcoming> (forthcoming)
+
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/status/forthcoming> "forthcoming"@en)
+ClassAssertion(<http://purl.org/ontology/bibo/DocumentStatus> <http://purl.org/ontology/bibo/status/forthcoming>)
+
+# Individual: <http://purl.org/ontology/bibo/status/legal> (legal)
+
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/status/legal> "legal"@en)
+ClassAssertion(<http://purl.org/ontology/bibo/DocumentStatus> <http://purl.org/ontology/bibo/status/legal>)
+
+# Individual: <http://purl.org/ontology/bibo/status/nonPeerReviewed> (non peer reviewed)
+
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/status/nonPeerReviewed> "non peer reviewed"@en)
+ClassAssertion(<http://purl.org/ontology/bibo/DocumentStatus> <http://purl.org/ontology/bibo/status/nonPeerReviewed>)
+
+# Individual: <http://purl.org/ontology/bibo/status/peerReviewed> (peer reviewed)
+
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/status/peerReviewed> "peer reviewed"@en)
+ClassAssertion(<http://purl.org/ontology/bibo/DocumentStatus> <http://purl.org/ontology/bibo/status/peerReviewed>)
+
+# Individual: <http://purl.org/ontology/bibo/status/published> (published)
+
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/status/published> "published"@en)
+ClassAssertion(<http://purl.org/ontology/bibo/DocumentStatus> <http://purl.org/ontology/bibo/status/published>)
+
+# Individual: <http://purl.org/ontology/bibo/status/rejected> (rejected)
+
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/status/rejected> "rejected"@en)
+ClassAssertion(<http://purl.org/ontology/bibo/DocumentStatus> <http://purl.org/ontology/bibo/status/rejected>)
+
+# Individual: <http://purl.org/ontology/bibo/status/unpublished> (unpublished)
+
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/status/unpublished> "unpublished"@en)
+ClassAssertion(<http://purl.org/ontology/bibo/DocumentStatus> <http://purl.org/ontology/bibo/status/unpublished>)
+
+
 )

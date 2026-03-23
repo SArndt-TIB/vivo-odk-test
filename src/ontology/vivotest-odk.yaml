@@ -40,8 +40,8 @@ import_group:
     mirror_from: http://www.w3.org/2009/08/skos-reference/skos.rdf
   - id: skos2
     mirror_from: http://www.w3.org/2008/05/skos
-  - id: dcterms
-    mirror_from: https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl
+   - id: dcterms
+    use_base_merging: true
   - id: bibo
     mirror_from: http://purl.org/ontology/bibo/bibo.owl
   - id: doap
@@ -49,7 +49,7 @@ import_group:
   - id: vann
     mirror_from: https://vocab.org/vann/vann-vocab-20100607.rdf
   - id: vitro
-    mirror_from: https://raw.githubusercontent.com/vivo-project/Vitro/main/api/src/main/resources/rdf/vitro-ontologies/vitro-public.owl
+    use_base_merging: true
   - id: ns
     mirror_from: http://www.w3.org/2003/06/sw-vocab-status/ns
   - id: geopolitical

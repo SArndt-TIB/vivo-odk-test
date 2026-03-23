@@ -1,12 +1,101 @@
-Prefix(:=<http://purl.obolibrary.org/obo//imports/doap_import.owl>)
-Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(:=<http://purl.obolibrary.org/obo//imports/doap_import.owl#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
-Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+
 
 Ontology(<http://purl.obolibrary.org/obo//imports/doap_import.owl>
-# This is a placeholder, it will be regenerated when makefile is first executed.
+<http://purl.obolibrary.org/obo//releases/2026-03-23/imports/doap_import.owl>
+Annotation(owl:versionInfo "2026-03-23")
+
+Declaration(Class(<http://purl.org/dc/terms/Agent>))
+Declaration(Class(<http://schema.org/Person>))
+Declaration(Class(<http://www.w3.org/2000/10/swap/pim/contact#Person>))
+Declaration(Class(<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>))
+Declaration(Class(<http://xmlns.com/foaf/0.1/Agent>))
+Declaration(Class(<http://xmlns.com/foaf/0.1/Person>))
+Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/made>))
+Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/maker>))
+Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/mbox>))
+Declaration(DataProperty(<http://xmlns.com/foaf/0.1/name>))
+Declaration(NamedIndividual(<http://usefulinc.com/ns/doap#>))
+Declaration(NamedIndividual(<mailto:edd@usefulinc.com>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://xmlns.com/foaf/0.1/made> (made)
+
+AnnotationAssertion(rdfs:label <http://xmlns.com/foaf/0.1/made> "made")
+InverseObjectProperties(<http://xmlns.com/foaf/0.1/made> <http://xmlns.com/foaf/0.1/maker>)
+ObjectPropertyDomain(<http://xmlns.com/foaf/0.1/made> <http://xmlns.com/foaf/0.1/Agent>)
+
+# Object Property: <http://xmlns.com/foaf/0.1/maker> (maker)
+
+AnnotationAssertion(rdfs:label <http://xmlns.com/foaf/0.1/maker> "maker")
+ObjectPropertyRange(<http://xmlns.com/foaf/0.1/maker> <http://xmlns.com/foaf/0.1/Agent>)
+
+# Object Property: <http://xmlns.com/foaf/0.1/mbox> (personal mailbox)
+
+AnnotationAssertion(rdfs:label <http://xmlns.com/foaf/0.1/mbox> "personal mailbox")
+InverseFunctionalObjectProperty(<http://xmlns.com/foaf/0.1/mbox>)
+ObjectPropertyDomain(<http://xmlns.com/foaf/0.1/mbox> <http://xmlns.com/foaf/0.1/Agent>)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://xmlns.com/foaf/0.1/name> (name)
+
+AnnotationAssertion(rdfs:label <http://xmlns.com/foaf/0.1/name> "name")
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.org/dc/terms/Agent> (<http://purl.org/dc/terms/Agent>)
+
+EquivalentClasses(<http://purl.org/dc/terms/Agent> <http://xmlns.com/foaf/0.1/Agent>)
+
+# Class: <http://schema.org/Person> (<http://schema.org/Person>)
+
+EquivalentClasses(<http://schema.org/Person> <http://xmlns.com/foaf/0.1/Person>)
+
+# Class: <http://www.w3.org/2000/10/swap/pim/contact#Person> (<http://www.w3.org/2000/10/swap/pim/contact#Person>)
+
+EquivalentClasses(<http://www.w3.org/2000/10/swap/pim/contact#Person> <http://xmlns.com/foaf/0.1/Person>)
+
+# Class: <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> (Spatial Thing)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> "Spatial Thing")
+
+# Class: <http://xmlns.com/foaf/0.1/Agent> (Agent)
+
+AnnotationAssertion(rdfs:label <http://xmlns.com/foaf/0.1/Agent> "Agent")
+
+# Class: <http://xmlns.com/foaf/0.1/Person> (Person)
+
+AnnotationAssertion(rdfs:label <http://xmlns.com/foaf/0.1/Person> "Person")
+SubClassOf(<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>)
+SubClassOf(<http://xmlns.com/foaf/0.1/Person> <http://xmlns.com/foaf/0.1/Agent>)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://usefulinc.com/ns/doap#> (<http://usefulinc.com/ns/doap#>)
+
+ObjectPropertyAssertion(<http://xmlns.com/foaf/0.1/maker> <http://usefulinc.com/ns/doap#> _:genid2147483648)
+
+
+ClassAssertion(<http://xmlns.com/foaf/0.1/Person> _:genid2147483648)
+ObjectPropertyAssertion(<http://xmlns.com/foaf/0.1/mbox> _:genid2147483648 <mailto:edd@usefulinc.com>)
+DataPropertyAssertion(<http://xmlns.com/foaf/0.1/name> _:genid2147483648 "Edd Wilder-James")
 )

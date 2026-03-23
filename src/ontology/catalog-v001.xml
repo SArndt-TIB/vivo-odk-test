@@ -1,17 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="public">
-  <group id="odk-managed-catalog" prefer="public">
-    <uri name="http://purl.obolibrary.org/obo//imports/ro_import.owl" uri="imports/ro_import.owl" />
-    <uri name="http://purl.obolibrary.org/obo//imports/skos_import.owl" uri="imports/skos_import.owl" />
-    <uri name="http://purl.obolibrary.org/obo//imports/skos2_import.owl" uri="imports/skos2_import.owl" />
-    <uri name="http://purl.obolibrary.org/obo//imports/dcterms_import.owl" uri="imports/dcterms_import.owl" />
-    <uri name="http://purl.obolibrary.org/obo//imports/bibo_import.owl" uri="imports/bibo_import.owl" />
-    <uri name="http://purl.obolibrary.org/obo//imports/doap_import.owl" uri="imports/doap_import.owl" />
-    <uri name="http://purl.obolibrary.org/obo//imports/vann_import.owl" uri="imports/vann_import.owl" />
-    <uri name="http://purl.obolibrary.org/obo//imports/vitro_import.owl" uri="imports/vitro_import.owl" />
-    <uri name="http://purl.obolibrary.org/obo//imports/ns_import.owl" uri="imports/ns_import.owl" />
-    <uri name="http://purl.obolibrary.org/obo//imports/geopolitical_import.owl" uri="imports/geopolitical_import.owl" />
-    <uri name="http://purl.obolibrary.org/obo//imports/statistics_import.owl" uri="imports/statistics_import.owl" />
-    <uri name="http://purl.obolibrary.org/obo//imports/study_protocol_import.owl" uri="imports/study_protocol_import.owl" />
-  </group>
+    <group id="odk-managed-catalog" prefer="public">
+        <uri name="http://purl.obolibrary.org/obo/vivotest/imports/ro_import.owl" uri="imports/ro_import.owl"/>
+        <uri name="http://purl.obolibrary.org/obo/vivotest/imports/skos_import.owl" uri="imports/skos_import.owl"/>
+        <uri name="http://purl.obolibrary.org/obo/vivotest/imports/skos2_import.owl" uri="imports/skos2_import.owl"/>
+        <uri name="http://purl.obolibrary.org/obo/vivotest/imports/dcterms_import.owl" uri="imports/dcterms_import.owl"/>
+        <uri name="http://purl.obolibrary.org/obo/vivotest/imports/bibo_import.owl" uri="imports/bibo_import.owl"/>
+        <uri name="http://purl.obolibrary.org/obo/vivotest/imports/doap_import.owl" uri="imports/doap_import.owl"/>
+        <uri name="http://purl.obolibrary.org/obo/vivotest/imports/vann_import.owl" uri="imports/vann_import.owl"/>
+        <uri name="http://purl.obolibrary.org/obo/vivotest/imports/vitro_import.owl" uri="imports/vitro_import.owl"/>
+        <uri name="http://purl.obolibrary.org/obo/vivotest/imports/ns_import.owl" uri="imports/ns_import.owl"/>
+        <uri name="http://purl.obolibrary.org/obo/vivotest/imports/geopolitical_import.owl" uri="imports/geopolitical_import.owl"/>
+        <uri name="http://purl.obolibrary.org/obo/vivotest/imports/statistics_import.owl" uri="imports/statistics_import.owl"/>
+        <uri name="http://purl.obolibrary.org/obo/vivotest/imports/study_protocol_import.owl" uri="imports/study_protocol_import.owl"/>
+    </group>
 </catalog>

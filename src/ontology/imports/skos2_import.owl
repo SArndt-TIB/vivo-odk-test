@@ -1,12 +1,225 @@
-Prefix(:=<http://purl.obolibrary.org/obo//imports/skos2_import.owl>)
-Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(:=<http://purl.obolibrary.org/obo//imports/skos2_import.owl#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
-Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
+
 
 Ontology(<http://purl.obolibrary.org/obo//imports/skos2_import.owl>
-# This is a placeholder, it will be regenerated when makefile is first executed.
+<http://purl.obolibrary.org/obo//releases/2026-03-23/imports/skos2_import.owl>
+Annotation(owl:versionInfo "2026-03-23")
+
+Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#changeNote>))
+Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#note>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#Collection>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#Concept>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#ConceptScheme>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#OrderedCollection>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#altLabel>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#broadMatch>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#broader>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#broaderTransitive>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#changeNote>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#closeMatch>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#definition>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#editorialNote>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#exactMatch>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#example>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#hasTopConcept>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#hiddenLabel>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#historyNote>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#inScheme>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#mappingRelation>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#member>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#memberList>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#narrowMatch>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#narrower>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#narrowerTransitive>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#notation>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#note>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#prefLabel>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#related>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#relatedMatch>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#scopeNote>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#semanticRelation>))
+Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#topConceptOf>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://www.w3.org/2008/05/skos#changeNote> (change note)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#changeNote> "change note"@en)
+SubObjectPropertyOf(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#note>)
+
+# Object Property: <http://www.w3.org/2008/05/skos#note> (note)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#note> "note"@en)
+
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: <http://www.w3.org/2008/05/skos#Collection> (Collection)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#Collection> "Collection"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#Collection> _:genid2147483680)
+
+# Individual: <http://www.w3.org/2008/05/skos#Concept> (Concept)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#Concept> "Concept"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#Concept> _:genid2147483701)
+
+# Individual: <http://www.w3.org/2008/05/skos#ConceptScheme> (Concept Scheme)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#ConceptScheme> "Concept Scheme"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#ConceptScheme> _:genid2147483710)
+
+# Individual: <http://www.w3.org/2008/05/skos#OrderedCollection> (Ordered Collection)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#OrderedCollection> "Ordered Collection"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#OrderedCollection> _:genid2147483702)
+
+# Individual: <http://www.w3.org/2008/05/skos#altLabel> (alternative label)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#altLabel> "alternative label"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#altLabel> _:genid2147483685)
+
+# Individual: <http://www.w3.org/2008/05/skos#broadMatch> (broader match)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#broadMatch> "broader match"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#broadMatch> _:genid2147483705)
+
+# Individual: <http://www.w3.org/2008/05/skos#broader> (has broader)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#broader> "has broader"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#broader> _:genid2147483711)
+
+# Individual: <http://www.w3.org/2008/05/skos#broaderTransitive> (broader transitive)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#broaderTransitive> "broader transitive"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#broaderTransitive> _:genid2147483691)
+
+# Individual: <http://www.w3.org/2008/05/skos#changeNote> (change note)
+
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#changeNote> _:genid2147483697)
+
+# Individual: <http://www.w3.org/2008/05/skos#closeMatch> (exact match)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#closeMatch> "exact match"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#closeMatch> _:genid2147483693)
+
+# Individual: <http://www.w3.org/2008/05/skos#definition> (<http://www.w3.org/2008/05/skos#definition>)
+
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#definition> _:genid2147483703)
+
+# Individual: <http://www.w3.org/2008/05/skos#editorialNote> (editorial note)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#editorialNote> "editorial note"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#editorialNote> _:genid2147483690)
+
+# Individual: <http://www.w3.org/2008/05/skos#exactMatch> (exact match)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#exactMatch> "exact match"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#exactMatch> _:genid2147483682)
+
+# Individual: <http://www.w3.org/2008/05/skos#example> (example)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#example> "example"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#example> _:genid2147483688)
+
+# Individual: <http://www.w3.org/2008/05/skos#hasTopConcept> (has top concept)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#hasTopConcept> "has top concept"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#hasTopConcept> _:genid2147483695)
+
+# Individual: <http://www.w3.org/2008/05/skos#hiddenLabel> (hidden label)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#hiddenLabel> "hidden label"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#hiddenLabel> _:genid2147483689)
+
+# Individual: <http://www.w3.org/2008/05/skos#historyNote> (history note)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#historyNote> "history note"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#historyNote> _:genid2147483707)
+
+# Individual: <http://www.w3.org/2008/05/skos#inScheme> (in scheme)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#inScheme> "in scheme"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#inScheme> _:genid2147483699)
+
+# Individual: <http://www.w3.org/2008/05/skos#mappingRelation> (mapping relation)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#mappingRelation> "mapping relation"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#mappingRelation> _:genid2147483681)
+
+# Individual: <http://www.w3.org/2008/05/skos#member> (member)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#member> "member"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#member> _:genid2147483696)
+
+# Individual: <http://www.w3.org/2008/05/skos#memberList> (member list)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#memberList> "member list"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#memberList> _:genid2147483709)
+
+# Individual: <http://www.w3.org/2008/05/skos#narrowMatch> (narrower match)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#narrowMatch> "narrower match"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#narrowMatch> _:genid2147483684)
+
+# Individual: <http://www.w3.org/2008/05/skos#narrower> (has narrower)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#narrower> "has narrower"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#narrower> _:genid2147483686)
+
+# Individual: <http://www.w3.org/2008/05/skos#narrowerTransitive> (narrower transitive)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#narrowerTransitive> "narrower transitive"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#narrowerTransitive> _:genid2147483687)
+
+# Individual: <http://www.w3.org/2008/05/skos#notation> (notation)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#notation> "notation"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#notation> _:genid2147483683)
+
+# Individual: <http://www.w3.org/2008/05/skos#note> (note)
+
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#note> _:genid2147483706)
+
+# Individual: <http://www.w3.org/2008/05/skos#prefLabel> (preferred label)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#prefLabel> "preferred label"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#prefLabel> _:genid2147483698)
+
+# Individual: <http://www.w3.org/2008/05/skos#related> (related to)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#related> "related to"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#related> _:genid2147483704)
+
+# Individual: <http://www.w3.org/2008/05/skos#relatedMatch> (related match)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#relatedMatch> "related match"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#relatedMatch> _:genid2147483692)
+
+# Individual: <http://www.w3.org/2008/05/skos#scopeNote> (scope note)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#scopeNote> "scope note"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#scopeNote> _:genid2147483708)
+
+# Individual: <http://www.w3.org/2008/05/skos#semanticRelation> (semantic relation)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#semanticRelation> "semantic relation"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#semanticRelation> _:genid2147483700)
+
+# Individual: <http://www.w3.org/2008/05/skos#topConceptOf> (top concept in scheme)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#topConceptOf> "top concept in scheme"@en)
+ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#topConceptOf> _:genid2147483694)
+
+
 )
