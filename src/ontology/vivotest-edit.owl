@@ -10,6 +10,18 @@ Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 Ontology(<http://purl.obolibrary.org/obo/vivotest.owl>
 
+Import(<http://purl.obolibrary.org/obo/vivotest/imports/ro_import.owl>)
+Import(<http://purl.obolibrary.org/obo/vivotest/imports/skos_import.owl>)
+Import(<http://purl.obolibrary.org/obo/vivotest/imports/skos2_import.owl>)
+Import(<http://purl.obolibrary.org/obo/vivotest/imports/dcterms_import.owl>)
+Import(<http://purl.obolibrary.org/obo/vivotest/imports/bibo_import.owl>)
+Import(<http://purl.obolibrary.org/obo/vivotest/imports/doap_import.owl>)
+Import(<http://purl.obolibrary.org/obo/vivotest/imports/vann_import.owl>)
+Import(<http://purl.obolibrary.org/obo/vivotest/imports/vitro_import.owl>)
+Import(<http://purl.obolibrary.org/obo/vivotest/imports/ns_import.owl>)
+Import(<http://purl.obolibrary.org/obo/vivotest/imports/geopolitical_import.owl>)
+Import(<http://purl.obolibrary.org/obo/vivotest/imports/statistics_import.owl>)
+Import(<http://purl.obolibrary.org/obo/vivotest/imports/study_protocol_import.owl>)
 
 
 Annotation(dcterms:description "None")

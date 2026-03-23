@@ -9,6 +9,9 @@
 # ----------------------------------------
 # More information: https://github.com/INCATools/ontology-development-kit/
 
+# Fingerprint of the configuration file when this Makefile was last generated
+CONFIG_HASH=                199dec33f5d19186cbb3edb54b8725e02d14dc2b09955ea99ad1288435986d89
+
 
 # ----------------------------------------
 # Standard Constants
@@ -18,7 +21,7 @@
 OBOBASE=                    http://purl.obolibrary.org/obo
 URIBASE=                    http://purl.obolibrary.org/obo
 ONT=                        vivotest
-ONTBASE=                    http://purl.obolibrary.org/obo/vivotest
+ONTBASE=                    http://purl.obolibrary.org/obo/
 EDIT_FORMAT=                owl
 SRC =                       $(ONT)-edit.$(EDIT_FORMAT)
 MAKE_FAST=                  $(MAKE) IMP=false PAT=false COMP=false MIR=false
@@ -39,7 +42,7 @@ UPDATEREPODIR=              target
 SPARQLDIR =                 ../sparql
 EXTENDED_PREFIX_MAP=        $(TMPDIR)/obo.epm.json
 COMPONENTSDIR =             components
-REPORT_FAIL_ON =            None
+REPORT_FAIL_ON =            
 REPORT_LABEL =              -l true
 REPORT_PROFILE_OPTS =       
 OBO_FORMAT_OPTIONS =        --clean-obo "strict drop-untranslatable-axioms"
@@ -101,7 +104,7 @@ PAT = true
 all: all_odk
 
 .PHONY: all_odk
-all_odk: odkversion test custom_reports all_assets
+all_odk: odkversion config_check test custom_reports all_assets
 
 .PHONY: test
 test: odkversion validate_idranges reason_test sparql_test robot_reports $(REPORTDIR)/validate_profile_owl2dl_$(ONT).owl.txt
@@ -123,6 +126,12 @@ reason_test: $(EDIT_PREPROCESSED)
 odkversion:
 	@echo "ODK Makefile $(ODK_VERSION_MAKEFILE)"
 	@odk-info --tools
+.PHONY: config_check
+config_check:
+	@if [ "$$(tr -d '\r' < $(ONT)-odk.yaml | sha256sum | cut -c1-64)" = "$(CONFIG_HASH)" ]; then \
+		echo "Repository is up-to-date." ; else \
+		echo "Your ODK configuration has changed since this Makefile was generated. You may need to run 'make update_repo'." ; fi
+
 
 $(TMPDIR) $(REPORTDIR) $(MIRRORDIR) $(IMPORTDIR) $(COMPONENTSDIR) $(SUBSETDIR):
 	mkdir -p $@
@@ -178,7 +187,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS = 
+IMPORTS =  ro skos skos2 dcterms bibo doap vann vitro ns geopolitical statistics study_protocol
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -264,10 +273,10 @@ endif
 # ----------------------------------------
 
 $(REPORTDIR)/$(SRC)-obo-report.tsv: $(SRCMERGED) | $(REPORTDIR)
-	$(ROBOT) report -i $< $(REPORT_LABEL) $(REPORT_PROFILE_OPTS) --fail-on $(REPORT_FAIL_ON) --base-iri $(URIBASE)/VIVOTEST_ --base-iri $(URIBASE)/vivotest --print 5 -o $@
+	$(ROBOT) report -i $< $(REPORT_LABEL) $(REPORT_PROFILE_OPTS) --fail-on $(REPORT_FAIL_ON) --print 5 -o $@
 
 $(REPORTDIR)/%-obo-report.tsv: % | $(REPORTDIR)
-	$(ROBOT) report -i $< $(REPORT_LABEL) $(REPORT_PROFILE_OPTS) --fail-on $(REPORT_FAIL_ON) --base-iri $(URIBASE)/VIVOTEST_ --base-iri $(URIBASE)/vivotest --print 5 -o $@
+	$(ROBOT) report -i $< $(REPORT_LABEL) $(REPORT_PROFILE_OPTS) --fail-on $(REPORT_FAIL_ON) --print 5 -o $@
 
 check_for_robot_updates:
 	echo "You are not using a custom profile, so you are getting the joy of the latest ROBOT report!"
@@ -347,6 +356,13 @@ $(REPORTDIR)/release-diff.md: $(ONT).owl $(TMPDIR)/current-release.owl
 # Imports: Seeding system 
 # ------------------------
 
+# pre_seed.txt contains all entities referenced from the -edit file
+# and its components
+PRESEED=$(TMPDIR)/pre_seed.txt
+$(PRESEED): $(SRCMERGED)
+	$(ROBOT) query --input $< --format --csv \
+		       --query $(SPARQLDIR)/terms.sparql $@
+
 $(SRCMERGED): $(EDIT_PREPROCESSED) $(OTHER_SRC)
 	$(ROBOT) remove --input $< --select imports --trim false \
 		 merge $(foreach src, $(OTHER_SRC), --input $(src)) \
@@ -354,6 +370,16 @@ $(SRCMERGED): $(EDIT_PREPROCESSED) $(OTHER_SRC)
 
 $(EDIT_PREPROCESSED): $(SRC)
 	$(ROBOT) convert --input $< --format ofn --output $@
+
+# seed.txt contains all entities to import in addition to those defined
+# in the individual _terms.txt files.
+IMPORTSEED = $(TMPDIR)/seed.txt
+$(IMPORTSEED): $(PRESEED) | $(TMPDIR)
+	cat $^ | sort | uniq > $@
+
+T_IMPORTSEED = --term-file $(IMPORTSEED)
+
+ANNOTATION_PROPERTIES=rdfs:label IAO:0000115 OMO:0002000 
 
 # ----------------------------------------
 # Import modules
@@ -364,7 +390,23 @@ $(EDIT_PREPROCESSED): $(SRC)
 
 ifeq ($(IMP),true)
 
-## Default module type ()
+## Default module type (slme)
+$(IMPORTDIR)/%_import.owl: $(MIRRORDIR)/%.owl $(IMPORTDIR)/%_terms.txt \
+			   $(IMPORTSEED) | all_robot_plugins
+	$(ROBOT) annotate --input $< --remove-annotations \
+		 odk:normalize --add-source true \
+		 extract --term-file $(IMPORTDIR)/$*_terms.txt $(T_IMPORTSEED) \
+		         --force true --copy-ontology-annotations true \
+		         --individuals include \
+		         --method BOT \
+		 remove $(foreach p, $(ANNOTATION_PROPERTIES), --term $(p)) \
+		        --term-file $(IMPORTDIR)/$*_terms.txt $(T_IMPORTSEED) \
+		        --select complement --select annotation-properties \
+		 odk:normalize --base-iri http://purl.obolibrary.org/obo \
+		               --subset-decls true --synonym-decls true \
+		 repair --merge-axiom-annotations true \
+		 $(ANNOTATE_CONVERT_FILE)
+
 .PRECIOUS: $(IMPORTDIR)/%_import.owl
 
 endif # IMP=true
@@ -398,6 +440,90 @@ no-mirror-refresh-%:
 # ----------------------------------------
 
 ifeq ($(MIR),true)
+
+
+## ONTOLOGY: ro
+.PHONY: mirror-ro
+.PRECIOUS: $(MIRRORDIR)/ro.owl
+mirror-ro: | $(TMPDIR)
+	$(ROBOT) convert -I http://purl.obolibrary.org/obo/ro.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: skos
+.PHONY: mirror-skos
+.PRECIOUS: $(MIRRORDIR)/skos.owl
+mirror-skos: | $(TMPDIR)
+	$(ROBOT) convert -I http://www.w3.org/2009/08/skos-reference/skos.rdf -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: skos2
+.PHONY: mirror-skos2
+.PRECIOUS: $(MIRRORDIR)/skos2.owl
+mirror-skos2: | $(TMPDIR)
+	$(ROBOT) convert -I http://www.w3.org/2008/05/skos -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: dcterms
+.PHONY: mirror-dcterms
+.PRECIOUS: $(MIRRORDIR)/dcterms.owl
+mirror-dcterms: | $(TMPDIR)
+	$(ROBOT) convert -I https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: bibo
+.PHONY: mirror-bibo
+.PRECIOUS: $(MIRRORDIR)/bibo.owl
+mirror-bibo: | $(TMPDIR)
+	$(ROBOT) convert -I http://purl.org/ontology/bibo/bibo.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: doap
+.PHONY: mirror-doap
+.PRECIOUS: $(MIRRORDIR)/doap.owl
+mirror-doap: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/edumbill/doap/master/schema/doap.rdf -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: vann
+.PHONY: mirror-vann
+.PRECIOUS: $(MIRRORDIR)/vann.owl
+mirror-vann: | $(TMPDIR)
+	$(ROBOT) convert -I https://vocab.org/vann/vann-vocab-20100607.rdf -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: vitro
+.PHONY: mirror-vitro
+.PRECIOUS: $(MIRRORDIR)/vitro.owl
+mirror-vitro: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/vivo-project/Vitro/main/api/src/main/resources/rdf/vitro-ontologies/vitro-public.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: ns
+.PHONY: mirror-ns
+.PRECIOUS: $(MIRRORDIR)/ns.owl
+mirror-ns: | $(TMPDIR)
+	$(ROBOT) convert -I http://www.w3.org/2003/06/sw-vocab-status/ns -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: geopolitical
+.PHONY: mirror-geopolitical
+.PRECIOUS: $(MIRRORDIR)/geopolitical.owl
+mirror-geopolitical: | $(TMPDIR)
+	$(ROBOT) convert -I http://aims.fao.org/aos/geopolitical.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: statistics
+.PHONY: mirror-statistics
+.PRECIOUS: $(MIRRORDIR)/statistics.owl
+mirror-statistics: | $(TMPDIR)
+	$(ROBOT) convert -I http://purl.org/net/OCRe/statistics.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: study_protocol
+.PHONY: mirror-study_protocol
+.PRECIOUS: $(MIRRORDIR)/study_protocol.owl
+mirror-study_protocol: | $(TMPDIR)
+	$(ROBOT) convert -I http://purl.org/net/OCRe/study_protocol.owl -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)
@@ -478,7 +604,7 @@ $(ONT)-base.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(IMPORT_FILES)
 	reason --reasoner $(REASONER) --equivalent-classes-allowed asserted-only --exclude-tautologies structural --annotate-inferred-axioms false \
 	relax $(RELAX_OPTIONS) \
 	reduce -r $(REASONER) $(REDUCE_OPTIONS) \
-	remove --base-iri $(URIBASE)/VIVOTEST --axioms external --preserve-structure false --trim false \
+	remove --axioms external --preserve-structure false --trim false \
 	$(SHARED_ROBOT_COMMANDS) \
 	annotate --link-annotation http://purl.org/dc/elements/1.1/type http://purl.obolibrary.org/obo/IAO_8000001 \
 		--ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) \

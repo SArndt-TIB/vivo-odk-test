@@ -4,10 +4,10 @@ catalog_file: catalog-v001.xml
 ci:
 - github_actions
 components: null
-contact: null
-contributors: null
+contact: ""
+contributors: []
 create_obo_metadata: true
-creators: null
+creators: []
 custom_makefile_header: '
 
   # ----------------------------------------
@@ -32,11 +32,37 @@ github_org: visoteeyy111
 gzip_main: false
 id: vivotest
 import_component_format: ofn
-import_group: null
+import_group:
+  products:
+  - id: ro
+    mirror_from: http://purl.obolibrary.org/obo/ro.owl
+  - id: skos
+    mirror_from: http://www.w3.org/2009/08/skos-reference/skos.rdf
+  - id: skos2
+    mirror_from: http://www.w3.org/2008/05/skos
+  - id: dcterms
+    mirror_from: https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl
+  - id: bibo
+    mirror_from: http://purl.org/ontology/bibo/bibo.owl
+  - id: doap
+    mirror_from: https://raw.githubusercontent.com/edumbill/doap/master/schema/doap.rdf
+  - id: vann
+    mirror_from: https://vocab.org/vann/vann-vocab-20100607.rdf
+  - id: vitro
+    mirror_from: https://raw.githubusercontent.com/vivo-project/Vitro/main/api/src/main/resources/rdf/vitro-ontologies/vitro-public.owl
+  - id: ns
+    mirror_from: http://www.w3.org/2003/06/sw-vocab-status/ns
+  - id: geopolitical
+    mirror_from: http://aims.fao.org/aos/geopolitical.owl
+  - id: statistics
+    mirror_from: http://purl.org/net/OCRe/statistics.owl
+  - id: study_protocol
+    mirror_from: http://purl.org/net/OCRe/study_protocol.owl
+
 import_pattern_ontology: false
 license: https://creativecommons.org/licenses/unspecified
-manage_import_declarations: true
-namespaces: null
+manage_import_declarations: false
+namespaces: []
 obo_format_options: --clean-obo "strict drop-untranslatable-axioms"
 owltools_memory: ''
 pattern_pipelines_group: null
@@ -50,7 +76,7 @@ release_artefacts:
 - base
 release_date: false
 release_diff: false
-release_materialize_object_properties: null
+release_materialize_object_properties: []
 release_use_reasoner: true
 remove_owl_nothing: false
 repo: vivotest
@@ -75,24 +101,24 @@ robot_report:
   - obsoletes
   - synonyms
   ensure_owl2dl_profile: true
-  fail_on: null
+  fail_on: ""
   release_reports: false
   report_on:
   - edit
   sparql_test_on:
   - edit
-  upper_ontology: null
+  upper_ontology: ""
   use_base_iris: true
   use_labels: true
 robot_settings: null
-robot_version: null
+robot_version: ""
 run_as_root: false
 sssom_mappingset_group: null
 subset_group: null
 title: VIVO Test Ontology
 travis_emails: null
 uribase: http://purl.obolibrary.org/obo
-uribase_suffix: null
+uribase_suffix: ""
 use_context: false
 use_custom_import_module: false
 use_dosdps: false
