@@ -8,7 +8,9 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 Prefix(dcterms:=<http://purl.org/dc/terms/>)
 
 
+
 Ontology(<http://purl.obolibrary.org/obo/vivotest.owl>
+
 
 Import(<http://purl.obolibrary.org/obo/vivotest/imports/ro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/vivotest/imports/skos_import.owl>)
@@ -17,11 +19,8 @@ Import(<http://purl.obolibrary.org/obo/vivotest/imports/dcterms_import.owl>)
 Import(<http://purl.obolibrary.org/obo/vivotest/imports/bibo_import.owl>)
 Import(<http://purl.obolibrary.org/obo/vivotest/imports/doap_import.owl>)
 Import(<http://purl.obolibrary.org/obo/vivotest/imports/vann_import.owl>)
-Import(<http://purl.obolibrary.org/obo/vivotest/imports/vitro_import.owl>)
 Import(<http://purl.obolibrary.org/obo/vivotest/imports/ns_import.owl>)
-Import(<http://purl.obolibrary.org/obo/vivotest/imports/geopolitical_import.owl>)
-Import(<http://purl.obolibrary.org/obo/vivotest/imports/statistics_import.owl>)
-Import(<http://purl.obolibrary.org/obo/vivotest/imports/study_protocol_import.owl>)
+
 
 
 Annotation(dcterms:description "None")
@@ -29,10 +28,19 @@ Annotation(dcterms:license <https://creativecommons.org/licenses/unspecified>)
 Annotation(dcterms:title "VIVO Test Ontology")
 
 
-Declaration(Class(<http://purl.obolibrary.org/obo/VIVOTEST_0000000>))
+
+############################
+#   Declarations
+############################
+
 Declaration(AnnotationProperty(dcterms:description))
 Declaration(AnnotationProperty(dcterms:license))
 Declaration(AnnotationProperty(dcterms:title))
+Declaration(ObjectProperty(<http://purl.obolibrary.org/obo/VIVOTEST_0000002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/VIVOTEST_0000000>))
+Declaration(Class(<http://purl.obolibrary.org/obo/VIVOTEST_0000001>))
+
+
 
 ############################
 #   Annotation Properties
@@ -42,6 +50,19 @@ AnnotationAssertion(rdfs:label dcterms:description "description")
 AnnotationAssertion(rdfs:label dcterms:license "license")
 AnnotationAssertion(rdfs:label dcterms:title "title")
 
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://purl.obolibrary.org/obo/VIVOTEST_0000002> (has affiliation)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/VIVOTEST_0000002> "has affiliation"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/VIVOTEST_0000002> "A relation linking a person to an organization they are affiliated with."@en)
+
+
+
 ############################
 #   Classes
 ############################
@@ -49,6 +70,14 @@ AnnotationAssertion(rdfs:label dcterms:title "title")
 # Class: <http://purl.obolibrary.org/obo/VIVOTEST_0000000> (root node)
 
 AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/VIVOTEST_0000000> "root node"@en)
+
+
+# Class: <http://purl.obolibrary.org/obo/VIVOTEST_0000001> (Test Person)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/VIVOTEST_0000001> "Test Person"@en)
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/VIVOTEST_0000001> "A person used for testing."@en)
+SubClassOf(<http://purl.obolibrary.org/obo/VIVOTEST_0000001> <http://purl.obolibrary.org/obo/VIVOTEST_0000000>)
+
 
 
 )
