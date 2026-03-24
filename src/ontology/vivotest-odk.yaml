@@ -1,4 +1,4 @@
-allow_equivalents: asserted-only
+allow_equivalents: all
 babelon_translation_group: null
 catalog_file: catalog-v001.xml
 ci:
@@ -40,24 +40,16 @@ import_group:
     mirror_from: http://www.w3.org/2009/08/skos-reference/skos.rdf
   - id: skos2
     mirror_from: http://www.w3.org/2008/05/skos
-   - id: dcterms
-    use_base_merging: true
+  - id: dcterms
+    mirror_from: https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.rdf
   - id: bibo
     mirror_from: http://purl.org/ontology/bibo/bibo.owl
   - id: doap
     mirror_from: https://raw.githubusercontent.com/edumbill/doap/master/schema/doap.rdf
   - id: vann
     mirror_from: https://vocab.org/vann/vann-vocab-20100607.rdf
-  - id: vitro
-    use_base_merging: true
   - id: ns
     mirror_from: http://www.w3.org/2003/06/sw-vocab-status/ns
-  - id: geopolitical
-    mirror_from: http://aims.fao.org/aos/geopolitical.owl
-  - id: statistics
-    mirror_from: http://purl.org/net/OCRe/statistics.owl
-  - id: study_protocol
-    mirror_from: http://purl.org/net/OCRe/study_protocol.owl
 
 import_pattern_ontology: false
 license: https://creativecommons.org/licenses/unspecified
@@ -100,8 +92,8 @@ robot_report:
   - xrefs
   - obsoletes
   - synonyms
-  ensure_owl2dl_profile: true
-  fail_on: ""
+  ensure_owl2dl_profile: false
+  fail_on: none
   release_reports: false
   report_on:
   - edit

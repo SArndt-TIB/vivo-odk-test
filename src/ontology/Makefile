@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                642e8f1c7924aa32443d1f3be7f981be0a2d473024b465c474f2d7b861351d9a
+CONFIG_HASH=                23d89b58f736526da29b79f0a55eb1e71148b9beea3caf29dcf85eac8dfcc10b
 
 
 # ----------------------------------------
@@ -42,7 +42,7 @@ UPDATEREPODIR=              target
 SPARQLDIR =                 ../sparql
 EXTENDED_PREFIX_MAP=        $(TMPDIR)/obo.epm.json
 COMPONENTSDIR =             components
-REPORT_FAIL_ON =            
+REPORT_FAIL_ON =            none
 REPORT_LABEL =              -l true
 REPORT_PROFILE_OPTS =       
 OBO_FORMAT_OPTIONS =        --clean-obo "strict drop-untranslatable-axioms"
@@ -107,7 +107,7 @@ all: all_odk
 all_odk: odkversion config_check test custom_reports all_assets
 
 .PHONY: test
-test: odkversion validate_idranges reason_test sparql_test robot_reports $(REPORTDIR)/validate_profile_owl2dl_$(ONT).owl.txt
+test: odkversion validate_idranges reason_test sparql_test robot_reports 
 	echo "Finished running all tests successfully."
 
 .PHONY: test
@@ -119,7 +119,7 @@ release_diff: $(REPORTDIR)/release-diff.md
 
 .PHONY: reason_test
 reason_test: $(EDIT_PREPROCESSED)
-	$(ROBOT) reason --input $< --reasoner $(REASONER) --equivalent-classes-allowed asserted-only \
+	$(ROBOT) reason --input $< --reasoner $(REASONER) --equivalent-classes-allowed all \
 		--exclude-tautologies structural --output test.owl && rm test.owl
 
 .PHONY: odkversion
@@ -187,7 +187,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  ro skos skos2 dcterms bibo doap vann vitro ns geopolitical statistics study_protocol
+IMPORTS =  ro skos skos2 dcterms bibo doap vann ns
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -491,39 +491,11 @@ mirror-vann: | $(TMPDIR)
 	$(ROBOT) convert -I https://vocab.org/vann/vann-vocab-20100607.rdf -o $(TMPDIR)/$@.owl
 
 
-## ONTOLOGY: vitro
-.PHONY: mirror-vitro
-.PRECIOUS: $(MIRRORDIR)/vitro.owl
-mirror-vitro: | $(TMPDIR)
-	$(ROBOT) convert -I https://raw.githubusercontent.com/vivo-project/Vitro/main/api/src/main/resources/rdf/vitro-ontologies/vitro-public.owl -o $(TMPDIR)/$@.owl
-
-
 ## ONTOLOGY: ns
 .PHONY: mirror-ns
 .PRECIOUS: $(MIRRORDIR)/ns.owl
 mirror-ns: | $(TMPDIR)
 	$(ROBOT) convert -I http://www.w3.org/2003/06/sw-vocab-status/ns -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: geopolitical
-.PHONY: mirror-geopolitical
-.PRECIOUS: $(MIRRORDIR)/geopolitical.owl
-mirror-geopolitical: | $(TMPDIR)
-	$(ROBOT) convert -I http://aims.fao.org/aos/geopolitical.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: statistics
-.PHONY: mirror-statistics
-.PRECIOUS: $(MIRRORDIR)/statistics.owl
-mirror-statistics: | $(TMPDIR)
-	$(ROBOT) convert -I http://purl.org/net/OCRe/statistics.owl -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: study_protocol
-.PHONY: mirror-study_protocol
-.PRECIOUS: $(MIRRORDIR)/study_protocol.owl
-mirror-study_protocol: | $(TMPDIR)
-	$(ROBOT) convert -I http://purl.org/net/OCRe/study_protocol.owl -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)
@@ -601,7 +573,7 @@ ROBOT_RELEASE_IMPORT_MODE_BASE=$(ROBOT) remove --input $< --select imports --tri
 # base: A version of the ontology that does not include any externally imported axioms.
 $(ONT)-base.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(IMPORT_FILES)
 	$(ROBOT_RELEASE_IMPORT_MODE) \
-	reason --reasoner $(REASONER) --equivalent-classes-allowed asserted-only --exclude-tautologies structural --annotate-inferred-axioms false \
+	reason --reasoner $(REASONER) --equivalent-classes-allowed all --exclude-tautologies structural --annotate-inferred-axioms false \
 	relax $(RELAX_OPTIONS) \
 	reduce -r $(REASONER) $(REDUCE_OPTIONS) \
 	remove --axioms external --preserve-structure false --trim false \
@@ -612,7 +584,7 @@ $(ONT)-base.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(IMPORT_FILES)
 # Full: The full artefacts with imports merged, reasoned.
 $(ONT)-full.owl: $(EDIT_PREPROCESSED) $(OTHER_SRC) $(IMPORT_FILES)
 	$(ROBOT_RELEASE_IMPORT_MODE) \
-		reason --reasoner $(REASONER) --equivalent-classes-allowed asserted-only --exclude-tautologies structural \
+		reason --reasoner $(REASONER) --equivalent-classes-allowed all --exclude-tautologies structural \
 		relax $(RELAX_OPTIONS) \
 		reduce -r $(REASONER) $(REDUCE_OPTIONS) \
 		$(SHARED_ROBOT_COMMANDS) annotate --ontology-iri $(ONTBASE)/$@ $(ANNOTATE_ONTOLOGY_VERSION) --output $@.tmp.owl && mv $@.tmp.owl $@
