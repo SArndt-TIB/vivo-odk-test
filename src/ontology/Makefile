@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                23d89b58f736526da29b79f0a55eb1e71148b9beea3caf29dcf85eac8dfcc10b
+CONFIG_HASH=                af7fcd5f8b88e2af796fa21de1b82483056ca082ba8de99e671bdb64a1ee75e1
 
 
 # ----------------------------------------
@@ -467,7 +467,7 @@ mirror-skos2: | $(TMPDIR)
 .PHONY: mirror-dcterms
 .PRECIOUS: $(MIRRORDIR)/dcterms.owl
 mirror-dcterms: | $(TMPDIR)
-	$(ROBOT) convert -I https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.rdf -o $(TMPDIR)/$@.owl
+	$(ROBOT) convert -I https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: bibo

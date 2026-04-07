@@ -1,0 +1,5 @@
+http://purl.org/dc/terms/contributor
+http://purl.org/dc/terms/creator
+http://purl.org/dc/terms/description
+http://purl.org/dc/terms/license
+http://purl.org/dc/terms/source

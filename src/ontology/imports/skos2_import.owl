@@ -7,11 +7,42 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo//imports/skos2_import.owl>
-<http://purl.obolibrary.org/obo//releases/2026-03-23/imports/skos2_import.owl>
-Annotation(owl:versionInfo "2026-03-23")
+<http://purl.obolibrary.org/obo//releases/2026-04-07/imports/skos2_import.owl>
+Annotation(owl:versionInfo "2026-04-07")
 
+Declaration(Class(rdf:List))
+Declaration(Class(<http://www.w3.org/2008/05/skos#Collection>))
+Declaration(Class(<http://www.w3.org/2008/05/skos#Concept>))
+Declaration(Class(<http://www.w3.org/2008/05/skos#ConceptScheme>))
+Declaration(Class(<http://www.w3.org/2008/05/skos#OrderedCollection>))
+Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#broadMatch>))
+Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#broader>))
+Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#broaderTransitive>))
 Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#changeNote>))
+Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#closeMatch>))
+Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#definition>))
+Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#editorialNote>))
+Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#exactMatch>))
+Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#example>))
+Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#hasTopConcept>))
+Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#historyNote>))
+Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#inScheme>))
+Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#mappingRelation>))
+Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#member>))
+Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#memberList>))
+Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#narrowMatch>))
+Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#narrower>))
+Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#narrowerTransitive>))
 Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#note>))
+Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#related>))
+Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#relatedMatch>))
+Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#scopeNote>))
+Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#semanticRelation>))
+Declaration(ObjectProperty(<http://www.w3.org/2008/05/skos#topConceptOf>))
+Declaration(DataProperty(<http://www.w3.org/2008/05/skos#altLabel>))
+Declaration(DataProperty(<http://www.w3.org/2008/05/skos#hiddenLabel>))
+Declaration(DataProperty(<http://www.w3.org/2008/05/skos#notation>))
+Declaration(DataProperty(<http://www.w3.org/2008/05/skos#prefLabel>))
 Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#Collection>))
 Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#Concept>))
 Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#ConceptScheme>))
@@ -49,15 +80,225 @@ Declaration(NamedIndividual(<http://www.w3.org/2008/05/skos#topConceptOf>))
 #   Object Properties
 ############################
 
+# Object Property: <http://www.w3.org/2008/05/skos#broadMatch> (broader match)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#broadMatch> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#broadMatch> "broader match"@en)
+SubObjectPropertyOf(<http://www.w3.org/2008/05/skos#broadMatch> <http://www.w3.org/2008/05/skos#broader>)
+SubObjectPropertyOf(<http://www.w3.org/2008/05/skos#broadMatch> <http://www.w3.org/2008/05/skos#mappingRelation>)
+InverseObjectProperties(<http://www.w3.org/2008/05/skos#broadMatch> <http://www.w3.org/2008/05/skos#narrowMatch>)
+
+# Object Property: <http://www.w3.org/2008/05/skos#broader> (has broader)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2008/05/skos#broader> "Broader concepts are typically rendered as parents in a concept hierarchy (tree)."@en)
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2008/05/skos#broader> "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#broader> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#broader> "has broader"@en)
+SubObjectPropertyOf(<http://www.w3.org/2008/05/skos#broader> <http://www.w3.org/2008/05/skos#broaderTransitive>)
+InverseObjectProperties(<http://www.w3.org/2008/05/skos#broader> <http://www.w3.org/2008/05/skos#narrower>)
+
+# Object Property: <http://www.w3.org/2008/05/skos#broaderTransitive> (broader transitive)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2008/05/skos#broaderTransitive> "By convention, skos:broaderTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#broaderTransitive> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#broaderTransitive> "broader transitive"@en)
+SubObjectPropertyOf(<http://www.w3.org/2008/05/skos#broaderTransitive> <http://www.w3.org/2008/05/skos#semanticRelation>)
+InverseObjectProperties(<http://www.w3.org/2008/05/skos#broaderTransitive> <http://www.w3.org/2008/05/skos#narrowerTransitive>)
+TransitiveObjectProperty(<http://www.w3.org/2008/05/skos#broaderTransitive>)
+
 # Object Property: <http://www.w3.org/2008/05/skos#changeNote> (change note)
 
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos>)
 AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#changeNote> "change note"@en)
 SubObjectPropertyOf(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#note>)
 
+# Object Property: <http://www.w3.org/2008/05/skos#closeMatch> (exact match)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#closeMatch> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#closeMatch> "exact match"@en)
+SubObjectPropertyOf(<http://www.w3.org/2008/05/skos#closeMatch> <http://www.w3.org/2008/05/skos#mappingRelation>)
+SymmetricObjectProperty(<http://www.w3.org/2008/05/skos#closeMatch>)
+
+# Object Property: <http://www.w3.org/2008/05/skos#definition> (<http://www.w3.org/2008/05/skos#definition>)
+
+SubObjectPropertyOf(<http://www.w3.org/2008/05/skos#definition> <http://www.w3.org/2008/05/skos#note>)
+
+# Object Property: <http://www.w3.org/2008/05/skos#editorialNote> (editorial note)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#editorialNote> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#editorialNote> "editorial note"@en)
+SubObjectPropertyOf(<http://www.w3.org/2008/05/skos#editorialNote> <http://www.w3.org/2008/05/skos#note>)
+
+# Object Property: <http://www.w3.org/2008/05/skos#exactMatch> (exact match)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2008/05/skos#exactMatch> "skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#exactMatch> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#exactMatch> "exact match"@en)
+SubObjectPropertyOf(<http://www.w3.org/2008/05/skos#exactMatch> <http://www.w3.org/2008/05/skos#closeMatch>)
+SymmetricObjectProperty(<http://www.w3.org/2008/05/skos#exactMatch>)
+TransitiveObjectProperty(<http://www.w3.org/2008/05/skos#exactMatch>)
+
+# Object Property: <http://www.w3.org/2008/05/skos#example> (example)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#example> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#example> "example"@en)
+SubObjectPropertyOf(<http://www.w3.org/2008/05/skos#example> <http://www.w3.org/2008/05/skos#note>)
+
+# Object Property: <http://www.w3.org/2008/05/skos#hasTopConcept> (has top concept)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#hasTopConcept> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#hasTopConcept> "has top concept"@en)
+InverseObjectProperties(<http://www.w3.org/2008/05/skos#hasTopConcept> <http://www.w3.org/2008/05/skos#topConceptOf>)
+ObjectPropertyDomain(<http://www.w3.org/2008/05/skos#hasTopConcept> <http://www.w3.org/2008/05/skos#ConceptScheme>)
+ObjectPropertyRange(<http://www.w3.org/2008/05/skos#hasTopConcept> <http://www.w3.org/2008/05/skos#Concept>)
+
+# Object Property: <http://www.w3.org/2008/05/skos#historyNote> (history note)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#historyNote> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#historyNote> "history note"@en)
+SubObjectPropertyOf(<http://www.w3.org/2008/05/skos#historyNote> <http://www.w3.org/2008/05/skos#note>)
+
+# Object Property: <http://www.w3.org/2008/05/skos#inScheme> (in scheme)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2008/05/skos#inScheme> "A concept may be a member of more than one concept scheme."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#inScheme> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#inScheme> "in scheme"@en)
+ObjectPropertyRange(<http://www.w3.org/2008/05/skos#inScheme> <http://www.w3.org/2008/05/skos#ConceptScheme>)
+
+# Object Property: <http://www.w3.org/2008/05/skos#mappingRelation> (mapping relation)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2008/05/skos#mappingRelation> "These concept mapping relations mirror semantic relations, and the data model defined below is similar (with the exception of skos:exactMatch) to the data model defined for semantic relations. A distinct vocabulary is provided for concept mapping relations, to provide a convenient way to differentiate links within a concept scheme from links between concept schemes. However, this pattern of usage is not a formal requirement of the SKOS data model, and relies on informal definitions of best practice."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#mappingRelation> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#mappingRelation> "mapping relation"@en)
+ObjectPropertyDomain(<http://www.w3.org/2008/05/skos#mappingRelation> <http://www.w3.org/2008/05/skos#Concept>)
+ObjectPropertyRange(<http://www.w3.org/2008/05/skos#mappingRelation> <http://www.w3.org/2008/05/skos#Concept>)
+
+# Object Property: <http://www.w3.org/2008/05/skos#member> (member)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#member> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#member> "member"@en)
+ObjectPropertyDomain(<http://www.w3.org/2008/05/skos#member> <http://www.w3.org/2008/05/skos#Collection>)
+
+# Object Property: <http://www.w3.org/2008/05/skos#memberList> (member list)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2008/05/skos#memberList> "For any resource, every item in the list given as the value of the skos:memberList property is also a value of the skos:member property."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#memberList> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#memberList> "member list"@en)
+FunctionalObjectProperty(<http://www.w3.org/2008/05/skos#memberList>)
+ObjectPropertyDomain(<http://www.w3.org/2008/05/skos#memberList> <http://www.w3.org/2008/05/skos#OrderedCollection>)
+ObjectPropertyRange(<http://www.w3.org/2008/05/skos#memberList> rdf:List)
+
+# Object Property: <http://www.w3.org/2008/05/skos#narrowMatch> (narrower match)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#narrowMatch> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#narrowMatch> "narrower match"@en)
+SubObjectPropertyOf(<http://www.w3.org/2008/05/skos#narrowMatch> <http://www.w3.org/2008/05/skos#mappingRelation>)
+SubObjectPropertyOf(<http://www.w3.org/2008/05/skos#narrowMatch> <http://www.w3.org/2008/05/skos#narrower>)
+
+# Object Property: <http://www.w3.org/2008/05/skos#narrower> (has narrower)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2008/05/skos#narrower> "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources."@en)
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2008/05/skos#narrower> "Narrower concepts are typically rendered as children in a concept hierarchy (tree)."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#narrower> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#narrower> "has narrower"@en)
+SubObjectPropertyOf(<http://www.w3.org/2008/05/skos#narrower> <http://www.w3.org/2008/05/skos#narrowerTransitive>)
+
+# Object Property: <http://www.w3.org/2008/05/skos#narrowerTransitive> (narrower transitive)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2008/05/skos#narrowerTransitive> "By convention, skos:narrowerTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#narrowerTransitive> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#narrowerTransitive> "narrower transitive"@en)
+SubObjectPropertyOf(<http://www.w3.org/2008/05/skos#narrowerTransitive> <http://www.w3.org/2008/05/skos#semanticRelation>)
+TransitiveObjectProperty(<http://www.w3.org/2008/05/skos#narrowerTransitive>)
+
 # Object Property: <http://www.w3.org/2008/05/skos#note> (note)
 
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2008/05/skos#note> "This property may be used directly, or as a super-property for more specific note types."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#note> <http://www.w3.org/2008/05/skos>)
 AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#note> "note"@en)
 
+# Object Property: <http://www.w3.org/2008/05/skos#related> (related to)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2008/05/skos#related> "skos:related is disjoint with skos:broaderTransitive"@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#related> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#related> "related to"@en)
+SubObjectPropertyOf(<http://www.w3.org/2008/05/skos#related> <http://www.w3.org/2008/05/skos#semanticRelation>)
+SymmetricObjectProperty(<http://www.w3.org/2008/05/skos#related>)
+
+# Object Property: <http://www.w3.org/2008/05/skos#relatedMatch> (related match)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#relatedMatch> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#relatedMatch> "related match"@en)
+SubObjectPropertyOf(<http://www.w3.org/2008/05/skos#relatedMatch> <http://www.w3.org/2008/05/skos#mappingRelation>)
+SubObjectPropertyOf(<http://www.w3.org/2008/05/skos#relatedMatch> <http://www.w3.org/2008/05/skos#related>)
+SymmetricObjectProperty(<http://www.w3.org/2008/05/skos#relatedMatch>)
+
+# Object Property: <http://www.w3.org/2008/05/skos#scopeNote> (scope note)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#scopeNote> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#scopeNote> "scope note"@en)
+SubObjectPropertyOf(<http://www.w3.org/2008/05/skos#scopeNote> <http://www.w3.org/2008/05/skos#note>)
+
+# Object Property: <http://www.w3.org/2008/05/skos#semanticRelation> (semantic relation)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2008/05/skos#semanticRelation> "This property should not be used directly, but as a super-property for all properties denoting a relationship of meaning between concepts."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#semanticRelation> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#semanticRelation> "semantic relation"@en)
+ObjectPropertyDomain(<http://www.w3.org/2008/05/skos#semanticRelation> <http://www.w3.org/2008/05/skos#Concept>)
+ObjectPropertyRange(<http://www.w3.org/2008/05/skos#semanticRelation> <http://www.w3.org/2008/05/skos#Concept>)
+
+# Object Property: <http://www.w3.org/2008/05/skos#topConceptOf> (top concept in scheme)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#topConceptOf> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#topConceptOf> "top concept in scheme"@en)
+SubObjectPropertyOf(<http://www.w3.org/2008/05/skos#topConceptOf> <http://www.w3.org/2008/05/skos#inScheme>)
+ObjectPropertyDomain(<http://www.w3.org/2008/05/skos#topConceptOf> <http://www.w3.org/2008/05/skos#Concept>)
+ObjectPropertyRange(<http://www.w3.org/2008/05/skos#topConceptOf> <http://www.w3.org/2008/05/skos#ConceptScheme>)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://www.w3.org/2008/05/skos#notation> (notation)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2008/05/skos#notation> "By convention, skos:notation is used with a typed literal in the object position of the triple."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#notation> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#notation> "notation"@en)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.w3.org/2008/05/skos#Collection> (Collection)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2008/05/skos#Collection> "Labelled collections can be used with collectable semantic relation properties e.g. skos:narrower, where you would like a set of concepts to be displayed under a 'node label' in the hierarchy."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#Collection> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#Collection> "Collection"@en)
+DisjointClasses(<http://www.w3.org/2008/05/skos#Collection> <http://www.w3.org/2008/05/skos#Concept>)
+DisjointClasses(<http://www.w3.org/2008/05/skos#Collection> <http://www.w3.org/2008/05/skos#ConceptScheme>)
+
+# Class: <http://www.w3.org/2008/05/skos#Concept> (Concept)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#Concept> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#Concept> "Concept"@en)
+DisjointClasses(<http://www.w3.org/2008/05/skos#Concept> <http://www.w3.org/2008/05/skos#ConceptScheme>)
+
+# Class: <http://www.w3.org/2008/05/skos#ConceptScheme> (Concept Scheme)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2008/05/skos#ConceptScheme> "A concept scheme may be defined to include concepts from different sources."@en)
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2008/05/skos#ConceptScheme> "Thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', and other types of controlled vocabulary are all examples of concept schemes.  Concept schemes are also embedded in glossaries and terminologies."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#ConceptScheme> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#ConceptScheme> "Concept Scheme"@en)
+
+# Class: <http://www.w3.org/2008/05/skos#OrderedCollection> (Ordered Collection)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2008/05/skos#OrderedCollection> "Ordered collections can be used with collectable semantic relation properties, where you would like a set of concepts to be displayed in a specific order, and optionally under a 'node label'."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2008/05/skos#OrderedCollection> <http://www.w3.org/2008/05/skos>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#OrderedCollection> "Ordered Collection"@en)
+SubClassOf(<http://www.w3.org/2008/05/skos#OrderedCollection> <http://www.w3.org/2008/05/skos#Collection>)
 
 
 ############################
@@ -66,42 +307,34 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#note> "note"@en)
 
 # Individual: <http://www.w3.org/2008/05/skos#Collection> (Collection)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#Collection> "Collection"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#Collection> _:genid2147483680)
 
 # Individual: <http://www.w3.org/2008/05/skos#Concept> (Concept)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#Concept> "Concept"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#Concept> _:genid2147483701)
 
 # Individual: <http://www.w3.org/2008/05/skos#ConceptScheme> (Concept Scheme)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#ConceptScheme> "Concept Scheme"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#ConceptScheme> _:genid2147483710)
 
 # Individual: <http://www.w3.org/2008/05/skos#OrderedCollection> (Ordered Collection)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#OrderedCollection> "Ordered Collection"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#OrderedCollection> _:genid2147483702)
 
-# Individual: <http://www.w3.org/2008/05/skos#altLabel> (alternative label)
+# Individual: <http://www.w3.org/2008/05/skos#altLabel> (<http://www.w3.org/2008/05/skos#altLabel>)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#altLabel> "alternative label"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#altLabel> _:genid2147483685)
 
 # Individual: <http://www.w3.org/2008/05/skos#broadMatch> (broader match)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#broadMatch> "broader match"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#broadMatch> _:genid2147483705)
 
 # Individual: <http://www.w3.org/2008/05/skos#broader> (has broader)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#broader> "has broader"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#broader> _:genid2147483711)
 
 # Individual: <http://www.w3.org/2008/05/skos#broaderTransitive> (broader transitive)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#broaderTransitive> "broader transitive"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#broaderTransitive> _:genid2147483691)
 
 # Individual: <http://www.w3.org/2008/05/skos#changeNote> (change note)
@@ -110,7 +343,6 @@ ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.
 
 # Individual: <http://www.w3.org/2008/05/skos#closeMatch> (exact match)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#closeMatch> "exact match"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#closeMatch> _:genid2147483693)
 
 # Individual: <http://www.w3.org/2008/05/skos#definition> (<http://www.w3.org/2008/05/skos#definition>)
@@ -119,106 +351,86 @@ ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.
 
 # Individual: <http://www.w3.org/2008/05/skos#editorialNote> (editorial note)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#editorialNote> "editorial note"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#editorialNote> _:genid2147483690)
 
 # Individual: <http://www.w3.org/2008/05/skos#exactMatch> (exact match)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#exactMatch> "exact match"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#exactMatch> _:genid2147483682)
 
 # Individual: <http://www.w3.org/2008/05/skos#example> (example)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#example> "example"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#example> _:genid2147483688)
 
 # Individual: <http://www.w3.org/2008/05/skos#hasTopConcept> (has top concept)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#hasTopConcept> "has top concept"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#hasTopConcept> _:genid2147483695)
 
-# Individual: <http://www.w3.org/2008/05/skos#hiddenLabel> (hidden label)
+# Individual: <http://www.w3.org/2008/05/skos#hiddenLabel> (<http://www.w3.org/2008/05/skos#hiddenLabel>)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#hiddenLabel> "hidden label"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#hiddenLabel> _:genid2147483689)
 
 # Individual: <http://www.w3.org/2008/05/skos#historyNote> (history note)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#historyNote> "history note"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#historyNote> _:genid2147483707)
 
 # Individual: <http://www.w3.org/2008/05/skos#inScheme> (in scheme)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#inScheme> "in scheme"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#inScheme> _:genid2147483699)
 
 # Individual: <http://www.w3.org/2008/05/skos#mappingRelation> (mapping relation)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#mappingRelation> "mapping relation"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#mappingRelation> _:genid2147483681)
 
 # Individual: <http://www.w3.org/2008/05/skos#member> (member)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#member> "member"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#member> _:genid2147483696)
 
 # Individual: <http://www.w3.org/2008/05/skos#memberList> (member list)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#memberList> "member list"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#memberList> _:genid2147483709)
 
 # Individual: <http://www.w3.org/2008/05/skos#narrowMatch> (narrower match)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#narrowMatch> "narrower match"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#narrowMatch> _:genid2147483684)
 
 # Individual: <http://www.w3.org/2008/05/skos#narrower> (has narrower)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#narrower> "has narrower"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#narrower> _:genid2147483686)
 
 # Individual: <http://www.w3.org/2008/05/skos#narrowerTransitive> (narrower transitive)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#narrowerTransitive> "narrower transitive"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#narrowerTransitive> _:genid2147483687)
 
 # Individual: <http://www.w3.org/2008/05/skos#notation> (notation)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#notation> "notation"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#notation> _:genid2147483683)
 
 # Individual: <http://www.w3.org/2008/05/skos#note> (note)
 
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#note> _:genid2147483706)
 
-# Individual: <http://www.w3.org/2008/05/skos#prefLabel> (preferred label)
+# Individual: <http://www.w3.org/2008/05/skos#prefLabel> (<http://www.w3.org/2008/05/skos#prefLabel>)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#prefLabel> "preferred label"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#prefLabel> _:genid2147483698)
 
 # Individual: <http://www.w3.org/2008/05/skos#related> (related to)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#related> "related to"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#related> _:genid2147483704)
 
 # Individual: <http://www.w3.org/2008/05/skos#relatedMatch> (related match)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#relatedMatch> "related match"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#relatedMatch> _:genid2147483692)
 
 # Individual: <http://www.w3.org/2008/05/skos#scopeNote> (scope note)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#scopeNote> "scope note"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#scopeNote> _:genid2147483708)
 
 # Individual: <http://www.w3.org/2008/05/skos#semanticRelation> (semantic relation)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#semanticRelation> "semantic relation"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#semanticRelation> _:genid2147483700)
 
 # Individual: <http://www.w3.org/2008/05/skos#topConceptOf> (top concept in scheme)
 
-AnnotationAssertion(rdfs:label <http://www.w3.org/2008/05/skos#topConceptOf> "top concept in scheme"@en)
 ObjectPropertyAssertion(<http://www.w3.org/2008/05/skos#changeNote> <http://www.w3.org/2008/05/skos#topConceptOf> _:genid2147483694)
 
 
