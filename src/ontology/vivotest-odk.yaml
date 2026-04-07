@@ -41,7 +41,8 @@ import_group:
   - id: skos2
     mirror_from: http://www.w3.org/2008/05/skos
   - id: dcterms
-    mirror_from: https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.rdf
+    mirror_from: https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl
+    use_custom_import: true
   - id: bibo
     mirror_from: http://purl.org/ontology/bibo/bibo.owl
   - id: doap

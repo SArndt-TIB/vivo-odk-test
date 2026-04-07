@@ -7,11 +7,95 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo//imports/skos_import.owl>
-<http://purl.obolibrary.org/obo//releases/2026-03-23/imports/skos_import.owl>
-Annotation(owl:versionInfo "2026-03-23")
+<http://purl.obolibrary.org/obo//releases/2026-04-07/imports/skos_import.owl>
+Annotation(owl:versionInfo "2026-04-07")
 
+Declaration(Class(<http://www.w3.org/2004/02/skos/core#Concept>))
+Declaration(ObjectProperty(<http://www.w3.org/2004/02/skos/core#broader>))
+Declaration(ObjectProperty(<http://www.w3.org/2004/02/skos/core#broaderTransitive>))
+Declaration(ObjectProperty(<http://www.w3.org/2004/02/skos/core#narrower>))
+Declaration(ObjectProperty(<http://www.w3.org/2004/02/skos/core#narrowerTransitive>))
+Declaration(ObjectProperty(<http://www.w3.org/2004/02/skos/core#related>))
+Declaration(ObjectProperty(<http://www.w3.org/2004/02/skos/core#semanticRelation>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/contributor>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/creator>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/description>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))
+Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#scopeNote>))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: <http://www.w3.org/2004/02/skos/core#scopeNote> (scope note)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/2004/02/skos/core>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#scopeNote> "scope note"@en)
+
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://www.w3.org/2004/02/skos/core#broader> (has broader)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2004/02/skos/core#broader> "Broader concepts are typically rendered as parents in a concept hierarchy (tree)."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/2004/02/skos/core>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#broader> "has broader"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/2004/02/skos/core#broader> "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources."@en)
+SubObjectPropertyOf(<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/2004/02/skos/core#broaderTransitive>)
+InverseObjectProperties(<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/2004/02/skos/core#narrower>)
+
+# Object Property: <http://www.w3.org/2004/02/skos/core#broaderTransitive> (has broader transitive)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/2004/02/skos/core>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#broaderTransitive> "has broader transitive"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/2004/02/skos/core#broaderTransitive> "By convention, skos:broaderTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application."@en)
+SubObjectPropertyOf(<http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/2004/02/skos/core#semanticRelation>)
+InverseObjectProperties(<http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/2004/02/skos/core#narrowerTransitive>)
+TransitiveObjectProperty(<http://www.w3.org/2004/02/skos/core#broaderTransitive>)
+
+# Object Property: <http://www.w3.org/2004/02/skos/core#narrower> (has narrower)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2004/02/skos/core#narrower> "Narrower concepts are typically rendered as children in a concept hierarchy (tree)."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#narrower> <http://www.w3.org/2004/02/skos/core>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#narrower> "has narrower"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/2004/02/skos/core#narrower> "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources."@en)
+SubObjectPropertyOf(<http://www.w3.org/2004/02/skos/core#narrower> <http://www.w3.org/2004/02/skos/core#narrowerTransitive>)
+
+# Object Property: <http://www.w3.org/2004/02/skos/core#narrowerTransitive> (has narrower transitive)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#narrowerTransitive> <http://www.w3.org/2004/02/skos/core>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#narrowerTransitive> "has narrower transitive"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/2004/02/skos/core#narrowerTransitive> "By convention, skos:narrowerTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application."@en)
+SubObjectPropertyOf(<http://www.w3.org/2004/02/skos/core#narrowerTransitive> <http://www.w3.org/2004/02/skos/core#semanticRelation>)
+TransitiveObjectProperty(<http://www.w3.org/2004/02/skos/core#narrowerTransitive>)
+
+# Object Property: <http://www.w3.org/2004/02/skos/core#related> (has related)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2004/02/skos/core#related> "skos:related is disjoint with skos:broaderTransitive"@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#related> <http://www.w3.org/2004/02/skos/core>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#related> "has related"@en)
+SubObjectPropertyOf(<http://www.w3.org/2004/02/skos/core#related> <http://www.w3.org/2004/02/skos/core#semanticRelation>)
+SymmetricObjectProperty(<http://www.w3.org/2004/02/skos/core#related>)
+
+# Object Property: <http://www.w3.org/2004/02/skos/core#semanticRelation> (is in semantic relation with)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#semanticRelation> <http://www.w3.org/2004/02/skos/core>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#semanticRelation> "is in semantic relation with"@en)
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/2004/02/skos/core#semanticRelation> "This property should not be used directly, but as a super-property for all properties denoting a relationship of meaning between concepts."@en)
+ObjectPropertyDomain(<http://www.w3.org/2004/02/skos/core#semanticRelation> <http://www.w3.org/2004/02/skos/core#Concept>)
+ObjectPropertyRange(<http://www.w3.org/2004/02/skos/core#semanticRelation> <http://www.w3.org/2004/02/skos/core#Concept>)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://www.w3.org/2004/02/skos/core#Concept> (Concept)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#Concept> <http://www.w3.org/2004/02/skos/core>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#Concept> "Concept"@en)
 
 
 )
