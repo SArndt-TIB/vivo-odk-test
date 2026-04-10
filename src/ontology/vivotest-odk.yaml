@@ -52,6 +52,15 @@ import_group:
   - id: ns
     mirror_from: http://www.w3.org/2003/06/sw-vocab-status/ns
 
+  - id: geopolitical
+    mirror_from: http://aims.fao.org/aos/geopolitical.owl
+    use_custom_import: true
+  - id: vitro
+    mirror_from: https://raw.githubusercontent.com/vivo-project/Vitro/main/api/src/main/resources/rdf/ontology/vitro.owl
+  - id: statistics
+    mirror_from: http://purl.org/net/OCRe/statistics.owl
+  - id: study_protocol
+    mirror_from: http://purl.org/net/OCRe/study_protocol.owl
 import_pattern_ontology: false
 license: https://creativecommons.org/licenses/unspecified
 manage_import_declarations: false

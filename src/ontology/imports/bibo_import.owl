@@ -7,14 +7,149 @@ Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
 Ontology(<http://purl.obolibrary.org/obo//imports/bibo_import.owl>
-<http://purl.obolibrary.org/obo//releases/2026-03-23/imports/bibo_import.owl>
-Annotation(owl:versionInfo "2026-03-23")
+<http://purl.obolibrary.org/obo//releases/2026-04-07/imports/bibo_import.owl>
+Annotation(owl:versionInfo "2026-04-07")
 
+Declaration(Class(<http://purl.org/NET/c4dm/event.owl#Event>))
+Declaration(Class(<http://purl.org/dc/terms/Agent>))
+Declaration(Class(<http://purl.org/ontology/bibo/AcademicArticle>))
+Declaration(Class(<http://purl.org/ontology/bibo/Article>))
+Declaration(Class(<http://purl.org/ontology/bibo/AudioDocument>))
+Declaration(Class(<http://purl.org/ontology/bibo/AudioVisualDocument>))
+Declaration(Class(<http://purl.org/ontology/bibo/Bill>))
+Declaration(Class(<http://purl.org/ontology/bibo/Book>))
+Declaration(Class(<http://purl.org/ontology/bibo/BookSection>))
+Declaration(Class(<http://purl.org/ontology/bibo/Brief>))
+Declaration(Class(<http://purl.org/ontology/bibo/Chapter>))
+Declaration(Class(<http://purl.org/ontology/bibo/Code>))
+Declaration(Class(<http://purl.org/ontology/bibo/CollectedDocument>))
+Declaration(Class(<http://purl.org/ontology/bibo/Collection>))
+Declaration(Class(<http://purl.org/ontology/bibo/Conference>))
+Declaration(Class(<http://purl.org/ontology/bibo/CourtReporter>))
+Declaration(Class(<http://purl.org/ontology/bibo/Document>))
+Declaration(Class(<http://purl.org/ontology/bibo/DocumentPart>))
 Declaration(Class(<http://purl.org/ontology/bibo/DocumentStatus>))
+Declaration(Class(<http://purl.org/ontology/bibo/EditedBook>))
+Declaration(Class(<http://purl.org/ontology/bibo/Event>))
+Declaration(Class(<http://purl.org/ontology/bibo/Excerpt>))
+Declaration(Class(<http://purl.org/ontology/bibo/Film>))
+Declaration(Class(<http://purl.org/ontology/bibo/Hearing>))
+Declaration(Class(<http://purl.org/ontology/bibo/Image>))
+Declaration(Class(<http://purl.org/ontology/bibo/Interview>))
+Declaration(Class(<http://purl.org/ontology/bibo/Issue>))
+Declaration(Class(<http://purl.org/ontology/bibo/Journal>))
+Declaration(Class(<http://purl.org/ontology/bibo/LegalCaseDocument>))
+Declaration(Class(<http://purl.org/ontology/bibo/LegalDecision>))
+Declaration(Class(<http://purl.org/ontology/bibo/LegalDocument>))
+Declaration(Class(<http://purl.org/ontology/bibo/Legislation>))
+Declaration(Class(<http://purl.org/ontology/bibo/Letter>))
+Declaration(Class(<http://purl.org/ontology/bibo/Magazine>))
+Declaration(Class(<http://purl.org/ontology/bibo/Manual>))
+Declaration(Class(<http://purl.org/ontology/bibo/Manuscript>))
+Declaration(Class(<http://purl.org/ontology/bibo/Map>))
+Declaration(Class(<http://purl.org/ontology/bibo/Newspaper>))
+Declaration(Class(<http://purl.org/ontology/bibo/Note>))
+Declaration(Class(<http://purl.org/ontology/bibo/Patent>))
+Declaration(Class(<http://purl.org/ontology/bibo/Performance>))
+Declaration(Class(<http://purl.org/ontology/bibo/Periodical>))
+Declaration(Class(<http://purl.org/ontology/bibo/PersonalCommunicationDocument>))
+Declaration(Class(<http://purl.org/ontology/bibo/Proceedings>))
+Declaration(Class(<http://purl.org/ontology/bibo/Quote>))
+Declaration(Class(<http://purl.org/ontology/bibo/ReferenceSource>))
+Declaration(Class(<http://purl.org/ontology/bibo/Report>))
+Declaration(Class(<http://purl.org/ontology/bibo/Series>))
+Declaration(Class(<http://purl.org/ontology/bibo/Slide>))
+Declaration(Class(<http://purl.org/ontology/bibo/Slideshow>))
+Declaration(Class(<http://purl.org/ontology/bibo/Specification>))
+Declaration(Class(<http://purl.org/ontology/bibo/Standard>))
+Declaration(Class(<http://purl.org/ontology/bibo/Statute>))
+Declaration(Class(<http://purl.org/ontology/bibo/Thesis>))
 Declaration(Class(<http://purl.org/ontology/bibo/ThesisDegree>))
+Declaration(Class(<http://purl.org/ontology/bibo/Webpage>))
+Declaration(Class(<http://purl.org/ontology/bibo/Website>))
+Declaration(Class(<http://purl.org/ontology/bibo/Workshop>))
+Declaration(Class(rdfs:Resource))
+Declaration(Class(owl:Thing))
+Declaration(Class(<http://xmlns.com/foaf/0.1/Agent>))
+Declaration(Class(<http://xmlns.com/foaf/0.1/Document>))
+Declaration(Class(<http://xmlns.com/foaf/0.1/Image>))
+Declaration(Class(<http://xmlns.com/foaf/0.1/Organization>))
 Declaration(Class(<http://xmlns.com/foaf/0.1/Person>))
+Declaration(ObjectProperty(<http://purl.org/NET/c4dm/event.owl#produced_in>))
+Declaration(ObjectProperty(<http://purl.org/NET/c4dm/event.owl#product>))
+Declaration(ObjectProperty(<http://purl.org/dc/terms/contributor>))
+Declaration(ObjectProperty(<http://purl.org/dc/terms/hasPart>))
+Declaration(ObjectProperty(<http://purl.org/dc/terms/isPartOf>))
+Declaration(ObjectProperty(<http://purl.org/dc/terms/isReferencedBy>))
+Declaration(ObjectProperty(<http://purl.org/dc/terms/isVersionOf>))
+Declaration(ObjectProperty(<http://purl.org/dc/terms/publisher>))
+Declaration(ObjectProperty(<http://purl.org/dc/terms/references>))
+Declaration(ObjectProperty(<http://purl.org/dc/terms/relation>))
 Declaration(ObjectProperty(<http://purl.org/dc/terms/title>))
+Declaration(ObjectProperty(<http://purl.org/ontology/bibo/affirmedBy>))
+Declaration(ObjectProperty(<http://purl.org/ontology/bibo/annotates>))
+Declaration(ObjectProperty(<http://purl.org/ontology/bibo/citedBy>))
+Declaration(ObjectProperty(<http://purl.org/ontology/bibo/cites>))
+Declaration(ObjectProperty(<http://purl.org/ontology/bibo/court>))
+Declaration(ObjectProperty(<http://purl.org/ontology/bibo/degree>))
+Declaration(ObjectProperty(<http://purl.org/ontology/bibo/director>))
+Declaration(ObjectProperty(<http://purl.org/ontology/bibo/distributor>))
+Declaration(ObjectProperty(<http://purl.org/ontology/bibo/interviewee>))
+Declaration(ObjectProperty(<http://purl.org/ontology/bibo/interviewer>))
+Declaration(ObjectProperty(<http://purl.org/ontology/bibo/issuer>))
+Declaration(ObjectProperty(<http://purl.org/ontology/bibo/performer>))
+Declaration(ObjectProperty(<http://purl.org/ontology/bibo/presentedAt>))
+Declaration(ObjectProperty(<http://purl.org/ontology/bibo/presents>))
+Declaration(ObjectProperty(<http://purl.org/ontology/bibo/recipient>))
+Declaration(ObjectProperty(<http://purl.org/ontology/bibo/reproducedIn>))
+Declaration(ObjectProperty(<http://purl.org/ontology/bibo/reversedBy>))
+Declaration(ObjectProperty(<http://purl.org/ontology/bibo/reviewOf>))
+Declaration(ObjectProperty(<http://purl.org/ontology/bibo/status>))
+Declaration(ObjectProperty(<http://purl.org/ontology/bibo/subsequentLegalDecision>))
+Declaration(ObjectProperty(<http://purl.org/ontology/bibo/transcriptOf>))
+Declaration(ObjectProperty(<http://purl.org/ontology/bibo/translationOf>))
+Declaration(ObjectProperty(<http://purl.org/ontology/bibo/translator>))
+Declaration(DataProperty(<http://prismstandard.org/namespaces/1.2/basic/doi>))
+Declaration(DataProperty(<http://prismstandard.org/namespaces/1.2/basic/eIssn>))
+Declaration(DataProperty(<http://prismstandard.org/namespaces/1.2/basic/edition>))
+Declaration(DataProperty(<http://prismstandard.org/namespaces/1.2/basic/endingPage>))
+Declaration(DataProperty(<http://prismstandard.org/namespaces/1.2/basic/isbn>))
+Declaration(DataProperty(<http://prismstandard.org/namespaces/1.2/basic/issn>))
+Declaration(DataProperty(<http://prismstandard.org/namespaces/1.2/basic/issue>))
+Declaration(DataProperty(<http://prismstandard.org/namespaces/1.2/basic/number>))
+Declaration(DataProperty(<http://prismstandard.org/namespaces/1.2/basic/startingPage>))
+Declaration(DataProperty(<http://prismstandard.org/namespaces/1.2/basic/volume>))
 Declaration(DataProperty(<http://purl.org/dc/terms/description>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/abstract>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/asin>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/chapter>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/coden>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/doi>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/eanucc13>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/edition>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/eissn>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/gtin14>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/identifier>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/isbn>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/isbn10>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/isbn13>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/issn>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/issue>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/lccn>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/locator>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/numPages>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/number>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/oclcnum>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/pageEnd>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/pageStart>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/pmid>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/prefixName>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/section>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/shortDescription>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/sici>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/upc>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/uri>))
+Declaration(DataProperty(<http://purl.org/ontology/bibo/volume>))
 Declaration(DataProperty(<http://xmlns.com/foaf/0.1/name>))
 Declaration(NamedIndividual(<http://purl.org/ontology/bibo/bdarcus>))
 Declaration(NamedIndividual(<http://purl.org/ontology/bibo/fgiasson>))
@@ -30,7 +165,488 @@ Declaration(NamedIndividual(<http://purl.org/ontology/bibo/status/peerReviewed>)
 Declaration(NamedIndividual(<http://purl.org/ontology/bibo/status/published>))
 Declaration(NamedIndividual(<http://purl.org/ontology/bibo/status/rejected>))
 Declaration(NamedIndividual(<http://purl.org/ontology/bibo/status/unpublished>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/creator>))
+Declaration(AnnotationProperty(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status>))
+Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#scopeNote>))
 
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://purl.org/NET/c4dm/event.owl#product> (<http://purl.org/NET/c4dm/event.owl#product>)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#scopeNote> <http://purl.org/NET/c4dm/event.owl#product> "Used to link an event such as a conference to an outcome (a product) of that event, for example, an article, a proceeding, etc."@en)
+
+# Object Property: <http://purl.org/dc/terms/contributor> (<http://purl.org/dc/terms/contributor>)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#scopeNote> <http://purl.org/dc/terms/contributor> "Used to link a bibliographic item to one of its contributor: can be an author, an editor, a publisher, etc."@en)
+
+# Object Property: <http://purl.org/dc/terms/isReferencedBy> (<http://purl.org/dc/terms/isReferencedBy>)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#scopeNote> <http://purl.org/dc/terms/isReferencedBy> "Used to relate a reference citation to a bibliographic resource."@en)
+
+# Object Property: <http://purl.org/dc/terms/publisher> (<http://purl.org/dc/terms/publisher>)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#scopeNote> <http://purl.org/dc/terms/publisher> "Used to link a bibliographic item to its publisher."@en)
+
+# Object Property: <http://purl.org/ontology/bibo/affirmedBy> (<http://purl.org/ontology/bibo/affirmedBy>)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/affirmedBy> "A legal decision that affirms a ruling."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/affirmedBy> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+SubObjectPropertyOf(<http://purl.org/ontology/bibo/affirmedBy> <http://purl.org/ontology/bibo/subsequentLegalDecision>)
+ObjectPropertyDomain(<http://purl.org/ontology/bibo/affirmedBy> <http://purl.org/ontology/bibo/LegalDecision>)
+ObjectPropertyRange(<http://purl.org/ontology/bibo/affirmedBy> <http://purl.org/ontology/bibo/LegalDecision>)
+
+# Object Property: <http://purl.org/ontology/bibo/annotates> (annotates)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/annotates> "Critical or explanatory note for a Document."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/annotates> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/annotates> "annotates"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/annotates> "stable")
+SubObjectPropertyOf(<http://purl.org/ontology/bibo/annotates> <http://purl.org/dc/terms/relation>)
+ObjectPropertyDomain(<http://purl.org/ontology/bibo/annotates> <http://purl.org/ontology/bibo/Note>)
+ObjectPropertyRange(<http://purl.org/ontology/bibo/annotates> rdfs:Resource)
+
+# Object Property: <http://purl.org/ontology/bibo/citedBy> (cited by)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/citedBy> "Relates a document to another document that cites the
+first document."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/citedBy> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/citedBy> "cited by"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/citedBy> "unstable")
+InverseObjectProperties(<http://purl.org/ontology/bibo/citedBy> <http://purl.org/ontology/bibo/cites>)
+ObjectPropertyDomain(<http://purl.org/ontology/bibo/citedBy> <http://purl.org/ontology/bibo/Document>)
+ObjectPropertyRange(<http://purl.org/ontology/bibo/citedBy> <http://purl.org/ontology/bibo/Document>)
+
+# Object Property: <http://purl.org/ontology/bibo/cites> (cites)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/cites> "Relates a document to another document that is cited
+by the first document as reference, comment, review, quotation or for
+another purpose."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/cites> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/cites> "cites"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/cites> "unstable")
+SubObjectPropertyOf(<http://purl.org/ontology/bibo/cites> <http://purl.org/dc/terms/references>)
+ObjectPropertyDomain(<http://purl.org/ontology/bibo/cites> <http://purl.org/ontology/bibo/Document>)
+ObjectPropertyRange(<http://purl.org/ontology/bibo/cites> <http://purl.org/ontology/bibo/Document>)
+
+# Object Property: <http://purl.org/ontology/bibo/court> (court)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/court> "A court associated with a legal document; for example, that which issues a decision."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/court> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/court> "court"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/court> "unstable")
+ObjectPropertyDomain(<http://purl.org/ontology/bibo/court> <http://purl.org/ontology/bibo/LegalDocument>)
+ObjectPropertyRange(<http://purl.org/ontology/bibo/court> <http://xmlns.com/foaf/0.1/Organization>)
+
+# Object Property: <http://purl.org/ontology/bibo/degree> (degree)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/degree> "The thesis degree."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/degree> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/degree> "degree"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/degree> "unstable")
+ObjectPropertyDomain(<http://purl.org/ontology/bibo/degree> <http://purl.org/ontology/bibo/Thesis>)
+ObjectPropertyRange(<http://purl.org/ontology/bibo/degree> <http://purl.org/ontology/bibo/ThesisDegree>)
+
+# Object Property: <http://purl.org/ontology/bibo/director> (director)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/director> "A Film director."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/director> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/director> "director")
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/director> "stable")
+SubObjectPropertyOf(<http://purl.org/ontology/bibo/director> <http://purl.org/dc/terms/contributor>)
+ObjectPropertyDomain(<http://purl.org/ontology/bibo/director> <http://purl.org/ontology/bibo/AudioVisualDocument>)
+ObjectPropertyRange(<http://purl.org/ontology/bibo/director> <http://xmlns.com/foaf/0.1/Agent>)
+
+# Object Property: <http://purl.org/ontology/bibo/distributor> (distributor)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/distributor> "Distributor of a document or a collection of documents."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/distributor> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/distributor> "distributor"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/distributor> "stable")
+ObjectPropertyDomain(<http://purl.org/ontology/bibo/distributor> ObjectUnionOf(<http://purl.org/ontology/bibo/Collection> <http://purl.org/ontology/bibo/Document>))
+ObjectPropertyRange(<http://purl.org/ontology/bibo/distributor> <http://xmlns.com/foaf/0.1/Agent>)
+
+# Object Property: <http://purl.org/ontology/bibo/interviewee> (interviewee)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/interviewee> "An agent that is interviewed by another agent."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/interviewee> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/interviewee> "interviewee")
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/interviewee> "stable")
+SubObjectPropertyOf(<http://purl.org/ontology/bibo/interviewee> <http://purl.org/dc/terms/contributor>)
+ObjectPropertyDomain(<http://purl.org/ontology/bibo/interviewee> <http://xmlns.com/foaf/0.1/Agent>)
+ObjectPropertyRange(<http://purl.org/ontology/bibo/interviewee> <http://xmlns.com/foaf/0.1/Agent>)
+
+# Object Property: <http://purl.org/ontology/bibo/interviewer> (interviewer)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/interviewer> "An agent that interview another agent."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/interviewer> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/interviewer> "interviewer")
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/interviewer> "stable")
+SubObjectPropertyOf(<http://purl.org/ontology/bibo/interviewer> <http://purl.org/dc/terms/contributor>)
+ObjectPropertyDomain(<http://purl.org/ontology/bibo/interviewer> <http://xmlns.com/foaf/0.1/Agent>)
+ObjectPropertyRange(<http://purl.org/ontology/bibo/interviewer> <http://xmlns.com/foaf/0.1/Agent>)
+
+# Object Property: <http://purl.org/ontology/bibo/issuer> (issuer)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/issuer> "An entity responsible for issuing often informally published documents such as press releases, reports, etc.")
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/issuer> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/issuer> "issuer")
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/issuer> "unstable")
+SubObjectPropertyOf(<http://purl.org/ontology/bibo/issuer> <http://purl.org/dc/terms/publisher>)
+ObjectPropertyDomain(<http://purl.org/ontology/bibo/issuer> ObjectUnionOf(<http://purl.org/ontology/bibo/Collection> <http://purl.org/ontology/bibo/Document>))
+ObjectPropertyRange(<http://purl.org/ontology/bibo/issuer> <http://xmlns.com/foaf/0.1/Agent>)
+
+# Object Property: <http://purl.org/ontology/bibo/performer> (performer)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/performer> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/performer> "performer")
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/performer> "stable")
+SubObjectPropertyOf(<http://purl.org/ontology/bibo/performer> <http://purl.org/dc/terms/contributor>)
+ObjectPropertyDomain(<http://purl.org/ontology/bibo/performer> <http://purl.org/ontology/bibo/Performance>)
+ObjectPropertyRange(<http://purl.org/ontology/bibo/performer> <http://xmlns.com/foaf/0.1/Agent>)
+
+# Object Property: <http://purl.org/ontology/bibo/presentedAt> (presented at)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/presentedAt> "Relates a document to an event; for example, a paper to a conference."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/presentedAt> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/presentedAt> "presented at"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/presentedAt> "unstable")
+SubObjectPropertyOf(<http://purl.org/ontology/bibo/presentedAt> <http://purl.org/NET/c4dm/event.owl#produced_in>)
+InverseObjectProperties(<http://purl.org/ontology/bibo/presentedAt> <http://purl.org/ontology/bibo/presents>)
+ObjectPropertyDomain(<http://purl.org/ontology/bibo/presentedAt> <http://purl.org/ontology/bibo/Document>)
+ObjectPropertyRange(<http://purl.org/ontology/bibo/presentedAt> <http://purl.org/ontology/bibo/Event>)
+
+# Object Property: <http://purl.org/ontology/bibo/presents> (presents)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/presents> "Relates an event to associated documents; for example, conference to a paper."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/presents> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/presents> "presents"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/presents> "unstable")
+SubObjectPropertyOf(<http://purl.org/ontology/bibo/presents> <http://purl.org/NET/c4dm/event.owl#product>)
+ObjectPropertyDomain(<http://purl.org/ontology/bibo/presents> <http://purl.org/ontology/bibo/Event>)
+ObjectPropertyRange(<http://purl.org/ontology/bibo/presents> <http://purl.org/ontology/bibo/Document>)
+
+# Object Property: <http://purl.org/ontology/bibo/recipient> (recipient)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/recipient> "An agent that receives a communication document."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/recipient> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/recipient> "recipient")
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/recipient> "stable")
+ObjectPropertyDomain(<http://purl.org/ontology/bibo/recipient> <http://purl.org/ontology/bibo/PersonalCommunicationDocument>)
+ObjectPropertyRange(<http://purl.org/ontology/bibo/recipient> <http://xmlns.com/foaf/0.1/Agent>)
+
+# Object Property: <http://purl.org/ontology/bibo/reproducedIn> (<http://purl.org/ontology/bibo/reproducedIn>)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/reproducedIn> "The resource in which another resource is reproduced."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/reproducedIn> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/reproducedIn> "unstable")
+SubObjectPropertyOf(<http://purl.org/ontology/bibo/reproducedIn> <http://purl.org/dc/terms/isPartOf>)
+ObjectPropertyDomain(<http://purl.org/ontology/bibo/reproducedIn> <http://purl.org/ontology/bibo/Document>)
+ObjectPropertyRange(<http://purl.org/ontology/bibo/reproducedIn> <http://purl.org/ontology/bibo/Document>)
+
+# Object Property: <http://purl.org/ontology/bibo/reversedBy> (<http://purl.org/ontology/bibo/reversedBy>)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/reversedBy> "A legal decision that reverses a ruling."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/reversedBy> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+SubObjectPropertyOf(<http://purl.org/ontology/bibo/reversedBy> <http://purl.org/ontology/bibo/subsequentLegalDecision>)
+ObjectPropertyDomain(<http://purl.org/ontology/bibo/reversedBy> <http://purl.org/ontology/bibo/LegalDecision>)
+ObjectPropertyRange(<http://purl.org/ontology/bibo/reversedBy> <http://purl.org/ontology/bibo/LegalDecision>)
+
+# Object Property: <http://purl.org/ontology/bibo/reviewOf> (review of)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/reviewOf> "Relates a review document to a reviewed thing (resource, item, etc.)."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/reviewOf> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/reviewOf> "review of"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/reviewOf> "stable")
+SubObjectPropertyOf(<http://purl.org/ontology/bibo/reviewOf> <http://purl.org/dc/terms/relation>)
+ObjectPropertyDomain(<http://purl.org/ontology/bibo/reviewOf> <http://purl.org/ontology/bibo/Document>)
+ObjectPropertyRange(<http://purl.org/ontology/bibo/reviewOf> rdfs:Resource)
+
+# Object Property: <http://purl.org/ontology/bibo/status> (status)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/status> "The publication status of (typically academic) content."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/status> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/status> "status"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/status> "stable")
+ObjectPropertyDomain(<http://purl.org/ontology/bibo/status> <http://purl.org/ontology/bibo/Document>)
+ObjectPropertyRange(<http://purl.org/ontology/bibo/status> <http://purl.org/ontology/bibo/DocumentStatus>)
+
+# Object Property: <http://purl.org/ontology/bibo/subsequentLegalDecision> (<http://purl.org/ontology/bibo/subsequentLegalDecision>)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/subsequentLegalDecision> "A legal decision on appeal that takes action on a case (affirming it, reversing it, etc.)."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/subsequentLegalDecision> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+SubObjectPropertyOf(<http://purl.org/ontology/bibo/subsequentLegalDecision> <http://purl.org/dc/terms/isReferencedBy>)
+ObjectPropertyDomain(<http://purl.org/ontology/bibo/subsequentLegalDecision> <http://purl.org/ontology/bibo/LegalDecision>)
+ObjectPropertyRange(<http://purl.org/ontology/bibo/subsequentLegalDecision> <http://purl.org/ontology/bibo/LegalDecision>)
+
+# Object Property: <http://purl.org/ontology/bibo/transcriptOf> (transcript of)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/transcriptOf> "Relates a document to some transcribed original."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/transcriptOf> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/transcriptOf> "transcript of"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/transcriptOf> "unstable")
+SubObjectPropertyOf(<http://purl.org/ontology/bibo/transcriptOf> <http://purl.org/dc/terms/relation>)
+ObjectPropertyDomain(<http://purl.org/ontology/bibo/transcriptOf> <http://purl.org/ontology/bibo/Document>)
+ObjectPropertyRange(<http://purl.org/ontology/bibo/transcriptOf> rdfs:Resource)
+
+# Object Property: <http://purl.org/ontology/bibo/translationOf> (translation of)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/translationOf> "Relates a translated document to the original document."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/translationOf> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/translationOf> "translation of"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/translationOf> "stable")
+SubObjectPropertyOf(<http://purl.org/ontology/bibo/translationOf> <http://purl.org/dc/terms/isVersionOf>)
+ObjectPropertyDomain(<http://purl.org/ontology/bibo/translationOf> <http://purl.org/ontology/bibo/Document>)
+ObjectPropertyRange(<http://purl.org/ontology/bibo/translationOf> <http://purl.org/ontology/bibo/Document>)
+
+# Object Property: <http://purl.org/ontology/bibo/translator> (translator)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/translator> "A person who translates written document from one language to another."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/translator> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/translator> "translator")
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/translator> "stable")
+SubObjectPropertyOf(<http://purl.org/ontology/bibo/translator> <http://purl.org/dc/terms/contributor>)
+ObjectPropertyDomain(<http://purl.org/ontology/bibo/translator> ObjectUnionOf(<http://purl.org/ontology/bibo/Collection> <http://purl.org/ontology/bibo/Document>))
+ObjectPropertyRange(<http://purl.org/ontology/bibo/translator> <http://xmlns.com/foaf/0.1/Agent>)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://prismstandard.org/namespaces/1.2/basic/doi> (<http://prismstandard.org/namespaces/1.2/basic/doi>)
+
+EquivalentDataProperties(<http://prismstandard.org/namespaces/1.2/basic/doi> <http://purl.org/ontology/bibo/doi>)
+
+# Data Property: <http://prismstandard.org/namespaces/1.2/basic/eIssn> (<http://prismstandard.org/namespaces/1.2/basic/eIssn>)
+
+EquivalentDataProperties(<http://prismstandard.org/namespaces/1.2/basic/eIssn> <http://purl.org/ontology/bibo/eissn>)
+
+# Data Property: <http://prismstandard.org/namespaces/1.2/basic/edition> (<http://prismstandard.org/namespaces/1.2/basic/edition>)
+
+EquivalentDataProperties(<http://prismstandard.org/namespaces/1.2/basic/edition> <http://purl.org/ontology/bibo/edition>)
+
+# Data Property: <http://prismstandard.org/namespaces/1.2/basic/endingPage> (<http://prismstandard.org/namespaces/1.2/basic/endingPage>)
+
+EquivalentDataProperties(<http://prismstandard.org/namespaces/1.2/basic/endingPage> <http://purl.org/ontology/bibo/pageEnd>)
+
+# Data Property: <http://prismstandard.org/namespaces/1.2/basic/isbn> (<http://prismstandard.org/namespaces/1.2/basic/isbn>)
+
+EquivalentDataProperties(<http://prismstandard.org/namespaces/1.2/basic/isbn> <http://purl.org/ontology/bibo/isbn>)
+
+# Data Property: <http://prismstandard.org/namespaces/1.2/basic/issn> (<http://prismstandard.org/namespaces/1.2/basic/issn>)
+
+EquivalentDataProperties(<http://prismstandard.org/namespaces/1.2/basic/issn> <http://purl.org/ontology/bibo/issn>)
+
+# Data Property: <http://prismstandard.org/namespaces/1.2/basic/issue> (<http://prismstandard.org/namespaces/1.2/basic/issue>)
+
+EquivalentDataProperties(<http://prismstandard.org/namespaces/1.2/basic/issue> <http://purl.org/ontology/bibo/issue>)
+
+# Data Property: <http://prismstandard.org/namespaces/1.2/basic/number> (<http://prismstandard.org/namespaces/1.2/basic/number>)
+
+EquivalentDataProperties(<http://prismstandard.org/namespaces/1.2/basic/number> <http://purl.org/ontology/bibo/locator>)
+
+# Data Property: <http://prismstandard.org/namespaces/1.2/basic/startingPage> (<http://prismstandard.org/namespaces/1.2/basic/startingPage>)
+
+EquivalentDataProperties(<http://prismstandard.org/namespaces/1.2/basic/startingPage> <http://purl.org/ontology/bibo/pageStart>)
+
+# Data Property: <http://prismstandard.org/namespaces/1.2/basic/volume> (<http://prismstandard.org/namespaces/1.2/basic/volume>)
+
+EquivalentDataProperties(<http://prismstandard.org/namespaces/1.2/basic/volume> <http://purl.org/ontology/bibo/volume>)
+
+# Data Property: <http://purl.org/ontology/bibo/abstract> (abstract)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/abstract> "A summary of the resource.")
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/abstract> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/abstract> "abstract")
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/abstract> "stable")
+DataPropertyDomain(<http://purl.org/ontology/bibo/abstract> rdfs:Resource)
+
+# Data Property: <http://purl.org/ontology/bibo/asin> (<http://purl.org/ontology/bibo/asin>)
+
+SubDataPropertyOf(<http://purl.org/ontology/bibo/asin> <http://purl.org/ontology/bibo/identifier>)
+DataPropertyDomain(<http://purl.org/ontology/bibo/asin> ObjectUnionOf(<http://purl.org/ontology/bibo/Collection> <http://purl.org/ontology/bibo/Document>))
+
+# Data Property: <http://purl.org/ontology/bibo/chapter> (chapter)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/chapter> "An chapter number"@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/chapter> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/chapter> "chapter"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/chapter> "unstable")
+SubDataPropertyOf(<http://purl.org/ontology/bibo/chapter> <http://purl.org/ontology/bibo/locator>)
+DataPropertyDomain(<http://purl.org/ontology/bibo/chapter> <http://purl.org/ontology/bibo/BookSection>)
+
+# Data Property: <http://purl.org/ontology/bibo/coden> (<http://purl.org/ontology/bibo/coden>)
+
+SubDataPropertyOf(<http://purl.org/ontology/bibo/coden> <http://purl.org/ontology/bibo/identifier>)
+DataPropertyDomain(<http://purl.org/ontology/bibo/coden> ObjectUnionOf(<http://purl.org/ontology/bibo/Collection> <http://purl.org/ontology/bibo/Document>))
+
+# Data Property: <http://purl.org/ontology/bibo/doi> (<http://purl.org/ontology/bibo/doi>)
+
+SubDataPropertyOf(<http://purl.org/ontology/bibo/doi> <http://purl.org/ontology/bibo/identifier>)
+DataPropertyDomain(<http://purl.org/ontology/bibo/doi> ObjectUnionOf(<http://purl.org/ontology/bibo/Collection> <http://purl.org/ontology/bibo/Document>))
+
+# Data Property: <http://purl.org/ontology/bibo/eanucc13> (<http://purl.org/ontology/bibo/eanucc13>)
+
+SubDataPropertyOf(<http://purl.org/ontology/bibo/eanucc13> <http://purl.org/ontology/bibo/identifier>)
+DataPropertyDomain(<http://purl.org/ontology/bibo/eanucc13> ObjectUnionOf(<http://purl.org/ontology/bibo/Collection> <http://purl.org/ontology/bibo/Document>))
+
+# Data Property: <http://purl.org/ontology/bibo/edition> (edition)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/edition> "The name defining a special edition of a document. Normally its a literal value composed of a version number and words."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/edition> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/edition> "edition"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/edition> "stable")
+DataPropertyDomain(<http://purl.org/ontology/bibo/edition> <http://purl.org/ontology/bibo/Document>)
+
+# Data Property: <http://purl.org/ontology/bibo/eissn> (<http://purl.org/ontology/bibo/eissn>)
+
+SubDataPropertyOf(<http://purl.org/ontology/bibo/eissn> <http://purl.org/ontology/bibo/identifier>)
+DataPropertyDomain(<http://purl.org/ontology/bibo/eissn> <http://purl.org/ontology/bibo/Collection>)
+
+# Data Property: <http://purl.org/ontology/bibo/gtin14> (<http://purl.org/ontology/bibo/gtin14>)
+
+SubDataPropertyOf(<http://purl.org/ontology/bibo/gtin14> <http://purl.org/ontology/bibo/identifier>)
+DataPropertyDomain(<http://purl.org/ontology/bibo/gtin14> ObjectUnionOf(<http://purl.org/ontology/bibo/Collection> <http://purl.org/ontology/bibo/Document>))
+
+# Data Property: <http://purl.org/ontology/bibo/identifier> (<http://purl.org/ontology/bibo/identifier>)
+
+DataPropertyDomain(<http://purl.org/ontology/bibo/identifier> ObjectUnionOf(<http://purl.org/ontology/bibo/Collection> <http://purl.org/ontology/bibo/Document>))
+
+# Data Property: <http://purl.org/ontology/bibo/isbn> (<http://purl.org/ontology/bibo/isbn>)
+
+SubDataPropertyOf(<http://purl.org/ontology/bibo/isbn> <http://purl.org/ontology/bibo/identifier>)
+
+# Data Property: <http://purl.org/ontology/bibo/isbn10> (<http://purl.org/ontology/bibo/isbn10>)
+
+SubDataPropertyOf(<http://purl.org/ontology/bibo/isbn10> <http://purl.org/ontology/bibo/isbn>)
+DataPropertyDomain(<http://purl.org/ontology/bibo/isbn10> ObjectUnionOf(<http://purl.org/ontology/bibo/Collection> <http://purl.org/ontology/bibo/Document>))
+
+# Data Property: <http://purl.org/ontology/bibo/isbn13> (<http://purl.org/ontology/bibo/isbn13>)
+
+SubDataPropertyOf(<http://purl.org/ontology/bibo/isbn13> <http://purl.org/ontology/bibo/isbn>)
+DataPropertyDomain(<http://purl.org/ontology/bibo/isbn13> ObjectUnionOf(<http://purl.org/ontology/bibo/Collection> <http://purl.org/ontology/bibo/Document>))
+
+# Data Property: <http://purl.org/ontology/bibo/issn> (<http://purl.org/ontology/bibo/issn>)
+
+SubDataPropertyOf(<http://purl.org/ontology/bibo/issn> <http://purl.org/ontology/bibo/identifier>)
+DataPropertyDomain(<http://purl.org/ontology/bibo/issn> <http://purl.org/ontology/bibo/Collection>)
+
+# Data Property: <http://purl.org/ontology/bibo/issue> (issue)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/issue> "An issue number"@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/issue> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/issue> "issue"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/issue> "stable")
+SubDataPropertyOf(<http://purl.org/ontology/bibo/issue> <http://purl.org/ontology/bibo/locator>)
+DataPropertyDomain(<http://purl.org/ontology/bibo/issue> <http://purl.org/ontology/bibo/Issue>)
+
+# Data Property: <http://purl.org/ontology/bibo/lccn> (<http://purl.org/ontology/bibo/lccn>)
+
+SubDataPropertyOf(<http://purl.org/ontology/bibo/lccn> <http://purl.org/ontology/bibo/identifier>)
+DataPropertyDomain(<http://purl.org/ontology/bibo/lccn> ObjectUnionOf(<http://purl.org/ontology/bibo/Collection> <http://purl.org/ontology/bibo/Document>))
+
+# Data Property: <http://purl.org/ontology/bibo/locator> (locator)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/locator> "A description (often numeric) that locates an item within a containing document or collection."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/locator> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/locator> "locator"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/locator> "stable")
+DataPropertyDomain(<http://purl.org/ontology/bibo/locator> <http://purl.org/ontology/bibo/Document>)
+
+# Data Property: <http://purl.org/ontology/bibo/numPages> (number of pages)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/numPages> "The number of pages contained in a document"@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/numPages> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/numPages> "number of pages"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/numPages> "stable")
+DataPropertyDomain(<http://purl.org/ontology/bibo/numPages> <http://purl.org/ontology/bibo/Document>)
+
+# Data Property: <http://purl.org/ontology/bibo/number> (number)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/number> "A generic item or document number. Not to be confused with issue number."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/number> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/number> "number"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/number> "stable")
+DataPropertyDomain(<http://purl.org/ontology/bibo/number> <http://purl.org/ontology/bibo/Document>)
+
+# Data Property: <http://purl.org/ontology/bibo/oclcnum> (<http://purl.org/ontology/bibo/oclcnum>)
+
+SubDataPropertyOf(<http://purl.org/ontology/bibo/oclcnum> <http://purl.org/ontology/bibo/identifier>)
+DataPropertyDomain(<http://purl.org/ontology/bibo/oclcnum> ObjectUnionOf(<http://purl.org/ontology/bibo/Collection> <http://purl.org/ontology/bibo/Document>))
+
+# Data Property: <http://purl.org/ontology/bibo/pageEnd> (page end)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/pageEnd> "Ending page number within a continuous page range."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/pageEnd> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/pageEnd> "page end"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/pageEnd> "stable")
+SubDataPropertyOf(<http://purl.org/ontology/bibo/pageEnd> <http://purl.org/ontology/bibo/locator>)
+DataPropertyDomain(<http://purl.org/ontology/bibo/pageEnd> <http://purl.org/ontology/bibo/Document>)
+
+# Data Property: <http://purl.org/ontology/bibo/pageStart> (page start)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/pageStart> "Starting page number within a continuous page range."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/pageStart> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/pageStart> "page start"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/pageStart> "stable")
+SubDataPropertyOf(<http://purl.org/ontology/bibo/pageStart> <http://purl.org/ontology/bibo/locator>)
+DataPropertyDomain(<http://purl.org/ontology/bibo/pageStart> <http://purl.org/ontology/bibo/Document>)
+
+# Data Property: <http://purl.org/ontology/bibo/pmid> (<http://purl.org/ontology/bibo/pmid>)
+
+SubDataPropertyOf(<http://purl.org/ontology/bibo/pmid> <http://purl.org/ontology/bibo/identifier>)
+DataPropertyDomain(<http://purl.org/ontology/bibo/pmid> ObjectUnionOf(<http://purl.org/ontology/bibo/Collection> <http://purl.org/ontology/bibo/Document>))
+
+# Data Property: <http://purl.org/ontology/bibo/prefixName> (prefix name)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/prefixName> "The prefix of a name"@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/prefixName> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/prefixName> "prefix name"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/prefixName> "stable")
+DataPropertyDomain(<http://purl.org/ontology/bibo/prefixName> <http://xmlns.com/foaf/0.1/Agent>)
+
+# Data Property: <http://purl.org/ontology/bibo/section> (section)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/section> "A section number"@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/section> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/section> "section"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/section> "unstable")
+SubDataPropertyOf(<http://purl.org/ontology/bibo/section> <http://purl.org/ontology/bibo/locator>)
+DataPropertyDomain(<http://purl.org/ontology/bibo/section> <http://purl.org/ontology/bibo/Document>)
+
+# Data Property: <http://purl.org/ontology/bibo/shortDescription> (<http://purl.org/ontology/bibo/shortDescription>)
+
+DataPropertyDomain(<http://purl.org/ontology/bibo/shortDescription> <http://purl.org/ontology/bibo/Document>)
+
+# Data Property: <http://purl.org/ontology/bibo/sici> (<http://purl.org/ontology/bibo/sici>)
+
+SubDataPropertyOf(<http://purl.org/ontology/bibo/sici> <http://purl.org/ontology/bibo/identifier>)
+DataPropertyDomain(<http://purl.org/ontology/bibo/sici> ObjectUnionOf(<http://purl.org/ontology/bibo/Collection> <http://purl.org/ontology/bibo/Document>))
+
+# Data Property: <http://purl.org/ontology/bibo/upc> (<http://purl.org/ontology/bibo/upc>)
+
+SubDataPropertyOf(<http://purl.org/ontology/bibo/upc> <http://purl.org/ontology/bibo/identifier>)
+DataPropertyDomain(<http://purl.org/ontology/bibo/upc> ObjectUnionOf(<http://purl.org/ontology/bibo/Collection> <http://purl.org/ontology/bibo/Document>))
+
+# Data Property: <http://purl.org/ontology/bibo/uri> (uri)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/uri> "Universal Resource Identifier of a document"@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/uri> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/uri> "uri"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/uri> "stable")
+SubDataPropertyOf(<http://purl.org/ontology/bibo/uri> <http://purl.org/ontology/bibo/identifier>)
+DataPropertyDomain(<http://purl.org/ontology/bibo/uri> ObjectUnionOf(<http://purl.org/ontology/bibo/Collection> <http://purl.org/ontology/bibo/Document>))
+
+# Data Property: <http://purl.org/ontology/bibo/volume> (volume)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/volume> "A volume number"@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/volume> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/volume> "volume"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/volume> "stable")
+SubDataPropertyOf(<http://purl.org/ontology/bibo/volume> <http://purl.org/ontology/bibo/locator>)
+DataPropertyDomain(<http://purl.org/ontology/bibo/volume> <http://purl.org/ontology/bibo/Document>)
 
 
 
@@ -38,13 +654,485 @@ Declaration(NamedIndividual(<http://purl.org/ontology/bibo/status/unpublished>))
 #   Classes
 ############################
 
+# Class: <http://purl.org/NET/c4dm/event.owl#Event> (<http://purl.org/NET/c4dm/event.owl#Event>)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#scopeNote> <http://purl.org/NET/c4dm/event.owl#Event> "Used to describe bibliographic related events such as conferences, hearing, etc."@en)
+
+# Class: <http://purl.org/dc/terms/Agent> (<http://purl.org/dc/terms/Agent>)
+
+EquivalentClasses(<http://purl.org/dc/terms/Agent> <http://xmlns.com/foaf/0.1/Agent>)
+
+# Class: <http://purl.org/ontology/bibo/AcademicArticle> (Academic Article)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/AcademicArticle> "A scholarly academic article, typically published in a journal."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/AcademicArticle> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/AcademicArticle> "Academic Article"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/AcademicArticle> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/AcademicArticle> <http://purl.org/ontology/bibo/Article>)
+
+# Class: <http://purl.org/ontology/bibo/Article> (Article)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Article> "A written composition in prose, usually nonfiction, on a specific topic, forming an independent part of a book or other publication, as a newspaper or magazine."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Article> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Article> "Article"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Article> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Article> <http://purl.org/ontology/bibo/Document>)
+
+# Class: <http://purl.org/ontology/bibo/AudioDocument> (audio document)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/AudioDocument> "An audio document; aka record."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/AudioDocument> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/AudioDocument> "audio document"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/AudioDocument> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/AudioDocument> <http://purl.org/ontology/bibo/Document>)
+
+# Class: <http://purl.org/ontology/bibo/AudioVisualDocument> (audio-visual document)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/AudioVisualDocument> "An audio-visual document; film, video, and so forth."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/AudioVisualDocument> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/AudioVisualDocument> "audio-visual document"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/AudioVisualDocument> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/AudioVisualDocument> <http://purl.org/ontology/bibo/Document>)
+
+# Class: <http://purl.org/ontology/bibo/Bill> (Bill)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Bill> "Draft legislation presented for discussion to a legal body."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Bill> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Bill> "Bill"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Bill> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Bill> <http://purl.org/ontology/bibo/Legislation>)
+
+# Class: <http://purl.org/ontology/bibo/Book> (Book)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Book> "A written or printed work of fiction or nonfiction, usually on sheets of paper fastened or bound together within covers."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Book> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Book> "Book"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Book> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Book> <http://purl.org/ontology/bibo/Document>)
+
+# Class: <http://purl.org/ontology/bibo/BookSection> (Book Section)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/BookSection> "A section of a book."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/BookSection> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/BookSection> "Book Section"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/BookSection> "unstable")
+SubClassOf(<http://purl.org/ontology/bibo/BookSection> <http://purl.org/ontology/bibo/DocumentPart>)
+
+# Class: <http://purl.org/ontology/bibo/Brief> (Brief)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Brief> "A written argument submitted to a court."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Brief> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Brief> "Brief"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Brief> "unstable")
+SubClassOf(<http://purl.org/ontology/bibo/Brief> <http://purl.org/ontology/bibo/LegalCaseDocument>)
+
+# Class: <http://purl.org/ontology/bibo/Chapter> (Chapter)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Chapter> "A chapter of a book."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Chapter> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Chapter> "Chapter"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Chapter> "unstable")
+SubClassOf(<http://purl.org/ontology/bibo/Chapter> <http://purl.org/ontology/bibo/BookSection>)
+
+# Class: <http://purl.org/ontology/bibo/Code> (Code)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Code> "A collection of statutes."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Code> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Code> "Code"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Code> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Code> <http://purl.org/ontology/bibo/Periodical>)
+SubClassOf(<http://purl.org/ontology/bibo/Code> ObjectAllValuesFrom(<http://purl.org/dc/terms/hasPart> <http://purl.org/ontology/bibo/Legislation>))
+SubClassOf(<http://purl.org/ontology/bibo/Code> ObjectMinCardinality(1 <http://purl.org/dc/terms/hasPart>))
+
+# Class: <http://purl.org/ontology/bibo/CollectedDocument> (Collected Document)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/CollectedDocument> "A document that simultaneously contains other documents."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/CollectedDocument> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/CollectedDocument> "Collected Document"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/CollectedDocument> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/CollectedDocument> <http://purl.org/ontology/bibo/Document>)
+SubClassOf(<http://purl.org/ontology/bibo/CollectedDocument> ObjectAllValuesFrom(<http://purl.org/dc/terms/hasPart> <http://purl.org/ontology/bibo/Document>))
+SubClassOf(<http://purl.org/ontology/bibo/CollectedDocument> ObjectMinCardinality(1 <http://purl.org/dc/terms/hasPart>))
+
+# Class: <http://purl.org/ontology/bibo/Collection> (Collection)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Collection> "A collection of Documents or Collections"@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Collection> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Collection> "Collection"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Collection> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Collection> ObjectAllValuesFrom(<http://purl.org/dc/terms/hasPart> ObjectUnionOf(<http://purl.org/ontology/bibo/Collection> <http://purl.org/ontology/bibo/Document>)))
+
+# Class: <http://purl.org/ontology/bibo/Conference> (Conference)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Conference> "A meeting for consultation or discussion."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Conference> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Conference> "Conference"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Conference> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Conference> <http://purl.org/NET/c4dm/event.owl#Event>)
+
+# Class: <http://purl.org/ontology/bibo/CourtReporter> (Court Reporter)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/CourtReporter> "A collection of legal cases."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/CourtReporter> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/CourtReporter> "Court Reporter"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/CourtReporter> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/CourtReporter> <http://purl.org/ontology/bibo/Periodical>)
+SubClassOf(<http://purl.org/ontology/bibo/CourtReporter> ObjectAllValuesFrom(<http://purl.org/dc/terms/hasPart> <http://purl.org/ontology/bibo/LegalDocument>))
+SubClassOf(<http://purl.org/ontology/bibo/CourtReporter> ObjectMinCardinality(1 <http://purl.org/dc/terms/hasPart>))
+
+# Class: <http://purl.org/ontology/bibo/Document> (Document)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Document> "A document (noun) is a bounded physical representation of body of information designed with the capacity (and usually intent) to communicate. A document may manifest symbolic, diagrammatic or sensory-representational information."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Document> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Document> "Document"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Document> "stable")
+EquivalentClasses(<http://purl.org/ontology/bibo/Document> <http://xmlns.com/foaf/0.1/Document>)
+
+# Class: <http://purl.org/ontology/bibo/DocumentPart> (document part)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/DocumentPart> "a distinct part of a larger document or collected document."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/DocumentPart> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/DocumentPart> "document part"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/DocumentPart> "unstable")
+SubClassOf(<http://purl.org/ontology/bibo/DocumentPart> <http://purl.org/ontology/bibo/Document>)
+SubClassOf(<http://purl.org/ontology/bibo/DocumentPart> ObjectMaxCardinality(1 <http://purl.org/dc/terms/isPartOf>))
+
 # Class: <http://purl.org/ontology/bibo/DocumentStatus> (Document Status)
 
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/DocumentStatus> "The status of the publication of a document."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/DocumentStatus> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
 AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/DocumentStatus> "Document Status"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/DocumentStatus> "stable")
+
+# Class: <http://purl.org/ontology/bibo/EditedBook> (Edited Book)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/EditedBook> "An edited book."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/EditedBook> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/EditedBook> "Edited Book"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/EditedBook> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/EditedBook> <http://purl.org/ontology/bibo/CollectedDocument>)
+
+# Class: <http://purl.org/ontology/bibo/Excerpt> (Excerpt)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Excerpt> "A passage selected from a larger work."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Excerpt> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Excerpt> "Excerpt"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Excerpt> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Excerpt> <http://purl.org/ontology/bibo/DocumentPart>)
+
+# Class: <http://purl.org/ontology/bibo/Film> (Film)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Film> "aka movie."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Film> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Film> "Film"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Film> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Film> <http://purl.org/ontology/bibo/AudioVisualDocument>)
+
+# Class: <http://purl.org/ontology/bibo/Hearing> (Hearing)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Hearing> "An instance or a session in which testimony and arguments are presented, esp. before an official, as a judge in a lawsuit."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Hearing> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Hearing> "Hearing"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Hearing> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Hearing> <http://purl.org/NET/c4dm/event.owl#Event>)
+
+# Class: <http://purl.org/ontology/bibo/Image> (Image)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Image> "A document that presents visual or diagrammatic information."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Image> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Image> "Image"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Image> "stable")
+EquivalentClasses(<http://purl.org/ontology/bibo/Image> <http://xmlns.com/foaf/0.1/Image>)
+SubClassOf(<http://purl.org/ontology/bibo/Image> <http://purl.org/ontology/bibo/Document>)
+
+# Class: <http://purl.org/ontology/bibo/Interview> (Interview)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Interview> "A formalized discussion between two or more people."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Interview> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Interview> "Interview"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Interview> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Interview> <http://purl.org/NET/c4dm/event.owl#Event>)
+
+# Class: <http://purl.org/ontology/bibo/Issue> (Issue)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Issue> "something that is printed or published and distributed, esp. a given number of a periodical"@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Issue> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Issue> "Issue"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Issue> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Issue> <http://purl.org/ontology/bibo/CollectedDocument>)
+SubClassOf(<http://purl.org/ontology/bibo/Issue> ObjectAllValuesFrom(<http://purl.org/dc/terms/hasPart> <http://purl.org/ontology/bibo/Article>))
+SubClassOf(<http://purl.org/ontology/bibo/Issue> ObjectMinCardinality(1 <http://purl.org/dc/terms/hasPart>))
+
+# Class: <http://purl.org/ontology/bibo/Journal> (Journal)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Journal> "A periodical of scholarly journal Articles."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Journal> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Journal> "Journal"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Journal> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Journal> <http://purl.org/ontology/bibo/Periodical>)
+SubClassOf(<http://purl.org/ontology/bibo/Journal> ObjectAllValuesFrom(<http://purl.org/dc/terms/hasPart> <http://purl.org/ontology/bibo/Issue>))
+SubClassOf(<http://purl.org/ontology/bibo/Journal> ObjectMinCardinality(1 <http://purl.org/dc/terms/hasPart>))
+
+# Class: <http://purl.org/ontology/bibo/LegalCaseDocument> (Legal Case Document)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/LegalCaseDocument> "A document accompanying a legal case."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/LegalCaseDocument> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/LegalCaseDocument> "Legal Case Document"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/LegalCaseDocument> "unstable")
+SubClassOf(<http://purl.org/ontology/bibo/LegalCaseDocument> <http://purl.org/ontology/bibo/LegalDocument>)
+
+# Class: <http://purl.org/ontology/bibo/LegalDecision> (Decision)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/LegalDecision> "A document containing an authoritative determination (as a decree or judgment) made after consideration of facts or law."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/LegalDecision> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/LegalDecision> "Decision"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/LegalDecision> "unstable")
+SubClassOf(<http://purl.org/ontology/bibo/LegalDecision> <http://purl.org/ontology/bibo/LegalCaseDocument>)
+
+# Class: <http://purl.org/ontology/bibo/LegalDocument> (Legal Document)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/LegalDocument> "A legal document; for example, a court decision, a brief, and so forth."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/LegalDocument> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/LegalDocument> "Legal Document"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/LegalDocument> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/LegalDocument> <http://purl.org/ontology/bibo/Document>)
+
+# Class: <http://purl.org/ontology/bibo/Legislation> (Legislation)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Legislation> "A legal document proposing or enacting a law or a group of laws."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Legislation> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Legislation> "Legislation"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Legislation> "unstable")
+SubClassOf(<http://purl.org/ontology/bibo/Legislation> <http://purl.org/ontology/bibo/LegalDocument>)
+
+# Class: <http://purl.org/ontology/bibo/Letter> (Letter)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Letter> "A written or printed communication addressed to a person or organization and usually transmitted by mail."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Letter> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Letter> "Letter"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Letter> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Letter> <http://purl.org/ontology/bibo/PersonalCommunicationDocument>)
+
+# Class: <http://purl.org/ontology/bibo/Magazine> (Magazine)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Magazine> "A periodical of magazine Articles. A magazine is a publication that is issued periodically, usually bound in a paper cover, and typically contains essays, stories, poems, etc., by many writers, and often photographs and drawings, frequently specializing in a particular subject or area, as hobbies, news, or sports."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Magazine> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Magazine> "Magazine"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Magazine> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Magazine> <http://purl.org/ontology/bibo/Periodical>)
+SubClassOf(<http://purl.org/ontology/bibo/Magazine> ObjectAllValuesFrom(<http://purl.org/dc/terms/hasPart> <http://purl.org/ontology/bibo/Issue>))
+SubClassOf(<http://purl.org/ontology/bibo/Magazine> ObjectMinCardinality(1 <http://purl.org/dc/terms/hasPart>))
+
+# Class: <http://purl.org/ontology/bibo/Manual> (Manual)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Manual> "A small reference book, especially one giving instructions."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Manual> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Manual> "Manual"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Manual> "unstable")
+SubClassOf(<http://purl.org/ontology/bibo/Manual> <http://purl.org/ontology/bibo/Document>)
+
+# Class: <http://purl.org/ontology/bibo/Manuscript> (Manuscript)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Manuscript> "An unpublished Document, which may also be submitted to a publisher for publication."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Manuscript> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Manuscript> "Manuscript"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Manuscript> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Manuscript> <http://purl.org/ontology/bibo/Document>)
+
+# Class: <http://purl.org/ontology/bibo/Map> (Map)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Map> "A graphical depiction of geographic features."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Map> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Map> "Map"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Map> "unstable")
+SubClassOf(<http://purl.org/ontology/bibo/Map> <http://purl.org/ontology/bibo/Image>)
+
+# Class: <http://purl.org/ontology/bibo/Newspaper> (Newspaper)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Newspaper> "A periodical of documents, usually issued daily or weekly, containing current news, editorials, feature articles, and usually advertising."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Newspaper> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Newspaper> "Newspaper"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Newspaper> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Newspaper> <http://purl.org/ontology/bibo/Periodical>)
+SubClassOf(<http://purl.org/ontology/bibo/Newspaper> ObjectAllValuesFrom(<http://purl.org/dc/terms/hasPart> <http://purl.org/ontology/bibo/Issue>))
+SubClassOf(<http://purl.org/ontology/bibo/Newspaper> ObjectMinCardinality(1 <http://purl.org/dc/terms/hasPart>))
+
+# Class: <http://purl.org/ontology/bibo/Note> (Note)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Note> "Notes or annotations about a resource."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Note> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Note> "Note"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Note> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Note> <http://purl.org/ontology/bibo/Document>)
+
+# Class: <http://purl.org/ontology/bibo/Patent> (Patent)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Patent> "A document describing the exclusive right granted by a government to an inventor to manufacture, use, or sell an invention for a certain number of years."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Patent> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Patent> "Patent"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Patent> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Patent> <http://purl.org/ontology/bibo/Document>)
+
+# Class: <http://purl.org/ontology/bibo/Performance> (Performance)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Performance> "A public performance."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Performance> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Performance> "Performance"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Performance> "unstable")
+SubClassOf(<http://purl.org/ontology/bibo/Performance> <http://purl.org/NET/c4dm/event.owl#Event>)
+
+# Class: <http://purl.org/ontology/bibo/Periodical> (Periodical)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Periodical> "A group of related documents issued at regular intervals."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Periodical> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Periodical> "Periodical"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Periodical> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Periodical> <http://purl.org/ontology/bibo/Collection>)
+SubClassOf(<http://purl.org/ontology/bibo/Periodical> ObjectAllValuesFrom(<http://purl.org/dc/terms/hasPart> <http://purl.org/ontology/bibo/Issue>))
+SubClassOf(<http://purl.org/ontology/bibo/Periodical> ObjectMinCardinality(1 <http://purl.org/dc/terms/hasPart>))
+
+# Class: <http://purl.org/ontology/bibo/PersonalCommunicationDocument> (Personal Communication Document)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/PersonalCommunicationDocument> "A personal communication manifested in some document."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/PersonalCommunicationDocument> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/PersonalCommunicationDocument> "Personal Communication Document"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/PersonalCommunicationDocument> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/PersonalCommunicationDocument> <http://purl.org/ontology/bibo/Document>)
+
+# Class: <http://purl.org/ontology/bibo/Proceedings> (Proceedings)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Proceedings> "A compilation of documents published from an event, such as a conference."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Proceedings> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Proceedings> "Proceedings"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Proceedings> "unstable")
+SubClassOf(<http://purl.org/ontology/bibo/Proceedings> <http://purl.org/ontology/bibo/Book>)
+
+# Class: <http://purl.org/ontology/bibo/Quote> (Quote)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Quote> "An excerpted collection of words."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Quote> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Quote> "Quote"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Quote> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Quote> <http://purl.org/ontology/bibo/Excerpt>)
+
+# Class: <http://purl.org/ontology/bibo/ReferenceSource> (Reference Source)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/ReferenceSource> "A document that presents authoritative reference information, such as a dictionary or encylopedia ."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/ReferenceSource> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/ReferenceSource> "Reference Source"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/ReferenceSource> "unstable")
+SubClassOf(<http://purl.org/ontology/bibo/ReferenceSource> <http://purl.org/ontology/bibo/Document>)
+
+# Class: <http://purl.org/ontology/bibo/Report> (Report)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Report> "A document describing an account or statement describing in detail an event, situation, or the like, usually as the result of observation, inquiry, etc.."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Report> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Report> "Report"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Report> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Report> <http://purl.org/ontology/bibo/Document>)
+
+# Class: <http://purl.org/ontology/bibo/Series> (Series)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Series> "A loose, thematic, collection of Documents, often Books."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Series> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Series> "Series"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Series> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Series> <http://purl.org/ontology/bibo/Collection>)
+SubClassOf(<http://purl.org/ontology/bibo/Series> ObjectAllValuesFrom(<http://purl.org/dc/terms/hasPart> <http://purl.org/ontology/bibo/Document>))
+
+# Class: <http://purl.org/ontology/bibo/Slide> (Slide)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Slide> "A slide in a slideshow"@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Slide> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Slide> "Slide"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Slide> "unstable")
+SubClassOf(<http://purl.org/ontology/bibo/Slide> <http://purl.org/ontology/bibo/DocumentPart>)
+
+# Class: <http://purl.org/ontology/bibo/Slideshow> (Slideshow)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Slideshow> "A presentation of a series of slides, usually presented in front of an audience with written text and images."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Slideshow> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Slideshow> "Slideshow"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Slideshow> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Slideshow> <http://purl.org/ontology/bibo/Document>)
+SubClassOf(<http://purl.org/ontology/bibo/Slideshow> ObjectAllValuesFrom(<http://purl.org/dc/terms/hasPart> <http://purl.org/ontology/bibo/Slide>))
+
+# Class: <http://purl.org/ontology/bibo/Specification> (Specification)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Specification> "A document describing a specification."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Specification> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Specification> "Specification"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Specification> "testing")
+SubClassOf(<http://purl.org/ontology/bibo/Specification> <http://purl.org/ontology/bibo/Document>)
+
+# Class: <http://purl.org/ontology/bibo/Standard> (Standard)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Standard> "A document describing a standard: a specification organized through a standards body."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Standard> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Standard> "Standard"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Standard> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Standard> <http://purl.org/ontology/bibo/Specification>)
+
+# Class: <http://purl.org/ontology/bibo/Statute> (Statute)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Statute> "A bill enacted into law."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Statute> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Statute> "Statute"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Statute> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Statute> <http://purl.org/ontology/bibo/Legislation>)
+
+# Class: <http://purl.org/ontology/bibo/Thesis> (Thesis)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Thesis> "A document created to summarize research findings associated with the completion of an academic degree."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Thesis> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Thesis> "Thesis"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Thesis> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Thesis> <http://purl.org/ontology/bibo/Document>)
 
 # Class: <http://purl.org/ontology/bibo/ThesisDegree> (Thesis degree)
 
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/ThesisDegree> "The academic degree of a Thesis"@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/ThesisDegree> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
 AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/ThesisDegree> "Thesis degree"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/ThesisDegree> "stable")
+
+# Class: <http://purl.org/ontology/bibo/Webpage> (Webpage)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Webpage> "A web page is an online document available (at least initially) on the world wide web. A web page is written first and foremost to appear on the web, as distinct from other online resources such as books, manuscripts or audio documents which use the web primarily as a distribution mechanism alongside other more traditional methods such as print."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Webpage> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Webpage> "Webpage"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Webpage> "unstable")
+SubClassOf(<http://purl.org/ontology/bibo/Webpage> <http://purl.org/ontology/bibo/Document>)
+
+# Class: <http://purl.org/ontology/bibo/Website> (Website)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Website> "A group of Webpages accessible on the Web."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Website> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Website> "Website"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Website> "unstable")
+SubClassOf(<http://purl.org/ontology/bibo/Website> <http://purl.org/ontology/bibo/Collection>)
+SubClassOf(<http://purl.org/ontology/bibo/Website> ObjectAllValuesFrom(<http://purl.org/dc/terms/hasPart> <http://purl.org/ontology/bibo/Webpage>))
+SubClassOf(<http://purl.org/ontology/bibo/Website> ObjectMinCardinality(1 <http://purl.org/dc/terms/hasPart>))
+
+# Class: <http://purl.org/ontology/bibo/Workshop> (Workshop)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/Workshop> "A seminar, discussion group, or the like, that emphasizes zxchange of ideas and the demonstration and application of techniques, skills, etc."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/Workshop> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
+AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/Workshop> "Workshop"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/Workshop> "stable")
+SubClassOf(<http://purl.org/ontology/bibo/Workshop> <http://purl.org/NET/c4dm/event.owl#Event>)
+
+# Class: <http://xmlns.com/foaf/0.1/Agent> (<http://xmlns.com/foaf/0.1/Agent>)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#scopeNote> <http://xmlns.com/foaf/0.1/Agent> "Used to describe any \"agent\" related to bibliographic items. Such agents can be persons, organizations or groups of any kind."@en)
+
+# Class: <http://xmlns.com/foaf/0.1/Organization> (<http://xmlns.com/foaf/0.1/Organization>)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#scopeNote> <http://xmlns.com/foaf/0.1/Organization> "Ued to describe an organization related to bibliographic items such as a publishing company, etc."@en)
+
+# Class: <http://xmlns.com/foaf/0.1/Person> (<http://xmlns.com/foaf/0.1/Person>)
+
+AnnotationAssertion(<http://www.w3.org/2004/02/skos/core#scopeNote> <http://xmlns.com/foaf/0.1/Person> "Used to describe a Person related to a bibliographic ite such as an author, an editor, etc."@en)
 
 
 ############################
@@ -53,72 +1141,98 @@ AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/ThesisDegree> "The
 
 # Individual: <http://purl.org/ontology/bibo/bdarcus> (<http://purl.org/ontology/bibo/bdarcus>)
 
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/bdarcus> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
 ClassAssertion(<http://xmlns.com/foaf/0.1/Person> <http://purl.org/ontology/bibo/bdarcus>)
 DataPropertyAssertion(<http://xmlns.com/foaf/0.1/name> <http://purl.org/ontology/bibo/bdarcus> "Bruce D'Arcus")
 
 # Individual: <http://purl.org/ontology/bibo/fgiasson> (<http://purl.org/ontology/bibo/fgiasson>)
 
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/ontology/bibo/fgiasson> "http://purl.org/ontology/bibo/"^^xsd:anyURI)
 ClassAssertion(<http://xmlns.com/foaf/0.1/Person> <http://purl.org/ontology/bibo/fgiasson>)
 DataPropertyAssertion(<http://xmlns.com/foaf/0.1/name> <http://purl.org/ontology/bibo/fgiasson> "Frederick Giasson")
 
 # Individual: <http://purl.org/ontology/bibo/degrees/ma> (M.A.)
 
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/degrees/ma> "masters degree in arts"@en)
 AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/degrees/ma> "M.A."@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/degrees/ma> "stable")
 ClassAssertion(<http://purl.org/ontology/bibo/ThesisDegree> <http://purl.org/ontology/bibo/degrees/ma>)
 
 # Individual: <http://purl.org/ontology/bibo/degrees/ms> (M.S.)
 
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/degrees/ms> "masters degree in science"@en)
 AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/degrees/ms> "M.S."@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/degrees/ms> "stable")
 ClassAssertion(<http://purl.org/ontology/bibo/ThesisDegree> <http://purl.org/ontology/bibo/degrees/ms>)
 
 # Individual: <http://purl.org/ontology/bibo/degrees/phd> (PhD degree)
 
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/degrees/phd> "PhD degree"@en)
 AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/degrees/phd> "PhD degree"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/degrees/phd> "stable")
 ClassAssertion(<http://purl.org/ontology/bibo/ThesisDegree> <http://purl.org/ontology/bibo/degrees/phd>)
 
 # Individual: <http://purl.org/ontology/bibo/status/accepted> (accepted)
 
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/status/accepted> "Accepted for publication after peer reviewing."@en)
 AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/status/accepted> "accepted"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/status/accepted> "stable")
 ClassAssertion(<http://purl.org/ontology/bibo/DocumentStatus> <http://purl.org/ontology/bibo/status/accepted>)
 
 # Individual: <http://purl.org/ontology/bibo/status/draft> (draft)
 
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/status/draft> "Document drafted"@en)
 AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/status/draft> "draft"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/status/draft> "stable")
 ClassAssertion(<http://purl.org/ontology/bibo/DocumentStatus> <http://purl.org/ontology/bibo/status/draft>)
 
 # Individual: <http://purl.org/ontology/bibo/status/forthcoming> (forthcoming)
 
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/status/forthcoming> "Document to be published"@en)
 AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/status/forthcoming> "forthcoming"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/status/forthcoming> "stable")
 ClassAssertion(<http://purl.org/ontology/bibo/DocumentStatus> <http://purl.org/ontology/bibo/status/forthcoming>)
 
 # Individual: <http://purl.org/ontology/bibo/status/legal> (legal)
 
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/status/legal> "Legal document"@en)
 AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/status/legal> "legal"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/status/legal> "stable")
 ClassAssertion(<http://purl.org/ontology/bibo/DocumentStatus> <http://purl.org/ontology/bibo/status/legal>)
 
 # Individual: <http://purl.org/ontology/bibo/status/nonPeerReviewed> (non peer reviewed)
 
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/status/nonPeerReviewed> "A document that is not peer reviewed"@en)
 AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/status/nonPeerReviewed> "non peer reviewed"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/status/nonPeerReviewed> "stable")
 ClassAssertion(<http://purl.org/ontology/bibo/DocumentStatus> <http://purl.org/ontology/bibo/status/nonPeerReviewed>)
 
 # Individual: <http://purl.org/ontology/bibo/status/peerReviewed> (peer reviewed)
 
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/status/peerReviewed> "The process by which articles are chosen to be included in a refereed journal. An editorial board consisting of experts in the same field as the author review the article and decide if it is authoritative enough for publication."@en)
 AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/status/peerReviewed> "peer reviewed"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/status/peerReviewed> "stable")
 ClassAssertion(<http://purl.org/ontology/bibo/DocumentStatus> <http://purl.org/ontology/bibo/status/peerReviewed>)
 
 # Individual: <http://purl.org/ontology/bibo/status/published> (published)
 
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/status/published> "Published document"@en)
 AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/status/published> "published"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/status/published> "stable")
 ClassAssertion(<http://purl.org/ontology/bibo/DocumentStatus> <http://purl.org/ontology/bibo/status/published>)
 
 # Individual: <http://purl.org/ontology/bibo/status/rejected> (rejected)
 
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/status/rejected> "Rejected for publication after peer reviewing."@en)
 AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/status/rejected> "rejected"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/status/rejected> "stable")
 ClassAssertion(<http://purl.org/ontology/bibo/DocumentStatus> <http://purl.org/ontology/bibo/status/rejected>)
 
 # Individual: <http://purl.org/ontology/bibo/status/unpublished> (unpublished)
 
+AnnotationAssertion(rdfs:comment <http://purl.org/ontology/bibo/status/unpublished> "Unpublished document"@en)
 AnnotationAssertion(rdfs:label <http://purl.org/ontology/bibo/status/unpublished> "unpublished"@en)
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://purl.org/ontology/bibo/status/unpublished> "stable")
 ClassAssertion(<http://purl.org/ontology/bibo/DocumentStatus> <http://purl.org/ontology/bibo/status/unpublished>)
 
 

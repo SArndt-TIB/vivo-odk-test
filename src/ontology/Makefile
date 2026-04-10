@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                af7fcd5f8b88e2af796fa21de1b82483056ca082ba8de99e671bdb64a1ee75e1
+CONFIG_HASH=                4933408263ebb42a4c029f41d4f30605b7f49878f5b16903e0473f2af3549ce2
 
 
 # ----------------------------------------
@@ -187,7 +187,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  ro skos skos2 dcterms bibo doap vann ns
+IMPORTS =  ro skos skos2 dcterms bibo doap vann ns geopolitical vitro statistics study_protocol
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -496,6 +496,34 @@ mirror-vann: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/ns.owl
 mirror-ns: | $(TMPDIR)
 	$(ROBOT) convert -I http://www.w3.org/2003/06/sw-vocab-status/ns -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: geopolitical
+.PHONY: mirror-geopolitical
+.PRECIOUS: $(MIRRORDIR)/geopolitical.owl
+mirror-geopolitical: | $(TMPDIR)
+	$(ROBOT) convert -I http://aims.fao.org/aos/geopolitical.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: vitro
+.PHONY: mirror-vitro
+.PRECIOUS: $(MIRRORDIR)/vitro.owl
+mirror-vitro: | $(TMPDIR)
+	$(ROBOT) convert -I https://raw.githubusercontent.com/vivo-project/Vitro/main/api/src/main/resources/rdf/ontology/vitro.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: statistics
+.PHONY: mirror-statistics
+.PRECIOUS: $(MIRRORDIR)/statistics.owl
+mirror-statistics: | $(TMPDIR)
+	$(ROBOT) convert -I http://purl.org/net/OCRe/statistics.owl -o $(TMPDIR)/$@.owl
+
+
+## ONTOLOGY: study_protocol
+.PHONY: mirror-study_protocol
+.PRECIOUS: $(MIRRORDIR)/study_protocol.owl
+mirror-study_protocol: | $(TMPDIR)
+	$(ROBOT) convert -I http://purl.org/net/OCRe/study_protocol.owl -o $(TMPDIR)/$@.owl
 
 
 $(MIRRORDIR)/%.owl: mirror-% | $(MIRRORDIR)
