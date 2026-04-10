@@ -35,6 +35,7 @@ jobs:
       - name: Save QC reports
         run: |
           cd src/ontology && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' custom_reports IMP=false PAT=false MIR=false
+          cd /github/workspace
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git add src/ontology/reports/
