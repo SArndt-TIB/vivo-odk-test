@@ -62,9 +62,9 @@
 <http://vivoweb.org/ontology/core#Blog>	<http://www.w3.org/2000/01/rdf-schema#label>	"Blog"@en	
 <http://purl.obolibrary.org/obo/ERO_0001258>	<http://www.w3.org/2000/01/rdf-schema#label>	"Maintenance Service"@en	
 <http://purl.org/ontology/bibo/Brief>	<http://www.w3.org/2000/01/rdf-schema#label>	"Brief"@en	
-<http://www.w3.org/2006/vcard/ns#RelatedType>	<http://www.w3.org/2000/01/rdf-schema#label>	"Relation Type"@en	
 <http://vivoweb.org/ontology/core#Building>	<http://www.w3.org/2000/01/rdf-schema#label>	"Building"@en	
 <http://vivoweb.org/ontology/core#CoPrincipalInvestigatorRole>	<http://www.w3.org/2000/01/rdf-schema#label>	"Co-Principal Investigator Role"@en	
+<http://www.w3.org/2006/vcard/ns#RelatedType>	<http://www.w3.org/2000/01/rdf-schema#label>	"Relation Type"@en	
 <http://vivoweb.org/ontology/core#Team>	<http://www.w3.org/2000/01/rdf-schema#label>	"Team"@en	
 <http://purl.obolibrary.org/obo/IAO_0000104>	<http://www.w3.org/2000/01/rdf-schema#label>	"Plan Specification"@en	
 <http://purl.obolibrary.org/obo/BFO_0000016>	<http://www.w3.org/2000/01/rdf-schema#label>	"disposition"@en	
@@ -132,10 +132,10 @@
 <http://purl.obolibrary.org/obo/GO_0016301>	<http://www.w3.org/2000/01/rdf-schema#label>	"kinase activity"	
 <http://vivoweb.org/ontology/core#AttendingProcess>	<http://www.w3.org/2000/01/rdf-schema#label>	"Attending Process"@en	
 <http://www.w3.org/2006/vcard/ns#Other>	<http://www.w3.org/2000/01/rdf-schema#label>	"Other"@en	
-<http://www.w3.org/2006/vcard/ns#Neighbor>	<http://www.w3.org/2000/01/rdf-schema#label>	"Neighbor"@en	
 <http://purl.obolibrary.org/obo/IAO_0000109>	<http://www.w3.org/2000/01/rdf-schema#label>	"Measurement Datum"@en	
-<http://www.w3.org/2006/vcard/ns#Location>	<http://www.w3.org/2000/01/rdf-schema#label>	"Location"@en	
+<http://www.w3.org/2006/vcard/ns#Neighbor>	<http://www.w3.org/2000/01/rdf-schema#label>	"Neighbor"@en	
 <http://vivoweb.org/ontology/core#TeacherRole>	<http://www.w3.org/2000/01/rdf-schema#label>	"Teacher Role"@en	
+<http://www.w3.org/2006/vcard/ns#Location>	<http://www.w3.org/2000/01/rdf-schema#label>	"Location"@en	
 <http://www.w3.org/2006/vcard/ns#Identification>	<http://www.w3.org/2000/01/rdf-schema#label>	"Identification"@en	
 <http://purl.obolibrary.org/obo/ERO_0000005>	<http://www.w3.org/2000/01/rdf-schema#label>	"Service"@en	
 <http://purl.org/ontology/bibo/Chapter>	<http://www.w3.org/2000/01/rdf-schema#label>	"Chapter"@en	
@@ -319,10 +319,10 @@
 <http://purl.obolibrary.org/obo/ERO_0000393>	<http://www.w3.org/2000/01/rdf-schema#label>	"Training Service"@en	
 <http://purl.obolibrary.org/obo/ERO_0000783>	<http://www.w3.org/2000/01/rdf-schema#label>	"Student Role"@en	
 <http://vivoweb.org/ontology/core#DateTimeValuePrecision>	<http://www.w3.org/2000/01/rdf-schema#label>	"DateTime Value Precision"@en	
-<http://www.w3.org/2006/vcard/ns#Organization>	<http://www.w3.org/2000/01/rdf-schema#label>	"Organization"@en	
 <http://www.w3.org/2006/vcard/ns#TelephoneType>	<http://www.w3.org/2000/01/rdf-schema#label>	"Telephone Type"@en	
-<http://www.w3.org/2006/vcard/ns#Crush>	<http://www.w3.org/2000/01/rdf-schema#label>	"Crush"@en	
+<http://www.w3.org/2006/vcard/ns#Organization>	<http://www.w3.org/2000/01/rdf-schema#label>	"Organization"@en	
 <http://www.w3.org/2006/vcard/ns#Sound>	<http://www.w3.org/2000/01/rdf-schema#label>	"Sound"@en	
+<http://www.w3.org/2006/vcard/ns#Crush>	<http://www.w3.org/2000/01/rdf-schema#label>	"Crush"@en	
 <http://www.w3.org/2006/vcard/ns#Fax>	<http://www.w3.org/2000/01/rdf-schema#label>	"Fax"@en	
 <http://vivoweb.org/ontology/core#Room>	<http://www.w3.org/2000/01/rdf-schema#label>	"Room"@en	
 <http://aims.fao.org/aos/geopolitical.owl#special_group>	<http://www.w3.org/2000/01/rdf-schema#label>	"Special Group"@en	
@@ -394,9 +394,9 @@
 <http://xmlns.com/foaf/0.1/Person>	<http://www.w3.org/2000/01/rdf-schema#label>	"Person"@en	
 <http://xmlns.com/foaf/0.1/Person>	<http://www.w3.org/2000/01/rdf-schema#label>	"Person"	
 <http://purl.org/ontology/bibo/Slide>	<http://www.w3.org/2000/01/rdf-schema#label>	"Slide"@en	
+<http://vivoweb.org/ontology/core#Student>	<http://www.w3.org/2000/01/rdf-schema#label>	"Student"@en	
 <http://vivoweb.org/ontology/core#DateTimeValue>	<http://www.w3.org/2000/01/rdf-schema#label>	"Date/Time Value"@en	
 <http://purl.obolibrary.org/obo/ERO_0000007>	<http://www.w3.org/2000/01/rdf-schema#label>	"Technique"@en	
-<http://vivoweb.org/ontology/core#Student>	<http://www.w3.org/2000/01/rdf-schema#label>	"Student"@en	
 <http://purl.obolibrary.org/obo/IAO_0000027>	<http://www.w3.org/2000/01/rdf-schema#label>	"Data Item"@en	
 <http://vivoweb.org/ontology/core#Laboratory>	<http://www.w3.org/2000/01/rdf-schema#label>	"Laboratory"@en	
 <http://vivoweb.org/ontology/core#BlogPosting>	<http://www.w3.org/2000/01/rdf-schema#label>	"Blog Posting"@en	
