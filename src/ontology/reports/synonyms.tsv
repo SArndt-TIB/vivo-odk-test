@@ -96,9 +96,9 @@
 <http://vivoweb.org/ontology/core#Continent>	<http://www.w3.org/2000/01/rdf-schema#label>	"Continent"@en	
 <http://vivoweb.org/ontology/core#ClinicalOrganization>	<http://www.w3.org/2000/01/rdf-schema#label>	"Clinical Organization"@en	
 <http://vivoweb.org/ontology/core#Committee>	<http://www.w3.org/2000/01/rdf-schema#label>	"Committee"@en	
-<http://purl.org/spar/c4o/GlobalCitationCount>	<http://www.w3.org/2000/01/rdf-schema#label>	"Global Citation Count"@en	
 <http://purl.obolibrary.org/obo/BFO_0000015>	<http://www.w3.org/2000/01/rdf-schema#label>	"process"@en	
 <http://purl.obolibrary.org/obo/BFO_0000015>	<http://www.w3.org/2000/01/rdf-schema#label>	"Process"@en	
+<http://purl.org/spar/c4o/GlobalCitationCount>	<http://www.w3.org/2000/01/rdf-schema#label>	"Global Citation Count"@en	
 <http://vivoweb.org/ontology/core#Meeting>	<http://www.w3.org/2000/01/rdf-schema#label>	"Meeting"@en	
 <http://vivoweb.org/ontology/core#StateOrProvince>	<http://www.w3.org/2000/01/rdf-schema#label>	"State or Province"@en	
 <http://vivoweb.org/ontology/core#Certification>	<http://www.w3.org/2000/01/rdf-schema#label>	"Certification"@en	
@@ -132,8 +132,8 @@
 <http://purl.obolibrary.org/obo/GO_0016301>	<http://www.w3.org/2000/01/rdf-schema#label>	"kinase activity"	
 <http://vivoweb.org/ontology/core#AttendingProcess>	<http://www.w3.org/2000/01/rdf-schema#label>	"Attending Process"@en	
 <http://www.w3.org/2006/vcard/ns#Other>	<http://www.w3.org/2000/01/rdf-schema#label>	"Other"@en	
-<http://purl.obolibrary.org/obo/IAO_0000109>	<http://www.w3.org/2000/01/rdf-schema#label>	"Measurement Datum"@en	
 <http://www.w3.org/2006/vcard/ns#Neighbor>	<http://www.w3.org/2000/01/rdf-schema#label>	"Neighbor"@en	
+<http://purl.obolibrary.org/obo/IAO_0000109>	<http://www.w3.org/2000/01/rdf-schema#label>	"Measurement Datum"@en	
 <http://vivoweb.org/ontology/core#TeacherRole>	<http://www.w3.org/2000/01/rdf-schema#label>	"Teacher Role"@en	
 <http://www.w3.org/2006/vcard/ns#Location>	<http://www.w3.org/2000/01/rdf-schema#label>	"Location"@en	
 <http://www.w3.org/2006/vcard/ns#Identification>	<http://www.w3.org/2000/01/rdf-schema#label>	"Identification"@en	
@@ -269,9 +269,9 @@
 <http://purl.org/ontology/bibo/Journal>	<http://www.w3.org/2000/01/rdf-schema#label>	"Journal"@en	
 <http://purl.obolibrary.org/obo/ERO_0000395>	<http://www.w3.org/2000/01/rdf-schema#label>	"Material Analysis Service"@en	
 <http://purl.org/NET/c4dm/event.owl#Event>	<http://www.w3.org/2000/01/rdf-schema#label>	"Event"@en	
+<http://www.w3.org/2006/vcard/ns#Related>	<http://www.w3.org/2000/01/rdf-schema#label>	"Related"@en	
 <http://www.w3.org/2006/vcard/ns#InstantMessage>	<http://www.w3.org/2000/01/rdf-schema#label>	"Messaging"@en	
 <http://vivoweb.org/ontology/core#PostdocPosition>	<http://www.w3.org/2000/01/rdf-schema#label>	"Postdoctoral Position"@en	
-<http://www.w3.org/2006/vcard/ns#Related>	<http://www.w3.org/2000/01/rdf-schema#label>	"Related"@en	
 <http://vivoweb.org/ontology/core#Facility>	<http://www.w3.org/2000/01/rdf-schema#label>	"Facility"@en	
 <http://purl.obolibrary.org/obo/ERO_0001262>	<http://www.w3.org/2000/01/rdf-schema#label>	"Data Analysis Service"@en	
 <http://vivoweb.org/ontology/core#FundingOrganization>	<http://www.w3.org/2000/01/rdf-schema#label>	"Funding Organization"@en	
@@ -376,8 +376,8 @@
 <http://purl.obolibrary.org/obo/OBI_0000017>	<http://www.w3.org/2000/01/rdf-schema#label>	"Regulatory Role"@en	
 <http://www.w3.org/2006/vcard/ns#Friend>	<http://www.w3.org/2000/01/rdf-schema#label>	"Friend"@en	
 <http://vivoweb.org/ontology/core#AcademicDegree>	<http://www.w3.org/2000/01/rdf-schema#label>	"Academic Degree"@en	
-<http://www.w3.org/2006/vcard/ns#OrganizationName>	<http://www.w3.org/2000/01/rdf-schema#label>	"Organization Name"@en	
 <http://vivoweb.org/ontology/core#ResearcherRole>	<http://www.w3.org/2000/01/rdf-schema#label>	"Researcher Role"@en	
+<http://www.w3.org/2006/vcard/ns#OrganizationName>	<http://www.w3.org/2000/01/rdf-schema#label>	"Organization Name"@en	
 <http://purl.obolibrary.org/obo/ERO_0000790>	<http://www.w3.org/2000/01/rdf-schema#label>	"Post-Baccalaureate Trainee"@en	
 <http://aims.fao.org/aos/geopolitical.owl#other>	<http://www.w3.org/2000/01/rdf-schema#label>	"Other"@en	
 <http://purl.obolibrary.org/obo/ERO_0000015>	<http://www.w3.org/2000/01/rdf-schema#label>	"Human Study"@en	
