@@ -27,6 +27,7 @@ jobs:
         run: cd src/ontology && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' test IMP=false PAT=false MIR=false
 
       - name: Save QC reports
+        continue-on-error: true
         run: |
           cd src/ontology
           make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' custom_reports IMP=false PAT=false MIR=false
@@ -35,4 +36,4 @@ jobs:
           git config user.email "actions@github.com"
           git add src/ontology/reports/
           git diff --staged --quiet || git commit -m "ci: update QC reports"
-          git push origin HEAD:${{ github.head_ref || github.ref_name }}# test push
+          git push origin HEAD:refs/heads/${{ github.ref_name }}
