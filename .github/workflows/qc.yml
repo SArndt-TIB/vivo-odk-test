@@ -2,23 +2,28 @@
 
 name: CI
 
+# Controls when the action will run. 
 on:
+  # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main, feat/** ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
-  workflow_dispatch:
-  schedule:
-    - cron: '0 7 * * 1'
 
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  # This workflow contains a single job called "ontology_qc"
   ontology_qc:
+    # The type of runner that the job will run on
     runs-on: ubuntu-latest
     container: obolibrary/odkfull:v1.6.1
-    permissions:
-      contents: write
 
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
       - name: Run ontology QC checks
@@ -26,14 +31,3 @@ jobs:
           DEFAULT_BRANCH: main
         run: cd src/ontology && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' test IMP=false PAT=false MIR=false
 
-      - name: Save QC reports
-        continue-on-error: true
-        run: |
-          cd src/ontology
-          make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' custom_reports IMP=false PAT=false MIR=false
-          cd ../..
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add src/ontology/reports/
-          git diff --staged --quiet || git commit -m "ci: update QC reports"
-          git push origin HEAD:refs/heads/${{ github.ref_name }}

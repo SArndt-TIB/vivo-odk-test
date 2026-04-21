@@ -32,12 +32,6 @@ src/ontology/mirror
 src/ontology/mirror/*
 src/ontology/reports/*
 !src/ontology/reports/release-diff.md
-!src/ontology/reports/basic-report.tsv
-!src/ontology/reports/class-count-by-prefix.tsv
-!src/ontology/reports/edges.tsv
-!src/ontology/reports/xrefs.tsv
-!src/ontology/reports/obsoletes.tsv
-!src/ontology/reports/synonyms.tsv
 src/ontology/vivotest.owl
 src/ontology/vivotest.obo
 src/ontology/vivotest.json

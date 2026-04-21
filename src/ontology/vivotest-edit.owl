@@ -392,6 +392,16 @@
     
 
 
+    AnnotationProperty: dcterms:title
+    Annotations:
+        rdfs:label "title"@en,
+        dcterms:description "A name given to the resource."@en
+    
+    SubPropertyOf: 
+        owl:topAnnotationProperty
+
+
+
     <!-- http://aims.fao.org/aos/geopolitical.owl#isAdministeredBy -->
 
     <owl:ObjectProperty rdf:about="http://aims.fao.org/aos/geopolitical.owl#isAdministeredBy">
