@@ -1,12 +1,1275 @@
-Prefix(:=<http://purl.obolibrary.org/obo//imports/geopolitical_import.owl>)
-Prefix(obo:=<http://purl.obolibrary.org/obo/>)
+Prefix(:=<http://purl.obolibrary.org/obo//vivotest/imports/geopolitical_import.owl#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
 Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
-Prefix(oboInOwl:=<http://www.geneontology.org/formats/oboInOwl#>)
 
-Ontology(<http://purl.obolibrary.org/obo//imports/geopolitical_import.owl>
-# This is a placeholder, it will be regenerated when makefile is first executed.
+
+Ontology(<http://purl.obolibrary.org/obo//vivotest/imports/geopolitical_import.owl>
+<http://purl.obolibrary.org/obo//vivotest/releases/2026-04-21/imports/geopolitical_import.owl>
+Annotation(owl:versionInfo "2026-04-21")
+
+Declaration(Class(<http://aims.fao.org/aos/geopolitical.owl#area>))
+Declaration(Class(<http://aims.fao.org/aos/geopolitical.owl#disputed>))
+Declaration(Class(<http://aims.fao.org/aos/geopolitical.owl#economic_region>))
+Declaration(Class(<http://aims.fao.org/aos/geopolitical.owl#geographical_region>))
+Declaration(Class(<http://aims.fao.org/aos/geopolitical.owl#group>))
+Declaration(Class(<http://aims.fao.org/aos/geopolitical.owl#non_self_governing>))
+Declaration(Class(<http://aims.fao.org/aos/geopolitical.owl#organization>))
+Declaration(Class(<http://aims.fao.org/aos/geopolitical.owl#other>))
+Declaration(Class(<http://aims.fao.org/aos/geopolitical.owl#self_governing>))
+Declaration(Class(<http://aims.fao.org/aos/geopolitical.owl#special_group>))
+Declaration(Class(<http://aims.fao.org/aos/geopolitical.owl#territory>))
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000002>))
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000004>))
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000006>))
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000141>))
+Declaration(Class(<http://vivoweb.org/ontology/core#Country>))
+Declaration(Class(<http://vivoweb.org/ontology/core#GeographicLocation>))
+Declaration(Class(<http://vivoweb.org/ontology/core#GeographicRegion>))
+Declaration(Class(<http://vivoweb.org/ontology/core#GeopoliticalEntity>))
+Declaration(Class(<http://vivoweb.org/ontology/core#Location>))
+Declaration(Class(<http://www.w3.org/2006/vcard/ns#Addressing>))
+Declaration(Class(<http://www.w3.org/2006/vcard/ns#Calendar>))
+Declaration(Class(<http://www.w3.org/2006/vcard/ns#Communication>))
+Declaration(Class(<http://www.w3.org/2006/vcard/ns#Explanatory>))
+Declaration(Class(<http://www.w3.org/2006/vcard/ns#Geo>))
+Declaration(Class(<http://www.w3.org/2006/vcard/ns#Geographical>))
+Declaration(Class(<http://www.w3.org/2006/vcard/ns#Identification>))
+Declaration(Class(<http://www.w3.org/2006/vcard/ns#Language>))
+Declaration(Class(<http://www.w3.org/2006/vcard/ns#Organizational>))
+Declaration(Class(<http://www.w3.org/2006/vcard/ns#Security>))
+Declaration(Class(<http://www.w3.org/2006/vcard/ns#TimeZone>))
+Declaration(ObjectProperty(<http://aims.fao.org/aos/geopolitical.owl#hasBorderWith>))
+Declaration(ObjectProperty(<http://aims.fao.org/aos/geopolitical.owl#hasMember>))
+Declaration(ObjectProperty(<http://aims.fao.org/aos/geopolitical.owl#isAdministeredBy>))
+Declaration(ObjectProperty(<http://aims.fao.org/aos/geopolitical.owl#isInGroup>))
+Declaration(ObjectProperty(<http://aims.fao.org/aos/geopolitical.owl#isPredecessorOf>))
+Declaration(ObjectProperty(<http://aims.fao.org/aos/geopolitical.owl#isSuccessorOf>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#GDP>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#GDPNotes>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#GDPTotalInCurrentPrices>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#GDPUnit>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#GDPYear>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#HDI>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#HDINotes>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#HDITotal>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#HDIUnit>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#HDIYear>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#agriculturalArea>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#agriculturalAreaNotes>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#agriculturalAreaTotal>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#agriculturalAreaUnit>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#agriculturalAreaYear>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#codeAGROVOC>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#codeCurrency>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#codeDBPediaID>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#codeFAOSTAT>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#codeFAOTERM>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#codeGAUL>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#codeISO2>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#codeISO3>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#codeUN>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#codeUNDP>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#countryArea>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#countryAreaNotes>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#countryAreaTotal>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#countryAreaUnit>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#countryAreaYear>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#hasCode>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#hasCoordinate>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#hasCurrency>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#hasListName>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#hasMaxLatitude>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#hasMaxLongitude>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#hasMinLatitude>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#hasMinLongitude>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#hasNationality>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#hasOfficialName>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#hasShortName>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#hasStatistics>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#landArea>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#landAreaNotes>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#landAreaTotal>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#landAreaUnit>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#landAreaYear>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameCurrencyAR>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameCurrencyEN>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameCurrencyES>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameCurrencyFR>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameCurrencyIT>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameCurrencyRU>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameCurrencyZH>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameListAR>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameListEN>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameListES>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameListFR>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameListIT>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameListRU>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameListZH>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameOfficialAR>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameOfficialEN>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameOfficialES>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameOfficialFR>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameOfficialIT>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameOfficialRU>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameOfficialZH>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameShortAR>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameShortEN>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameShortES>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameShortFR>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameShortIT>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameShortRU>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nameShortZH>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nationalityAR>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nationalityEN>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nationalityES>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nationalityFR>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nationalityIT>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nationalityRU>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#nationalityZH>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#population>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#populationNotes>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#populationTotal>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#populationUnit>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#populationYear>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#validSince>))
+Declaration(DataProperty(<http://aims.fao.org/aos/geopolitical.owl#validUntil>))
+Declaration(DataProperty(<http://www.w3.org/2006/vcard/ns#geo>))
+Declaration(DataProperty(<http://www.w3.org/2006/vcard/ns#language>))
+Declaration(DataProperty(<http://www.w3.org/2006/vcard/ns#sortAs>))
+Declaration(DataProperty(<http://www.w3.org/2006/vcard/ns#timeZone>))
+Declaration(AnnotationProperty(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator>))
+Declaration(AnnotationProperty(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier>))
+Declaration(AnnotationProperty(<http://aims.fao.org/aos/geopolitical.owl#sourceModified>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000112>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/description>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/source>))
+Declaration(Datatype(rdfs:Literal))
+Declaration(Datatype(xsd:anyURI))
+Declaration(Datatype(xsd:string))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://aims.fao.org/aos/geopolitical.owl#hasBorderWith> (has border with)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#hasBorderWith> "United Nations cartographic maps")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#hasBorderWith> "http://www.un.org/Depts/Cartographic/map/profile/world00.pdf")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#hasBorderWith> "2010-05-01")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#hasBorderWith> "United Nations cartographic maps http://www.un.org/Depts/Cartographic/map/profile/world00.pdf")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#hasBorderWith> "has border with"@en)
+
+# Object Property: <http://aims.fao.org/aos/geopolitical.owl#hasMember> (has member country or territory)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#hasMember> "has member country or territory"@en)
+InverseObjectProperties(<http://aims.fao.org/aos/geopolitical.owl#hasMember> <http://aims.fao.org/aos/geopolitical.owl#isInGroup>)
+ObjectPropertyDomain(<http://aims.fao.org/aos/geopolitical.owl#hasMember> <http://aims.fao.org/aos/geopolitical.owl#group>)
+ObjectPropertyRange(<http://aims.fao.org/aos/geopolitical.owl#hasMember> <http://aims.fao.org/aos/geopolitical.owl#territory>)
+
+# Object Property: <http://aims.fao.org/aos/geopolitical.owl#isAdministeredBy> (is administered by)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#isAdministeredBy> "United Nations cartographic maps")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#isAdministeredBy> "http://www.un.org/Depts/Cartographic/map/profile/world00.pdf"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#isAdministeredBy> "2010-05-01")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#isAdministeredBy> "United Nations cartographic maps http://www.un.org/Depts/Cartographic/map/profile/world00.pdf")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#isAdministeredBy> "is administered by"@en)
+
+# Object Property: <http://aims.fao.org/aos/geopolitical.owl#isInGroup> (in geographic grouping)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#isInGroup> "in geographic grouping"@en)
+ObjectPropertyDomain(<http://aims.fao.org/aos/geopolitical.owl#isInGroup> <http://aims.fao.org/aos/geopolitical.owl#territory>)
+ObjectPropertyRange(<http://aims.fao.org/aos/geopolitical.owl#isInGroup> <http://aims.fao.org/aos/geopolitical.owl#group>)
+
+# Object Property: <http://aims.fao.org/aos/geopolitical.owl#isPredecessorOf> (is predecessor of)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#isPredecessorOf> "United Nations Statistics Division")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#isPredecessorOf> "http://unstats.un.org/unsd/methods/m49/m49chang.htm"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#isPredecessorOf> "http://unstats.un.org/unsd/methods/m49/m49chgef.htm"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#isPredecessorOf> "2010-04-15")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#isPredecessorOf> "United Nations Statistics Division http://unstats.un.org/unsd/methods/m49/m49chang.htm")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#isPredecessorOf> "is predecessor of"@en)
+InverseObjectProperties(<http://aims.fao.org/aos/geopolitical.owl#isPredecessorOf> <http://aims.fao.org/aos/geopolitical.owl#isSuccessorOf>)
+ObjectPropertyDomain(<http://aims.fao.org/aos/geopolitical.owl#isPredecessorOf> <http://aims.fao.org/aos/geopolitical.owl#area>)
+ObjectPropertyRange(<http://aims.fao.org/aos/geopolitical.owl#isPredecessorOf> <http://aims.fao.org/aos/geopolitical.owl#area>)
+
+# Object Property: <http://aims.fao.org/aos/geopolitical.owl#isSuccessorOf> (is successor of)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#isSuccessorOf> "United Nations Statistics Division")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#isSuccessorOf> "http://unstats.un.org/unsd/methods/m49/m49chang.htm"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#isSuccessorOf> "http://unstats.un.org/unsd/methods/m49/m49chgef.htm"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#isSuccessorOf> "2010-04-15")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#isSuccessorOf> "United Nations Statistics Division http://unstats.un.org/unsd/methods/m49/m49chang.htm")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#isSuccessorOf> "is successor of"@en)
+ObjectPropertyDomain(<http://aims.fao.org/aos/geopolitical.owl#isSuccessorOf> <http://aims.fao.org/aos/geopolitical.owl#area>)
+ObjectPropertyRange(<http://aims.fao.org/aos/geopolitical.owl#isSuccessorOf> <http://aims.fao.org/aos/geopolitical.owl#area>)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#GDP> (GDP)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#GDP> "World Bank")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#GDP> "http://data.albankaldawli.org/indicator/NY.GDP.MKTP.CD"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#GDP> "http://data.worldbank.org/indicator/NY.GDP.MKTP.CD")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#GDP> "http://data.worldbank.org/indicator/NY.GDP.MKTP.CD"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#GDP> "http://datos.bancomundial.org/indicador/NY.GDP.MKTP.CD"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#GDP> "http://donnees.banquemondiale.org/indicateur/NY.GDP.MKTP.CD"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#GDP> "2010-12-16")
+AnnotationAssertion(<http://purl.org/dc/terms/description> <http://aims.fao.org/aos/geopolitical.owl#GDP> "GDP at purchaser's prices is the sum of gross value added by all resident producers in the economy plus any product taxes and minus any subsidies not included in the value of the products. It is calculated without making deductions for depreciation of fabricated assets or for depletion and degradation of natural resources. Data are in current U.S. dollars. Dollar figures for GDP are converted from domestic currencies using single year official exchange rates. For a few countries where the official exchange rate does not reflect the rate effectively applied to actual foreign exchange transactions, an alternative conversion factor is used. Source: World Bank national accounts data, and OECD National Accounts data files. http://data.worldbank.org/indicator/NY.GDP.MKTP.CD")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#GDP> "World Bank http://data.worldbank.org/indicator/NY.GDP.MKTP.CD")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#GDP> "GDP"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#GDPNotes> (GDP notes)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#GDPNotes> "GDP notes"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#GDPTotalInCurrentPrices> (GDP total in current prices)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#GDPTotalInCurrentPrices> "GDP total in current prices"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#GDPUnit> (GDP unit)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#GDPUnit> "GDP unit"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#GDPYear> (GDPYear)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#GDPYear> "GDPYear"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#HDI> (<http://aims.fao.org/aos/geopolitical.owl#HDI>)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#HDI> "UNDP - HDRO")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#HDI> "http://hdrstats.undp.org/en/indicators/49806.html")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#HDI> "http://hdrstats.undp.org/en/indicators/49806.html"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#HDI> "http://hdrstats.undp.org/es/indicadores/49806.html"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#HDI> "http://hdrstats.undp.org/fr/indicateurs/49806.html"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#HDI> "2010-11-04")
+AnnotationAssertion(<http://purl.org/dc/terms/description> <http://aims.fao.org/aos/geopolitical.owl#HDI> " composite index measuring average achievement in three basic dimensions of human development-a long and healthy life, knowledge and a decent standard of living. Source: Calculated based on data from UNDESA (2009d), Barro and Lee (2010), UNESCO Institute for Statistics (2010b), World Bank (2010b) and IMF(2010a) . http://hdrstats.undp.org/en/indicators/49806.html")
+AnnotationAssertion(<http://purl.org/dc/terms/description> <http://aims.fao.org/aos/geopolitical.owl#HDI> " composite index measuring average achievement in three basic dimensions of human development—a long and healthy life, knowledge and a decent standard of living. Source: Calculated based on data from UNDESA (2009d), Barro and Lee (2010), UNESCO Institute for Statistics (2010b), World Bank (2010b) and IMF(2010a) . http://hdrstats.undp.org/en/indicators/49806.html")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#HDI> "UNDP - HDRO http://hdrstats.undp.org/en/indicators/49806.html")
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#agriculturalArea> (agricultural area)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#agriculturalArea> "FAOSTAT")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#agriculturalArea> "http://faostat.fao.org/DesktopDefault.aspx?PageID=377&lang=en#ancor")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#agriculturalArea> "http://faostat.fao.org/DesktopDefault.aspx?PageID=377&lang=en#ancor"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#agriculturalArea> "http://faostat.fao.org/DesktopDefault.aspx?PageID=377&lang=es#ancor"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#agriculturalArea> "http://faostat.fao.org/DesktopDefault.aspx?PageID=377&lang=fr#ancor"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#agriculturalArea> "2010-07-21")
+AnnotationAssertion(<http://purl.org/dc/terms/description> <http://aims.fao.org/aos/geopolitical.owl#agriculturalArea> "Agricultural area, this category is the sum of areas under a) arable land - land under temporary agricultural crops (multiple-cropped areas are counted only once), temporary meadows for mowing or pasture, land under market and kitchen gardens and land temporarily fallow (less than five years). The abandoned land resulting from shifting cultivation is not included in this category. Data for “Arable land” are not meant to indicate the amount of land that is potentially cultivable; (b) permanent crops - land cultivated with long-term crops which do not have to be replanted for several years (such as cocoa and coffee); land under trees and shrubs producing flowers, such as roses and jasmine; and nurseries (except those for forest trees, which should be classified under \"forest\"); and (c) permanent meadows and pastures - land used permanently (five years or more) to grow herbaceous forage crops, either cultivated or growing wild (wild prairie or grazing land). Data are expressed in 1000 hectares. http://faostat.fao.org/site/375/default.aspx ")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#agriculturalArea> "FAOSTAT http://faostat.fao.org/DesktopDefault.aspx?PageID=377&lang=en#ancor")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#agriculturalArea> "agricultural area"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#agriculturalAreaNotes> (agricultural area notes)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#agriculturalAreaNotes> "agricultural area notes"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#agriculturalAreaTotal> (agriculturalAreaTotal)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#agriculturalAreaTotal> "agriculturalAreaTotal"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#agriculturalAreaUnit> (agricultural area unit)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#agriculturalAreaUnit> "agricultural area unit"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#agriculturalAreaYear> (agriculturalAreaYear)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#agriculturalAreaYear> "agriculturalAreaYear"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#codeAGROVOC> (codeAGROVOC)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#codeAGROVOC> "AGROVOC")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeAGROVOC> "http://aims.fao.org/ar/website/Search-AGROVOC/sub"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeAGROVOC> "http://aims.fao.org/es/website/Search-AGROVOC/sub"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeAGROVOC> "http://aims.fao.org/fr/website/Search-AGROVOC/sub"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeAGROVOC> "http://aims.fao.org/website/Search-AGROVOC/sub"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeAGROVOC> "http://aims.fao.org/zh-hans/website/Search-AGROVOC/sub"@zh)
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#codeAGROVOC> "AGROVOC http://aims.fao.org/website/Search-AGROVOC/sub")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#codeAGROVOC> "codeAGROVOC"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#codeCurrency> (codeCurrency)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#codeCurrency> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeCurrency> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeCurrency> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeCurrency> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeCurrency> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeCurrency> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeCurrency> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#codeCurrency> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#codeCurrency> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#codeCurrency> "codeCurrency"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#codeDBPediaID> (codeDBPediaID)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#codeDBPediaID> "DBpedia")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeDBPediaID> "http://dbpedia.org/About"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#codeDBPediaID> "2010-04-28")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#codeDBPediaID> "DBpedia http://dbpedia.org/About")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#codeDBPediaID> "codeDBPediaID"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#codeFAOSTAT> (codeFAOSTAT)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#codeFAOSTAT> "FAOSTAT")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeFAOSTAT> "http://faostat.fao.org"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeFAOSTAT> "http://faostat.fao.org/default.aspx?lang=es"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeFAOSTAT> "http://faostat.fao.org/default.aspx?lang=fr"@fr)
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#codeFAOSTAT> "FAOSTAT http://faostat.fao.org")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#codeFAOSTAT> "codeFAOSTAT"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#codeFAOTERM> (codeFAOTERM)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#codeFAOTERM> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeFAOTERM> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeFAOTERM> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeFAOTERM> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeFAOTERM> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeFAOTERM> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeFAOTERM> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#codeFAOTERM> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#codeFAOTERM> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#codeFAOTERM> "codeFAOTERM"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#codeGAUL> (codeGAUL)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#codeGAUL> "Global Administrative Unit Layers")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeGAUL> "http://www.fao.org/geonetwork/srv/en/metadata.show?id=12691")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#codeGAUL> "2008-12-10")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#codeGAUL> "Global Administrative Unit Layers http://www.fao.org/geonetwork/srv/en/metadata.show?id=12691")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#codeGAUL> "codeGAUL"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#codeISO2> (codeISO2)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#codeISO2> "ISO 3166-1")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeISO2> "http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#codeISO2> "ISO 3166-1 http://www.iso.org/iso/country_codes/iso_3166_code_lists.htm")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#codeISO2> "codeISO2"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#codeISO3> (codeISO3)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#codeISO3> "United Nations Statistics Division")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeISO3> "http://unstats.un.org/unsd/methods/m49/m49alpha.htm"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeISO3> "http://unstats.un.org/unsd/methods/m49/m49alphaf.htm"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#codeISO3> "2010-04-01")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#codeISO3> "United Nations Statistics Division http://unstats.un.org/unsd/methods/m49/m49alpha.htm")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#codeISO3> "codeISO3"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#codeUN> (codeUN)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#codeUN> "United Nations Statistics Division")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeUN> "http://unstats.un.org/unsd/methods/m49/m49alpha.htm"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#codeUN> "http://unstats.un.org/unsd/methods/m49/m49alphaf.htm"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#codeUN> "2010-04-01")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#codeUN> "United Nations Statistics Division http://unstats.un.org/unsd/methods/m49/m49alpha.htm")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#codeUN> "codeUN"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#codeUNDP> (codeUNDP)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#codeUNDP> "codeUNDP"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#countryArea> (countryArea)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#countryArea> "FAOSTAT")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#countryArea> "http://faostat.fao.org/DesktopDefault.aspx?PageID=377&lang=en#ancor")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#countryArea> "http://faostat.fao.org/DesktopDefault.aspx?PageID=377&lang=en#ancor"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#countryArea> "http://faostat.fao.org/DesktopDefault.aspx?PageID=377&lang=es#ancor"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#countryArea> "http://faostat.fao.org/DesktopDefault.aspx?PageID=377&lang=fr#ancor"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#countryArea> "2011-07-21")
+AnnotationAssertion(<http://purl.org/dc/terms/description> <http://aims.fao.org/aos/geopolitical.owl#countryArea> "Country area, area of the country including area under inland water bodies, but excluding offshore territorial waters. Possible variations in the data may be due to updating and revisions of the country data and not necessarily to any change of area. Data are expressed in 1000 hectares. http://faostat.fao.org/site/375/default.aspx ")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#countryArea> "FAOSTAT http://faostat.fao.org/DesktopDefault.aspx?PageID=377&lang=en#ancor")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#countryArea> "countryArea"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#countryAreaNotes> (country area notes)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#countryAreaNotes> "country area notes"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#countryAreaTotal> (total country area)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#countryAreaTotal> "total country area"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#countryAreaUnit> (country area unit)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#countryAreaUnit> "country area unit"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#countryAreaYear> (countryAreaYear)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#countryAreaYear> "countryAreaYear"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#hasCode> (has code)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#hasCode> "has code"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#hasCoordinate> (has coordinate)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#hasCoordinate> "has coordinate"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#hasCurrency> (has currency)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#hasCurrency> "has currency"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#hasListName> (has list name)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#hasListName> "has list name"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#hasMaxLatitude> (has maximum latitude)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#hasMaxLatitude> "has maximum latitude"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#hasMaxLongitude> (has maximum longitude)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#hasMaxLongitude> "has maximum longitude"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#hasMinLatitude> (has minimum latitude)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#hasMinLatitude> "has minimum latitude"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#hasMinLongitude> (has minimum longitude)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#hasMinLongitude> "has minimum longitude"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#hasNationality> (has nationality)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#hasNationality> "has nationality"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#hasOfficialName> (has official name)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#hasOfficialName> "has official name"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#hasShortName> (has short name)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#hasShortName> "has short name"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#hasStatistics> (has statistics)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#hasStatistics> "has statistics"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#landArea> (land area)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#landArea> "FAOSTAT")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#landArea> "http://faostat.fao.org/DesktopDefault.aspx?PageID=377&lang=en#ancor")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#landArea> "http://faostat.fao.org/DesktopDefault.aspx?PageID=377&lang=en#ancor"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#landArea> "http://faostat.fao.org/DesktopDefault.aspx?PageID=377&lang=es#ancor"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#landArea> "http://faostat.fao.org/DesktopDefault.aspx?PageID=377&lang=fr#ancor"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#landArea> "2011-07-21")
+AnnotationAssertion(<http://purl.org/dc/terms/description> <http://aims.fao.org/aos/geopolitical.owl#landArea> "Land area is the total area of the country excluding area under inland water bodies. Possible variations in the data may be due to updating and revisions of the country data and not necessarily to any change of area. Data are expressed in 1 000 hectares. http://faostat.fao.org/site/375/default.aspx ")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#landArea> "FAOSTAT http://faostat.fao.org/DesktopDefault.aspx?PageID=377&lang=en#ancor")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#landArea> "land area"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#landAreaNotes> (land area notes)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#landAreaNotes> "land area notes"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#landAreaTotal> (total land area)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#landAreaTotal> "total land area"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#landAreaUnit> (land area unit)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#landAreaUnit> "land area unit"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#landAreaYear> (landAreaYear)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#landAreaYear> "landAreaYear"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyAR> (nameCurrencyAR)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyAR> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyAR> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyAR> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyAR> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyAR> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyAR> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyAR> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyAR> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyAR> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyAR> "nameCurrencyAR"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyEN> (nameCurrencyEN)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyEN> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyEN> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyEN> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyEN> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyEN> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyEN> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyEN> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyEN> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyEN> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyEN> "nameCurrencyEN"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyES> (nameCurrencyES)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyES> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyES> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyES> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyES> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyES> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyES> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyES> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyES> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyES> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyES> "nameCurrencyES"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyFR> (nameCurrencyFR)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyFR> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyFR> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyFR> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyFR> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyFR> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyFR> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyFR> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyFR> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyFR> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyFR> "nameCurrencyFR"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyIT> (nameCurrencyIT)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyIT> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyIT> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyIT> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyIT> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyIT> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyIT> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyIT> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyIT> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyIT> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyIT> "nameCurrencyIT"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyRU> (nameCurrencyRU)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyRU> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyRU> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyRU> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyRU> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyRU> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyRU> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyRU> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyRU> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyRU> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyRU> "nameCurrencyRU"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyZH> (nameCurrencyZH)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyZH> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyZH> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyZH> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyZH> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyZH> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyZH> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyZH> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyZH> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyZH> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyZH> "nameCurrencyZH"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameListAR> (nameListAR)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameListAR> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListAR> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListAR> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListAR> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListAR> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListAR> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListAR> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameListAR> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameListAR> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameListAR> "nameListAR"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameListEN> (nameListEN)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameListEN> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListEN> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListEN> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListEN> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListEN> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListEN> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListEN> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameListEN> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameListEN> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameListEN> "nameListEN"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameListES> (nameListES)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameListES> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListES> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListES> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListES> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListES> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListES> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListES> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameListES> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameListES> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameListES> "nameListES"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameListFR> (nameListFR)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameListFR> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListFR> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListFR> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListFR> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListFR> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListFR> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListFR> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameListFR> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameListFR> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameListFR> "nameListFR"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameListIT> (nameListIT)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameListIT> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListIT> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListIT> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListIT> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListIT> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListIT> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListIT> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameListIT> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameListIT> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameListIT> "nameListIT"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameListRU> (nameListRU)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameListRU> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListRU> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListRU> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListRU> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListRU> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListRU> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListRU> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameListRU> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameListRU> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameListRU> "nameListRU"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameListZH> (nameListZH)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameListZH> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListZH> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListZH> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListZH> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListZH> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListZH> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameListZH> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameListZH> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameListZH> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameListZH> "nameListZH"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameOfficialAR> (nameOfficialAR)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialAR> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialAR> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialAR> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialAR> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialAR> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialAR> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialAR> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialAR> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialAR> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameOfficialAR> "nameOfficialAR"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameOfficialEN> (nameOfficialEN)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialEN> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialEN> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialEN> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialEN> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialEN> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialEN> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialEN> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialEN> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialEN> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameOfficialEN> "nameOfficialEN"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameOfficialES> (nameOfficialES)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialES> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialES> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialES> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialES> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialES> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialES> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialES> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialES> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialES> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameOfficialES> "nameOfficialES"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameOfficialFR> (nameOfficialFR)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialFR> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialFR> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialFR> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialFR> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialFR> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialFR> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialFR> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialFR> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialFR> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameOfficialFR> "nameOfficialFR"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameOfficialIT> (nameOfficialIT)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialIT> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialIT> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialIT> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialIT> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialIT> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialIT> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialIT> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialIT> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialIT> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameOfficialIT> "nameOfficialIT"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameOfficialRU> (nameOfficialRU)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialRU> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialRU> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialRU> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialRU> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialRU> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialRU> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialRU> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialRU> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialRU> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameOfficialRU> "nameOfficialRU"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameOfficialZH> (nameOfficialZH)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialZH> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialZH> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialZH> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialZH> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialZH> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialZH> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialZH> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialZH> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameOfficialZH> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameOfficialZH> "nameOfficialZH"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameShortAR> (nameShortAR)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameShortAR> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortAR> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortAR> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortAR> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortAR> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortAR> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortAR> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameShortAR> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameShortAR> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameShortAR> "nameShortAR"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameShortEN> (nameShortEN)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameShortEN> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortEN> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortEN> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortEN> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortEN> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortEN> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortEN> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameShortEN> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameShortEN> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameShortEN> "nameShortEN"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameShortES> (nameShortES)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameShortES> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortES> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortES> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortES> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortES> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortES> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortES> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameShortES> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameShortES> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameShortES> "nameShortES"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameShortFR> (nameShortFR)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameShortFR> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortFR> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortFR> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortFR> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortFR> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortFR> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortFR> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameShortFR> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameShortFR> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameShortFR> "nameShortFR"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameShortIT> (nameShortIT)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameShortIT> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortIT> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortIT> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortIT> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortIT> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortIT> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortIT> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameShortIT> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameShortIT> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameShortIT> "nameShortIT"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameShortRU> (nameShortRU)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameShortRU> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortRU> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortRU> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortRU> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortRU> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortRU> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortRU> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameShortRU> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameShortRU> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameShortRU> "nameShortRU"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nameShortZH> (nameShortZH)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nameShortZH> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortZH> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortZH> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortZH> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortZH> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortZH> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nameShortZH> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nameShortZH> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nameShortZH> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nameShortZH> "nameShortZH"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nationalityAR> (nationalityAR)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nationalityAR> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityAR> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityAR> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityAR> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityAR> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityAR> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityAR> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nationalityAR> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nationalityAR> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nationalityAR> "nationalityAR"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nationalityEN> (nationalityEN)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nationalityEN> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityEN> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityEN> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityEN> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityEN> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityEN> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityEN> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nationalityEN> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nationalityEN> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nationalityEN> "nationalityEN"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nationalityES> (nationalityES)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nationalityES> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityES> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityES> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityES> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityES> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityES> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityES> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nationalityES> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nationalityES> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nationalityES> "nationalityES"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nationalityFR> (nationalityFR)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nationalityFR> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityFR> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityFR> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityFR> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityFR> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityFR> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityFR> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nationalityFR> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nationalityFR> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nationalityFR> "nationalityFR"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nationalityIT> (nationalityIT)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nationalityIT> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityIT> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityIT> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityIT> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityIT> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityIT> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityIT> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nationalityIT> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nationalityIT> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nationalityIT> "nationalityIT"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nationalityRU> (nationalityRU)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nationalityRU> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityRU> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityRU> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityRU> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityRU> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityRU> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityRU> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nationalityRU> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nationalityRU> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nationalityRU> "nationalityRU"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#nationalityZH> (nationalityZH)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#nationalityZH> "FAO terminology")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityZH> "http://www.fao.org/termportal/contr/ar/"@ar)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityZH> "http://www.fao.org/termportal/contr/en/"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityZH> "http://www.fao.org/termportal/contr/es/"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityZH> "http://www.fao.org/termportal/contr/fr/"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityZH> "http://www.fao.org/termportal/contr/zh/"@zh)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#nationalityZH> "http://www.fao.org/termportal/en/")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#nationalityZH> "2010-06-24")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#nationalityZH> "FAO terminology http://www.fao.org/termportal/en/")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#nationalityZH> "nationalityZH"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#population> (population)
+
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceCreator> <http://aims.fao.org/aos/geopolitical.owl#population> "FAOSTAT")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#population> "http://faostat.fao.org/DesktopDefault.aspx?PageID=550&lang=en#ancor")
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#population> "http://faostat.fao.org/DesktopDefault.aspx?PageID=550&lang=en#ancor"@en)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#population> "http://faostat.fao.org/DesktopDefault.aspx?PageID=550&lang=es#ancor"@es)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceIdentifier> <http://aims.fao.org/aos/geopolitical.owl#population> "http://faostat.fao.org/DesktopDefault.aspx?PageID=550&lang=fr#ancor"@fr)
+AnnotationAssertion(<http://aims.fao.org/aos/geopolitical.owl#sourceModified> <http://aims.fao.org/aos/geopolitical.owl#population> "2009-09-21")
+AnnotationAssertion(<http://purl.org/dc/terms/description> <http://aims.fao.org/aos/geopolitical.owl#population> "The total population usually refers to the present-in-area (de facto) population which includes all persons physically present within the present geographical boundaries of countries at the mid-point of the reference period.  http://faostat.fao.org/site/375/default.aspx")
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#population> "FAOSTAT http://faostat.fao.org/site/550/default.aspx")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#population> "population"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#populationNotes> (population notes)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#populationNotes> "population notes"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#populationTotal> (total population)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#populationTotal> "total population"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#populationUnit> (population unit)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#populationUnit> "population unit"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#populationYear> (populationYear)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#populationYear> "populationYear"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#validSince> (valid since)
+
+AnnotationAssertion(rdfs:comment <http://aims.fao.org/aos/geopolitical.owl#validSince> "The value of the datatype property *validSince* associated to a particular area (territory or group) indicates the area's  first year of validity.  The geopolitical ontology traces back historic changes only until 1985, therefore, if an area has a validSince = 1985, this indicates that the area is/was valid since 1985 or before.       ")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#validSince> "valid since"@en)
+
+# Data Property: <http://aims.fao.org/aos/geopolitical.owl#validUntil> (valid until)
+
+AnnotationAssertion(rdfs:comment <http://aims.fao.org/aos/geopolitical.owl#validUntil> "The value of the datatype property *validUntil* associated to a particular area (territory or group) indicates the area's last year of validity. In case the area is currently valid, this value is set by default to 9999.
+      ")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#validUntil> "valid until"@en)
+
+# Data Property: <http://www.w3.org/2006/vcard/ns#geo> (geo)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/vcard/ns#geo> "Must use the geo URI scheme RFC5870")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#geo> "geo"@en)
+DataPropertyDomain(<http://www.w3.org/2006/vcard/ns#geo> <http://www.w3.org/2006/vcard/ns#Geo>)
+DataPropertyRange(<http://www.w3.org/2006/vcard/ns#geo> xsd:anyURI)
+
+# Data Property: <http://www.w3.org/2006/vcard/ns#language> (has language)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/vcard/ns#language> "Use 2 char language code from RFC5646")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#language> "has language"@en)
+DataPropertyRange(<http://www.w3.org/2006/vcard/ns#language> xsd:string)
+
+# Data Property: <http://www.w3.org/2006/vcard/ns#sortAs> (sort as)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#sortAs> "sort as"@en)
+DataPropertyRange(<http://www.w3.org/2006/vcard/ns#sortAs> xsd:string)
+
+# Data Property: <http://www.w3.org/2006/vcard/ns#timeZone> (timezone)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#timeZone> "timezone"@en)
+DataPropertyDomain(<http://www.w3.org/2006/vcard/ns#timeZone> <http://www.w3.org/2006/vcard/ns#TimeZone>)
+DataPropertyRange(<http://www.w3.org/2006/vcard/ns#timeZone> xsd:string)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://aims.fao.org/aos/geopolitical.owl#area> (Area)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#area> "Area"@en)
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#codeAGROVOC>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#codeDBPediaID>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#codeFAOSTAT>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#codeFAOTERM>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#codeGAUL>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#codeISO2>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#codeISO3>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#codeUN>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#codeUNDP>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameListAR>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameListEN>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameListES>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameListFR>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameListIT>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameListRU>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameListZH>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameOfficialAR>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameOfficialEN>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameOfficialES>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameOfficialFR>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameOfficialIT>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameOfficialRU>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameOfficialZH>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameShortAR>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameShortEN>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameShortES>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameShortFR>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameShortIT>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameShortRU>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameShortZH>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#validSince>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#area> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#validUntil>))
+
+# Class: <http://aims.fao.org/aos/geopolitical.owl#disputed> (Disputed)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#disputed> "Disputed"@en)
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#disputed> <http://aims.fao.org/aos/geopolitical.owl#territory>)
+
+# Class: <http://aims.fao.org/aos/geopolitical.owl#economic_region> (Economic Region)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#economic_region> "Economic Region"@en)
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#economic_region> <http://aims.fao.org/aos/geopolitical.owl#group>)
+
+# Class: <http://aims.fao.org/aos/geopolitical.owl#geographical_region> (Transnational Region)
+
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#geographical_region> "United Nations statistics department http://unstats.un.org/unsd/methods/m49/m49regin.htm")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#geographical_region> "Transnational Region"@en)
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#geographical_region> <http://aims.fao.org/aos/geopolitical.owl#group>)
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#geographical_region> <http://vivoweb.org/ontology/core#GeographicRegion>)
+
+# Class: <http://aims.fao.org/aos/geopolitical.owl#group> (Group)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#group> "Group"@en)
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#group> <http://aims.fao.org/aos/geopolitical.owl#area>)
+
+# Class: <http://aims.fao.org/aos/geopolitical.owl#non_self_governing> (Non Self Governing)
+
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#non_self_governing> "UN Cartographic Section, Department of Field Support http://www.un.org/Depts/Cartographic/map/profile/world00.pdf")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#non_self_governing> "Non Self Governing"@en)
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#non_self_governing> <http://aims.fao.org/aos/geopolitical.owl#territory>)
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#non_self_governing> ObjectAllValuesFrom(<http://aims.fao.org/aos/geopolitical.owl#isAdministeredBy> <http://aims.fao.org/aos/geopolitical.owl#self_governing>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#non_self_governing> ObjectMinCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#isAdministeredBy>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#non_self_governing> ObjectMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#isAdministeredBy>))
+
+# Class: <http://aims.fao.org/aos/geopolitical.owl#organization> (Organization)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#organization> "Organization"@en)
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#organization> <http://aims.fao.org/aos/geopolitical.owl#group>)
+
+# Class: <http://aims.fao.org/aos/geopolitical.owl#other> (Other)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#other> "Other"@en)
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#other> <http://aims.fao.org/aos/geopolitical.owl#territory>)
+
+# Class: <http://aims.fao.org/aos/geopolitical.owl#self_governing> (Self Governing)
+
+AnnotationAssertion(<http://purl.org/dc/terms/source> <http://aims.fao.org/aos/geopolitical.owl#self_governing> "United Nations Map Library http://www.un.org/depts/dhl/maplib/countinfo.htm")
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#self_governing> "Self Governing"@en)
+EquivalentClasses(<http://aims.fao.org/aos/geopolitical.owl#self_governing> <http://vivoweb.org/ontology/core#Country>)
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#self_governing> <http://aims.fao.org/aos/geopolitical.owl#territory>)
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#self_governing> <http://vivoweb.org/ontology/core#GeopoliticalEntity>)
+
+# Class: <http://aims.fao.org/aos/geopolitical.owl#special_group> (Special Group)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#special_group> "Special Group"@en)
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#special_group> <http://aims.fao.org/aos/geopolitical.owl#group>)
+
+# Class: <http://aims.fao.org/aos/geopolitical.owl#territory> (Territory)
+
+AnnotationAssertion(rdfs:label <http://aims.fao.org/aos/geopolitical.owl#territory> "Territory"@en)
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> <http://aims.fao.org/aos/geopolitical.owl#area>)
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> <http://vivoweb.org/ontology/core#GeopoliticalEntity>)
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#GDPNotes>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#GDPTotalInCurrentPrices>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#GDPUnit>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#GDPYear>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#HDINotes>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#HDITotal>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#HDIUnit>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#HDIYear>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#agriculturalAreaNotes>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#agriculturalAreaTotal>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#agriculturalAreaUnit>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#agriculturalAreaYear>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#codeCurrency>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#countryAreaNotes>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#countryAreaTotal>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#countryAreaUnit>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#countryAreaYear>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#hasMaxLatitude>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#hasMaxLongitude>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#hasMinLatitude>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#hasMinLongitude>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#landAreaNotes>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#landAreaTotal>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#landAreaUnit>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#landAreaYear>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyEN>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyES>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyFR>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyIT>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyRU>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nameCurrencyZH>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nationalityAR>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nationalityEN>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nationalityES>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nationalityFR>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nationalityIT>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nationalityRU>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#nationalityZH>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#populationNotes>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#populationTotal>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#populationUnit>))
+SubClassOf(<http://aims.fao.org/aos/geopolitical.owl#territory> DataMaxCardinality(1 <http://aims.fao.org/aos/geopolitical.owl#populationYear>))
+
+# Class: <http://purl.obolibrary.org/obo/BFO_0000001> (Entity)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000001> "Entity"@en)
+
+# Class: <http://purl.obolibrary.org/obo/BFO_0000002> (Continuant)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000002> "Continuant"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000002> <http://purl.obolibrary.org/obo/BFO_0000001>)
+
+# Class: <http://purl.obolibrary.org/obo/BFO_0000004> (Independent Continuant)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000004> "Independent Continuant"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000004> <http://purl.obolibrary.org/obo/BFO_0000002>)
+
+# Class: <http://purl.obolibrary.org/obo/BFO_0000006> (Spatial Region)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000006> "Spatial Region"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000006> <http://purl.obolibrary.org/obo/BFO_0000141>)
+
+# Class: <http://purl.obolibrary.org/obo/BFO_0000141> (Immaterial Entity)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000141> "Immaterial Entity"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000141> <http://purl.obolibrary.org/obo/BFO_0000004>)
+
+# Class: <http://vivoweb.org/ontology/core#Country> (Country)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://vivoweb.org/ontology/core#Country> "Afghanistan; Antigua and Barbuda; Cameroon; Iceland; Jamaica; Nigeria; United States of America")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://vivoweb.org/ontology/core#Country> "Source of the Short Definition: http://www.thefreedictionary.com/country.  This is also the same as geopolitical.owl:self_governing.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://vivoweb.org/ontology/core#Country> "An area of land distinguished by its political autonomy. Politically independent territories.")
+AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core#Country> "Country"@en)
+SubClassOf(<http://vivoweb.org/ontology/core#Country> <http://vivoweb.org/ontology/core#GeopoliticalEntity>)
+
+# Class: <http://vivoweb.org/ontology/core#GeographicLocation> (Geographic Location)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://vivoweb.org/ontology/core#GeographicLocation> "Removed the word \"stable\" because disputed territories from geopolitical.owl are included. This could imply that the geographic coordinates could change. I've also copied this definition to core:Geographic Location.  I think core:Geographic Location and core:Geographic Region are both the same and only one is needed. There is also geopolitical.owl:geographical_region which further causes confusion.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://vivoweb.org/ontology/core#GeographicLocation> "Use subclasses of core:Geographic Location subclasses instead of this class if possible.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://vivoweb.org/ontology/core#GeographicLocation> "A location having coordinates in geographic space.")
+AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core#GeographicLocation> "Geographic Location"@en)
+SubClassOf(<http://vivoweb.org/ontology/core#GeographicLocation> <http://vivoweb.org/ontology/core#Location>)
+
+# Class: <http://vivoweb.org/ontology/core#GeographicRegion> (Geographic Region)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://vivoweb.org/ontology/core#GeographicRegion> "Removed the word \"stable\" because disputed territories from geopolitical.owl are included. This could imply that the geographic coordinates could change. This definition was originally in core:Geographic Location.  I simply copied the definition from there.  I think core:Geographic Location and core:Geographic Region are both the same and only one is needed. There is also geopolitical.owl:geographical_region which further causes confusion.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://vivoweb.org/ontology/core#GeographicRegion> "Use subclasses of core:Geographic Region subclasses instead of this class if possible.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://vivoweb.org/ontology/core#GeographicRegion> "A location having coordinates in geographic space.")
+AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core#GeographicRegion> "Geographic Region"@en)
+SubClassOf(<http://vivoweb.org/ontology/core#GeographicRegion> <http://vivoweb.org/ontology/core#GeographicLocation>)
+
+# Class: <http://vivoweb.org/ontology/core#GeopoliticalEntity> (Geopolitical Entity)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://vivoweb.org/ontology/core#GeopoliticalEntity> "Short definition obtained here: http://en.wiktionary.org/wiki/geopolitical_entity.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://vivoweb.org/ontology/core#GeopoliticalEntity> "Use subclasses of core:GeopoliticalEntity subclasses instead of this class if possible.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://vivoweb.org/ontology/core#GeopoliticalEntity> "A geographical area which is associated with some sort of political  structure.")
+AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core#GeopoliticalEntity> "Geopolitical Entity"@en)
+SubClassOf(<http://vivoweb.org/ontology/core#GeopoliticalEntity> <http://vivoweb.org/ontology/core#GeographicRegion>)
+
+# Class: <http://vivoweb.org/ontology/core#Location> (Location)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://vivoweb.org/ontology/core#Location> "It's anticipated that the subclasses will be used when classifying items. And, all locations can be viewable via this class.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000112> <http://vivoweb.org/ontology/core#Location> "Use subclasses of core:Location when classsifying items.")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://vivoweb.org/ontology/core#Location> "Top level of all location classes.")
+AnnotationAssertion(rdfs:label <http://vivoweb.org/ontology/core#Location> "Location"@en)
+SubClassOf(<http://vivoweb.org/ontology/core#Location> <http://purl.obolibrary.org/obo/BFO_0000006>)
+
+# Class: <http://www.w3.org/2006/vcard/ns#Addressing> (Addressing)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/vcard/ns#Addressing> "These types are concerned with information related to the delivery addressing or label for the vCard object")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#Addressing> "Addressing"@en)
+EquivalentClasses(<http://www.w3.org/2006/vcard/ns#Addressing> ObjectUnionOf(ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#geo> xsd:anyURI) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#geo>)) ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#timeZone> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#timeZone>)) ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#language> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#language>)) ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#sortAs> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#sortAs>))))
+
+# Class: <http://www.w3.org/2006/vcard/ns#Calendar> (Calendar)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#Calendar> "Calendar"@en)
+EquivalentClasses(<http://www.w3.org/2006/vcard/ns#Calendar> ObjectIntersectionOf(ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#geo> xsd:anyURI) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#geo>)) ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#timeZone> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#timeZone>))))
+
+# Class: <http://www.w3.org/2006/vcard/ns#Communication> (Communication)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/vcard/ns#Communication> "These properties describe information about how to communicate with the object the vCard represents")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#Communication> "Communication"@en)
+EquivalentClasses(<http://www.w3.org/2006/vcard/ns#Communication> ObjectUnionOf(ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#geo> xsd:anyURI) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#geo>)) ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#timeZone> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#timeZone>)) ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#language> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#language>)) ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#sortAs> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#sortAs>))))
+
+# Class: <http://www.w3.org/2006/vcard/ns#Explanatory> (Explanatory)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/vcard/ns#Explanatory> "These properties are concerned with additional explanations, such as that related to informational notes or revisions specific to the  vCard")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#Explanatory> "Explanatory"@en)
+EquivalentClasses(<http://www.w3.org/2006/vcard/ns#Explanatory> ObjectUnionOf(ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#geo> xsd:anyURI) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#geo>)) ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#timeZone> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#timeZone>)) ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#language> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#language>)) ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#sortAs> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#sortAs>))))
+
+# Class: <http://www.w3.org/2006/vcard/ns#Geo> (Geo)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/vcard/ns#Geo> "Used to indicate global positioning  information that is specific to an address")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#Geo> "Geo"@en)
+EquivalentClasses(<http://www.w3.org/2006/vcard/ns#Geo> ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#geo> xsd:anyURI) DataMinCardinality(1 <http://www.w3.org/2006/vcard/ns#geo>)))
+SubClassOf(<http://www.w3.org/2006/vcard/ns#Geo> <http://www.w3.org/2006/vcard/ns#Geographical>)
+
+# Class: <http://www.w3.org/2006/vcard/ns#Geographical> (Geographical)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/vcard/ns#Geographical> "These properties are concerned with information associated with  geographical positions or regions associated with the object the vCard represents")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#Geographical> "Geographical"@en)
+EquivalentClasses(<http://www.w3.org/2006/vcard/ns#Geographical> ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#sortAs> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#sortAs>)))
+
+# Class: <http://www.w3.org/2006/vcard/ns#Identification> (Identification)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/vcard/ns#Identification> "These types are used to capture information associated with the identification and naming of the entity associated with the vCard")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#Identification> "Identification"@en)
+EquivalentClasses(<http://www.w3.org/2006/vcard/ns#Identification> ObjectUnionOf(ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#geo> xsd:anyURI) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#geo>)) ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#timeZone> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#timeZone>)) ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#language> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#language>)) ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#sortAs> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#sortAs>))))
+
+# Class: <http://www.w3.org/2006/vcard/ns#Language> (Language)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/vcard/ns#Language> "To specify the language(s) that may be used for contacting the entity associated with the vCard.")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#Language> "Language"@en)
+EquivalentClasses(<http://www.w3.org/2006/vcard/ns#Language> ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#language> xsd:string) DataExactCardinality(1 <http://www.w3.org/2006/vcard/ns#language>)))
+SubClassOf(<http://www.w3.org/2006/vcard/ns#Language> <http://www.w3.org/2006/vcard/ns#Communication>)
+
+# Class: <http://www.w3.org/2006/vcard/ns#Organizational> (Organizational)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/vcard/ns#Organizational> "These properties are concerned with information associated with characteristics of the organization or organizational units of the object that the vCard represents")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#Organizational> "Organizational"@en)
+EquivalentClasses(<http://www.w3.org/2006/vcard/ns#Organizational> ObjectIntersectionOf(ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#geo> xsd:anyURI) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#geo>)) ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#timeZone> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#timeZone>)) ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#language> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#language>)) ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#sortAs> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#sortAs>))))
+
+# Class: <http://www.w3.org/2006/vcard/ns#Security> (Security)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/vcard/ns#Security> "Contains all the Security related Classes")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#Security> "Security"@en)
+EquivalentClasses(<http://www.w3.org/2006/vcard/ns#Security> ObjectIntersectionOf(ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#geo> xsd:anyURI) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#geo>)) ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#timeZone> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#timeZone>)) ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#sortAs> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#sortAs>))))
+
+# Class: <http://www.w3.org/2006/vcard/ns#TimeZone> (Time Zone)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/vcard/ns#TimeZone> "Used to indicate time zone information that is specific to a location or address")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#TimeZone> "Time Zone"@en)
+EquivalentClasses(<http://www.w3.org/2006/vcard/ns#TimeZone> ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#timeZone> xsd:string) DataMinCardinality(1 <http://www.w3.org/2006/vcard/ns#timeZone>)))
+SubClassOf(<http://www.w3.org/2006/vcard/ns#TimeZone> <http://www.w3.org/2006/vcard/ns#Geographical>)
+
+
 )

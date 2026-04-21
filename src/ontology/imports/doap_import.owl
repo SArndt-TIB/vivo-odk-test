@@ -1,4 +1,4 @@
-Prefix(:=<http://purl.obolibrary.org/obo//imports/doap_import.owl#>)
+Prefix(:=<http://purl.obolibrary.org/obo//vivotest/imports/doap_import.owl#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -6,41 +6,107 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<http://purl.obolibrary.org/obo//imports/doap_import.owl>
-<http://purl.obolibrary.org/obo//releases/2026-03-23/imports/doap_import.owl>
-Annotation(owl:versionInfo "2026-03-23")
+Ontology(<http://purl.obolibrary.org/obo//vivotest/imports/doap_import.owl>
+<http://purl.obolibrary.org/obo//vivotest/releases/2026-04-21/imports/doap_import.owl>
+Annotation(owl:versionInfo "2026-04-21")
 
 Declaration(Class(<http://purl.org/dc/terms/Agent>))
 Declaration(Class(<http://schema.org/Person>))
+Declaration(Class(<http://usefulinc.com/ns/doap#Project>))
+Declaration(Class(<http://usefulinc.com/ns/doap#Repository>))
 Declaration(Class(<http://www.w3.org/2000/10/swap/pim/contact#Person>))
 Declaration(Class(<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>))
 Declaration(Class(<http://xmlns.com/foaf/0.1/Agent>))
+Declaration(Class(<http://xmlns.com/foaf/0.1/Group>))
+Declaration(Class(<http://xmlns.com/foaf/0.1/Organization>))
 Declaration(Class(<http://xmlns.com/foaf/0.1/Person>))
+Declaration(Class(<http://xmlns.com/foaf/0.1/Project>))
+Declaration(Class(<http://xmlns.com/wordnet/1.6/Project>))
+Declaration(ObjectProperty(<http://usefulinc.com/ns/doap#repository>))
+Declaration(ObjectProperty(<http://usefulinc.com/ns/doap#repositoryOf>))
 Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/made>))
 Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/maker>))
 Declaration(ObjectProperty(<http://xmlns.com/foaf/0.1/mbox>))
 Declaration(DataProperty(<http://xmlns.com/foaf/0.1/name>))
 Declaration(NamedIndividual(<http://usefulinc.com/ns/doap#>))
 Declaration(NamedIndividual(<mailto:edd@usefulinc.com>))
+Declaration(AnnotationProperty(<http://usefulinc.com/ns/doap#bug-database>))
+Declaration(AnnotationProperty(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status>))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: <http://usefulinc.com/ns/doap#bug-database> (base de datos de bugs)
+
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#bug-database> "Bug tracker for a project."@en)
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#bug-database> "Bug tracker para um projeto."@pt)
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#bug-database> "Bug tracker para un proyecto."@es)
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#bug-database> "Fehlerdatenbank eines Projektes."@de)
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#bug-database> "Správa chyb projektu."@cs)
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#bug-database> "Suivi des bugs pour un projet."@fr)
+AnnotationAssertion(rdfs:isDefinedBy <http://usefulinc.com/ns/doap#bug-database> <http://usefulinc.com/ns/doap#>)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#bug-database> "Fehlerdatenbank"@de)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#bug-database> "base de dados de bugs"@pt)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#bug-database> "base de datos de bugs"@es)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#bug-database> "bug database"@en)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#bug-database> "databáze chyb"@cs)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#bug-database> "suivi des bugs"@fr)
+
 
 ############################
 #   Object Properties
 ############################
 
+# Object Property: <http://usefulinc.com/ns/doap#repository> (úložiště)
+
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#repository> "Dépôt du code source."@fr)
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#repository> "Quellcode-Versionierungssystem."@de)
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#repository> "Repositorio del código fuente."@es)
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#repository> "Repositório do código fonte."@pt)
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#repository> "Source code repository."@en)
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#repository> "Úložiště zdrojových kódů."@cs)
+AnnotationAssertion(rdfs:isDefinedBy <http://usefulinc.com/ns/doap#repository> <http://usefulinc.com/ns/doap#>)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#repository> "Repository"@de)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#repository> "dépôt"@fr)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#repository> "repositorio"@es)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#repository> "repository"@en)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#repository> "repositório"@pt)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#repository> "úložiště"@cs)
+InverseObjectProperties(<http://usefulinc.com/ns/doap#repository> <http://usefulinc.com/ns/doap#repositoryOf>)
+ObjectPropertyDomain(<http://usefulinc.com/ns/doap#repository> <http://usefulinc.com/ns/doap#Project>)
+ObjectPropertyRange(<http://usefulinc.com/ns/doap#repository> <http://usefulinc.com/ns/doap#Repository>)
+
+# Object Property: <http://usefulinc.com/ns/doap#repositoryOf> (repository of)
+
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#repositoryOf> "The project that uses a repository."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://usefulinc.com/ns/doap#repositoryOf> <http://usefulinc.com/ns/doap#>)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#repositoryOf> "repository of"@en)
+ObjectPropertyDomain(<http://usefulinc.com/ns/doap#repositoryOf> <http://usefulinc.com/ns/doap#Repository>)
+ObjectPropertyRange(<http://usefulinc.com/ns/doap#repositoryOf> <http://usefulinc.com/ns/doap#Project>)
+
 # Object Property: <http://xmlns.com/foaf/0.1/made> (made)
 
+AnnotationAssertion(rdfs:comment <http://xmlns.com/foaf/0.1/made> "Something that was made by this agent.")
+AnnotationAssertion(rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/made> <http://xmlns.com/foaf/0.1/>)
 AnnotationAssertion(rdfs:label <http://xmlns.com/foaf/0.1/made> "made")
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://xmlns.com/foaf/0.1/made> "stable")
 InverseObjectProperties(<http://xmlns.com/foaf/0.1/made> <http://xmlns.com/foaf/0.1/maker>)
 ObjectPropertyDomain(<http://xmlns.com/foaf/0.1/made> <http://xmlns.com/foaf/0.1/Agent>)
 
 # Object Property: <http://xmlns.com/foaf/0.1/maker> (maker)
 
+AnnotationAssertion(rdfs:comment <http://xmlns.com/foaf/0.1/maker> "An agent that  made this thing.")
+AnnotationAssertion(rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/maker> <http://xmlns.com/foaf/0.1/>)
 AnnotationAssertion(rdfs:label <http://xmlns.com/foaf/0.1/maker> "maker")
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://xmlns.com/foaf/0.1/maker> "stable")
 ObjectPropertyRange(<http://xmlns.com/foaf/0.1/maker> <http://xmlns.com/foaf/0.1/Agent>)
 
 # Object Property: <http://xmlns.com/foaf/0.1/mbox> (personal mailbox)
 
+AnnotationAssertion(rdfs:comment <http://xmlns.com/foaf/0.1/mbox> "A  personal mailbox, ie. an Internet mailbox associated with exactly one owner, the first owner of this mailbox. This is a 'static inverse functional property', in that  there is (across time and change) at most one individual that ever has any particular value for foaf:mbox.")
+AnnotationAssertion(rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/mbox> <http://xmlns.com/foaf/0.1/>)
 AnnotationAssertion(rdfs:label <http://xmlns.com/foaf/0.1/mbox> "personal mailbox")
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://xmlns.com/foaf/0.1/mbox> "stable")
 InverseFunctionalObjectProperty(<http://xmlns.com/foaf/0.1/mbox>)
 ObjectPropertyDomain(<http://xmlns.com/foaf/0.1/mbox> <http://xmlns.com/foaf/0.1/Agent>)
 
@@ -51,7 +117,10 @@ ObjectPropertyDomain(<http://xmlns.com/foaf/0.1/mbox> <http://xmlns.com/foaf/0.1
 
 # Data Property: <http://xmlns.com/foaf/0.1/name> (name)
 
+AnnotationAssertion(rdfs:comment <http://xmlns.com/foaf/0.1/name> "A name for some thing.")
+AnnotationAssertion(rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/name> <http://xmlns.com/foaf/0.1/>)
 AnnotationAssertion(rdfs:label <http://xmlns.com/foaf/0.1/name> "name")
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://xmlns.com/foaf/0.1/name> "testing")
 
 
 
@@ -67,6 +136,40 @@ EquivalentClasses(<http://purl.org/dc/terms/Agent> <http://xmlns.com/foaf/0.1/Ag
 
 EquivalentClasses(<http://schema.org/Person> <http://xmlns.com/foaf/0.1/Person>)
 
+# Class: <http://usefulinc.com/ns/doap#Project> (Projekt)
+
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#Project> "A project."@en)
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#Project> "Ein Projekt."@de)
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#Project> "Projekt."@cs)
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#Project> "Projeto."@pt)
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#Project> "Un projet."@fr)
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#Project> "Un proyecto."@es)
+AnnotationAssertion(rdfs:isDefinedBy <http://usefulinc.com/ns/doap#Project> <http://usefulinc.com/ns/doap#>)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#Project> "Project"@en)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#Project> "Projekt"@cs)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#Project> "Projekt"@de)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#Project> "Projet"@fr)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#Project> "Projeto"@pt)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#Project> "Proyecto"@es)
+SubClassOf(<http://usefulinc.com/ns/doap#Project> <http://xmlns.com/foaf/0.1/Project>)
+SubClassOf(<http://usefulinc.com/ns/doap#Project> <http://xmlns.com/wordnet/1.6/Project>)
+
+# Class: <http://usefulinc.com/ns/doap#Repository> (Repositório)
+
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#Repository> "Dépôt du code source."@fr)
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#Repository> "Quellcode-Versionierungssystem."@de)
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#Repository> "Repositorio del código fuente."@es)
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#Repository> "Repositório do código fonte."@pt)
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#Repository> "Source code repository."@en)
+AnnotationAssertion(rdfs:comment <http://usefulinc.com/ns/doap#Repository> "Úložiště zdrojových kódů."@cs)
+AnnotationAssertion(rdfs:isDefinedBy <http://usefulinc.com/ns/doap#Repository> <http://usefulinc.com/ns/doap#>)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#Repository> "Dépôt"@fr)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#Repository> "Repositorio"@es)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#Repository> "Repository"@de)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#Repository> "Repository"@en)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#Repository> "Repositório"@pt)
+AnnotationAssertion(rdfs:label <http://usefulinc.com/ns/doap#Repository> "Úložiště"@cs)
+
 # Class: <http://www.w3.org/2000/10/swap/pim/contact#Person> (<http://www.w3.org/2000/10/swap/pim/contact#Person>)
 
 EquivalentClasses(<http://www.w3.org/2000/10/swap/pim/contact#Person> <http://xmlns.com/foaf/0.1/Person>)
@@ -77,13 +180,42 @@ AnnotationAssertion(rdfs:label <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialT
 
 # Class: <http://xmlns.com/foaf/0.1/Agent> (Agent)
 
+AnnotationAssertion(rdfs:comment <http://xmlns.com/foaf/0.1/Agent> "An agent (eg. person, group, software or physical artifact).")
 AnnotationAssertion(rdfs:label <http://xmlns.com/foaf/0.1/Agent> "Agent")
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://xmlns.com/foaf/0.1/Agent> "stable")
+
+# Class: <http://xmlns.com/foaf/0.1/Group> (Group)
+
+AnnotationAssertion(rdfs:comment <http://xmlns.com/foaf/0.1/Group> "A class of Agents.")
+AnnotationAssertion(rdfs:label <http://xmlns.com/foaf/0.1/Group> "Group")
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://xmlns.com/foaf/0.1/Group> "stable")
+SubClassOf(<http://xmlns.com/foaf/0.1/Group> <http://xmlns.com/foaf/0.1/Agent>)
+
+# Class: <http://xmlns.com/foaf/0.1/Organization> (Organization)
+
+AnnotationAssertion(rdfs:comment <http://xmlns.com/foaf/0.1/Organization> "An organization.")
+AnnotationAssertion(rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/Organization> <http://xmlns.com/foaf/0.1/>)
+AnnotationAssertion(rdfs:label <http://xmlns.com/foaf/0.1/Organization> "Organization")
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://xmlns.com/foaf/0.1/Organization> "stable")
+SubClassOf(<http://xmlns.com/foaf/0.1/Organization> <http://xmlns.com/foaf/0.1/Agent>)
+DisjointClasses(<http://xmlns.com/foaf/0.1/Organization> <http://xmlns.com/foaf/0.1/Person>)
 
 # Class: <http://xmlns.com/foaf/0.1/Person> (Person)
 
+AnnotationAssertion(rdfs:comment <http://xmlns.com/foaf/0.1/Person> "A person.")
+AnnotationAssertion(rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/Person> <http://xmlns.com/foaf/0.1/>)
 AnnotationAssertion(rdfs:label <http://xmlns.com/foaf/0.1/Person> "Person")
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://xmlns.com/foaf/0.1/Person> "stable")
 SubClassOf(<http://xmlns.com/foaf/0.1/Person> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing>)
 SubClassOf(<http://xmlns.com/foaf/0.1/Person> <http://xmlns.com/foaf/0.1/Agent>)
+DisjointClasses(<http://xmlns.com/foaf/0.1/Person> <http://xmlns.com/foaf/0.1/Project>)
+
+# Class: <http://xmlns.com/foaf/0.1/Project> (Project)
+
+AnnotationAssertion(rdfs:comment <http://xmlns.com/foaf/0.1/Project> "A project (a collective endeavour of some kind).")
+AnnotationAssertion(rdfs:isDefinedBy <http://xmlns.com/foaf/0.1/Project> <http://xmlns.com/foaf/0.1/>)
+AnnotationAssertion(rdfs:label <http://xmlns.com/foaf/0.1/Project> "Project")
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://xmlns.com/foaf/0.1/Project> "testing")
 
 
 ############################
@@ -98,4 +230,6 @@ ObjectPropertyAssertion(<http://xmlns.com/foaf/0.1/maker> <http://usefulinc.com/
 ClassAssertion(<http://xmlns.com/foaf/0.1/Person> _:genid2147483648)
 ObjectPropertyAssertion(<http://xmlns.com/foaf/0.1/mbox> _:genid2147483648 <mailto:edd@usefulinc.com>)
 DataPropertyAssertion(<http://xmlns.com/foaf/0.1/name> _:genid2147483648 "Edd Wilder-James")
+AnnotationAssertion(rdfs:label owl:Thing "Thing")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#Concept> "Concept")
 )

@@ -1,4 +1,4 @@
-Prefix(:=<http://purl.obolibrary.org/obo//imports/vann_import.owl#>)
+Prefix(:=<http://purl.obolibrary.org/obo//vivotest/imports/vann_import.owl#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -6,9 +6,9 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<http://purl.obolibrary.org/obo//imports/vann_import.owl>
-<http://purl.obolibrary.org/obo//releases/2026-03-23/imports/vann_import.owl>
-Annotation(owl:versionInfo "2026-03-23")
+Ontology(<http://purl.obolibrary.org/obo//vivotest/imports/vann_import.owl>
+<http://purl.obolibrary.org/obo//vivotest/releases/2026-04-21/imports/vann_import.owl>
+Annotation(owl:versionInfo "2026-04-21")
 
 Declaration(Class(<http://web.resource.org/cc/License>))
 Declaration(Class(<http://web.resource.org/cc/Work>))
@@ -16,8 +16,28 @@ Declaration(Class(<http://xmlns.com/foaf/0.1/Person>))
 Declaration(NamedIndividual(<http://creativecommons.org/licenses/by/1.0/>))
 Declaration(NamedIndividual(<http://iandavis.com/id/me>))
 Declaration(NamedIndividual(<https://vocab.org/vann/vann-vocab-20100607.rdf>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/creator>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/description>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))
+Declaration(AnnotationProperty(<http://purl.org/vocab/vann/preferredNamespacePrefix>))
+Declaration(AnnotationProperty(<http://purl.org/vocab/vann/preferredNamespaceUri>))
+Declaration(AnnotationProperty(<http://xmlns.com/foaf/0.1/name>))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: <http://purl.org/vocab/vann/preferredNamespacePrefix> (Preferred Namespace Prefix)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/vocab/vann/preferredNamespacePrefix> "The preferred namespace prefix to use when using terms from this vocabulary in an XML document."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/vocab/vann/preferredNamespacePrefix> <http://purl.org/vocab/vann/>)
+AnnotationAssertion(rdfs:label <http://purl.org/vocab/vann/preferredNamespacePrefix> "Preferred Namespace Prefix"@en)
+
+# Annotation Property: <http://purl.org/vocab/vann/preferredNamespaceUri> (Preferred Namespace Uri)
+
+AnnotationAssertion(rdfs:comment <http://purl.org/vocab/vann/preferredNamespaceUri> "The preferred namespace URI to use when using terms from this vocabulary in an XML document."@en)
+AnnotationAssertion(rdfs:isDefinedBy <http://purl.org/vocab/vann/preferredNamespaceUri> <http://purl.org/vocab/vann/>)
+AnnotationAssertion(rdfs:label <http://purl.org/vocab/vann/preferredNamespaceUri> "Preferred Namespace Uri"@en)
+
 
 
 
@@ -31,6 +51,7 @@ ClassAssertion(<http://web.resource.org/cc/License> <http://creativecommons.org/
 
 # Individual: <http://iandavis.com/id/me> (<http://iandavis.com/id/me>)
 
+AnnotationAssertion(<http://xmlns.com/foaf/0.1/name> <http://iandavis.com/id/me> "Ian Davis")
 ClassAssertion(<http://xmlns.com/foaf/0.1/Person> <http://iandavis.com/id/me>)
 
 # Individual: <https://vocab.org/vann/vann-vocab-20100607.rdf> (<https://vocab.org/vann/vann-vocab-20100607.rdf>)

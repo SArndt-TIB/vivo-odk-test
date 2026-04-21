@@ -1,4 +1,4 @@
-Prefix(:=<http://purl.obolibrary.org/obo//imports/skos_import.owl#>)
+Prefix(:=<http://purl.obolibrary.org/obo//vivotest/imports/skos_import.owl#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -6,9 +6,9 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<http://purl.obolibrary.org/obo//imports/skos_import.owl>
-<http://purl.obolibrary.org/obo//releases/2026-04-07/imports/skos_import.owl>
-Annotation(owl:versionInfo "2026-04-07")
+Ontology(<http://purl.obolibrary.org/obo//vivotest/imports/skos_import.owl>
+<http://purl.obolibrary.org/obo//vivotest/releases/2026-04-21/imports/skos_import.owl>
+Annotation(owl:versionInfo "2026-04-21")
 
 Declaration(Class(<http://www.w3.org/2004/02/skos/core#Concept>))
 Declaration(ObjectProperty(<http://www.w3.org/2004/02/skos/core#broader>))
@@ -21,10 +21,16 @@ Declaration(AnnotationProperty(<http://purl.org/dc/terms/contributor>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/creator>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/description>))
 Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))
+Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#editorialNote>))
 Declaration(AnnotationProperty(<http://www.w3.org/2004/02/skos/core#scopeNote>))
 ############################
 #   Annotation Properties
 ############################
+
+# Annotation Property: <http://www.w3.org/2004/02/skos/core#editorialNote> (editorial note)
+
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2004/02/skos/core#editorialNote> <http://www.w3.org/2004/02/skos/core>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2004/02/skos/core#editorialNote> "editorial note"@en)
 
 # Annotation Property: <http://www.w3.org/2004/02/skos/core#scopeNote> (scope note)
 

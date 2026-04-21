@@ -1,4 +1,223 @@
-Prefix(:=<http://purl.obolibrary.org/obo/vivotest/imports/study_protocol_import.owl>)
+Prefix(:=<http://purl.obolibrary.org/obo//vivotest/imports/study_protocol_import.owl#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
-Ontology(<http://purl.obolibrary.org/obo/vivotest/imports/study_protocol_import.owl>
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://purl.obolibrary.org/obo//vivotest/imports/study_protocol_import.owl>
+<http://purl.obolibrary.org/obo//vivotest/releases/2026-04-21/imports/study_protocol_import.owl>
+Annotation(owl:versionInfo "2026-04-21")
+
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000001>))
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000003>))
+Declaration(Class(<http://purl.obolibrary.org/obo/BFO_0000015>))
+Declaration(Class(<http://purl.org/net/OCRe/research.owl#Interventional_study>))
+Declaration(Class(<http://purl.org/net/OCRe/study_design.owl#OCRE100038>))
+Declaration(Class(<http://purl.org/net/OCRe/study_design.owl#Phase_0>))
+Declaration(Class(<http://purl.org/net/OCRe/study_design.owl#Phase_1>))
+Declaration(Class(<http://purl.org/net/OCRe/study_design.owl#Phase_2>))
+Declaration(Class(<http://purl.org/net/OCRe/study_design.owl#Phase_3>))
+Declaration(Class(<http://purl.org/net/OCRe/study_design.owl#Phase_4>))
+Declaration(Class(<http://purl.org/net/OCRe/study_design.owl#Single_group_study>))
+Declaration(Class(<http://www.w3.org/2006/vcard/ns#Addressing>))
+Declaration(Class(<http://www.w3.org/2006/vcard/ns#Calendar>))
+Declaration(Class(<http://www.w3.org/2006/vcard/ns#Communication>))
+Declaration(Class(<http://www.w3.org/2006/vcard/ns#Explanatory>))
+Declaration(Class(<http://www.w3.org/2006/vcard/ns#Geo>))
+Declaration(Class(<http://www.w3.org/2006/vcard/ns#Geographical>))
+Declaration(Class(<http://www.w3.org/2006/vcard/ns#Identification>))
+Declaration(Class(<http://www.w3.org/2006/vcard/ns#Language>))
+Declaration(Class(<http://www.w3.org/2006/vcard/ns#Organizational>))
+Declaration(Class(<http://www.w3.org/2006/vcard/ns#Security>))
+Declaration(Class(<http://www.w3.org/2006/vcard/ns#TimeZone>))
+Declaration(DataProperty(<http://www.w3.org/2006/vcard/ns#geo>))
+Declaration(DataProperty(<http://www.w3.org/2006/vcard/ns#language>))
+Declaration(DataProperty(<http://www.w3.org/2006/vcard/ns#sortAs>))
+Declaration(DataProperty(<http://www.w3.org/2006/vcard/ns#timeZone>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000117>))
+Declaration(AnnotationProperty(<http://purl.org/net/OCRe/statistics.owl#curator>))
+Declaration(AnnotationProperty(<http://purl.org/net/OCRe/study_protocol.owl#develop_comment>))
+Declaration(Datatype(rdfs:Literal))
+Declaration(Datatype(xsd:anyURI))
+Declaration(Datatype(xsd:string))
+
+############################
+#   Data Properties
+############################
+
+# Data Property: <http://www.w3.org/2006/vcard/ns#geo> (geo)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/vcard/ns#geo> "Must use the geo URI scheme RFC5870")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#geo> "geo"@en)
+DataPropertyDomain(<http://www.w3.org/2006/vcard/ns#geo> <http://www.w3.org/2006/vcard/ns#Geo>)
+DataPropertyRange(<http://www.w3.org/2006/vcard/ns#geo> xsd:anyURI)
+
+# Data Property: <http://www.w3.org/2006/vcard/ns#language> (has language)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/vcard/ns#language> "Use 2 char language code from RFC5646")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#language> "has language"@en)
+DataPropertyRange(<http://www.w3.org/2006/vcard/ns#language> xsd:string)
+
+# Data Property: <http://www.w3.org/2006/vcard/ns#sortAs> (sort as)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#sortAs> "sort as"@en)
+DataPropertyRange(<http://www.w3.org/2006/vcard/ns#sortAs> xsd:string)
+
+# Data Property: <http://www.w3.org/2006/vcard/ns#timeZone> (timezone)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#timeZone> "timezone"@en)
+DataPropertyDomain(<http://www.w3.org/2006/vcard/ns#timeZone> <http://www.w3.org/2006/vcard/ns#TimeZone>)
+DataPropertyRange(<http://www.w3.org/2006/vcard/ns#timeZone> xsd:string)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://purl.obolibrary.org/obo/BFO_0000001> (Entity)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000001> "Entity"@en)
+
+# Class: <http://purl.obolibrary.org/obo/BFO_0000003> (Occurrent)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000003> "Occurrent"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000003> <http://purl.obolibrary.org/obo/BFO_0000001>)
+
+# Class: <http://purl.obolibrary.org/obo/BFO_0000015> (Process)
+
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/BFO_0000015> "Process"@en)
+SubClassOf(<http://purl.obolibrary.org/obo/BFO_0000015> <http://purl.obolibrary.org/obo/BFO_0000003>)
+
+# Class: <http://purl.org/net/OCRe/study_design.owl#OCRE100038> (Phase)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/net/OCRe/study_design.owl#OCRE100038> "Phase describes the level of a trial required of drugs before (and after) they are routinely used in clinical practice:
+- Phase I trials assess toxic effects on humans (not many people participate in them, and usually without controls);
+- Phase ll trials assess therapeutic benefit (usually involving a few hundred people, usually with controls, but not always);
+- Phase III trials compare the new treatment against standard (or placebo) treatment (usually a full randomised controlled trial). At this point, a drug can be approved for community use.
+- Phase IV monitors a new treatment in the community, often to evaluate longterm safety and effectiveness. [Glossary of Terms in The Cochrane Collaboration]
+
+A trial can be of a combination phase (e.g., I/II).
+The concept of phase is not applicable to trials studying certain interventions (e.g., device, procedure, behavioral)")
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000117> <http://purl.org/net/OCRe/study_design.owl#OCRE100038> "Simona")
+AnnotationAssertion(rdfs:label <http://purl.org/net/OCRe/study_design.owl#OCRE100038> "Phase"@en)
+SubClassOf(<http://purl.org/net/OCRe/study_design.owl#OCRE100038> <http://purl.obolibrary.org/obo/BFO_0000015>)
+
+# Class: <http://purl.org/net/OCRe/study_design.owl#Phase_0> (Phase 0)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/net/OCRe/study_design.owl#Phase_0> "A Phase 0 trial is an exploratory trial involving very limited human exposure, with no therapeutic or diagnostic intent (e.g., screening study, microdose study). [http://prsinfo.clinicaltrials.gov/definitions.html]")
+AnnotationAssertion(<http://purl.org/net/OCRe/statistics.owl#curator> <http://purl.org/net/OCRe/study_design.owl#Phase_0> "Simona")
+AnnotationAssertion(rdfs:label <http://purl.org/net/OCRe/study_design.owl#Phase_0> "Phase 0"@en)
+SubClassOf(<http://purl.org/net/OCRe/study_design.owl#Phase_0> <http://purl.org/net/OCRe/study_design.owl#OCRE100038>)
+
+# Class: <http://purl.org/net/OCRe/study_design.owl#Phase_1> (Phase 1)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/net/OCRe/study_design.owl#Phase_1> "A Phase I trial assesses toxic effects on humans (not many people participate, and usually without controls) [Glossary of Terms in The Cochrane Collaboration]")
+AnnotationAssertion(<http://purl.org/net/OCRe/statistics.owl#curator> <http://purl.org/net/OCRe/study_design.owl#Phase_1> "Simona")
+AnnotationAssertion(rdfs:label <http://purl.org/net/OCRe/study_design.owl#Phase_1> "Phase 1"@en)
+SubClassOf(<http://purl.org/net/OCRe/study_design.owl#Phase_1> <http://purl.org/net/OCRe/study_design.owl#OCRE100038>)
+
+# Class: <http://purl.org/net/OCRe/study_design.owl#Phase_2> (Phase 2)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/net/OCRe/study_design.owl#Phase_2> "A Phase ll trial assesses therapeutic benefit (usually involving a few hundred people, usually with controls, but not always) [Glossary of Terms in The Cochrane Collaboration]")
+AnnotationAssertion(<http://purl.org/net/OCRe/statistics.owl#curator> <http://purl.org/net/OCRe/study_design.owl#Phase_2> "Simona")
+AnnotationAssertion(rdfs:label <http://purl.org/net/OCRe/study_design.owl#Phase_2> "Phase 2"@en)
+SubClassOf(<http://purl.org/net/OCRe/study_design.owl#Phase_2> <http://purl.org/net/OCRe/study_design.owl#OCRE100038>)
+
+# Class: <http://purl.org/net/OCRe/study_design.owl#Phase_3> (Phase 3)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/net/OCRe/study_design.owl#Phase_3> "A Phase III trial compares the new treatment against standard (or placebo) treatment (usually a full
+randomised controlled trial). At this point, a drug can be approved for community use. [Glossary of Terms in The Cochrane Collaboration]")
+AnnotationAssertion(<http://purl.org/net/OCRe/statistics.owl#curator> <http://purl.org/net/OCRe/study_design.owl#Phase_3> "Simona")
+AnnotationAssertion(rdfs:label <http://purl.org/net/OCRe/study_design.owl#Phase_3> "Phase 3"@en)
+SubClassOf(<http://purl.org/net/OCRe/study_design.owl#Phase_3> <http://purl.org/net/OCRe/study_design.owl#OCRE100038>)
+
+# Class: <http://purl.org/net/OCRe/study_design.owl#Phase_4> (Phase 4)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/net/OCRe/study_design.owl#Phase_4> "A Phase IV study monitors a new treatment in the community, often to evaluate longterm safety and effectiveness. [Glossary of Terms in The Cochrane Collaboration]")
+AnnotationAssertion(<http://purl.org/net/OCRe/statistics.owl#curator> <http://purl.org/net/OCRe/study_design.owl#Phase_4> "Simona")
+AnnotationAssertion(rdfs:label <http://purl.org/net/OCRe/study_design.owl#Phase_4> "Phase 4"@en)
+SubClassOf(<http://purl.org/net/OCRe/study_design.owl#Phase_4> <http://purl.org/net/OCRe/study_design.owl#OCRE100038>)
+
+# Class: <http://purl.org/net/OCRe/study_design.owl#Single_group_study> (Single Group Study)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.org/net/OCRe/study_design.owl#Single_group_study> "A single group study is an interventional study that has only a single allocation group and no contemporaneuos comparison group.
+A study in which an individual acts has his/her own comparison does not fall into this category, since an individual is not a group.")
+AnnotationAssertion(<http://purl.org/net/OCRe/statistics.owl#curator> <http://purl.org/net/OCRe/study_design.owl#Single_group_study> "Simona")
+AnnotationAssertion(<http://purl.org/net/OCRe/study_protocol.owl#develop_comment> <http://purl.org/net/OCRe/study_design.owl#Single_group_study> "Simona: to be reviewed")
+AnnotationAssertion(rdfs:label <http://purl.org/net/OCRe/study_design.owl#Single_group_study> "Single Group Study"@en)
+SubClassOf(<http://purl.org/net/OCRe/study_design.owl#Single_group_study> <http://purl.org/net/OCRe/research.owl#Interventional_study>)
+
+# Class: <http://www.w3.org/2006/vcard/ns#Addressing> (Addressing)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/vcard/ns#Addressing> "These types are concerned with information related to the delivery addressing or label for the vCard object")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#Addressing> "Addressing"@en)
+EquivalentClasses(<http://www.w3.org/2006/vcard/ns#Addressing> ObjectUnionOf(ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#geo> xsd:anyURI) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#geo>)) ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#timeZone> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#timeZone>)) ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#language> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#language>)) ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#sortAs> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#sortAs>))))
+
+# Class: <http://www.w3.org/2006/vcard/ns#Calendar> (Calendar)
+
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#Calendar> "Calendar"@en)
+EquivalentClasses(<http://www.w3.org/2006/vcard/ns#Calendar> ObjectIntersectionOf(ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#geo> xsd:anyURI) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#geo>)) ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#timeZone> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#timeZone>))))
+
+# Class: <http://www.w3.org/2006/vcard/ns#Communication> (Communication)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/vcard/ns#Communication> "These properties describe information about how to communicate with the object the vCard represents")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#Communication> "Communication"@en)
+EquivalentClasses(<http://www.w3.org/2006/vcard/ns#Communication> ObjectUnionOf(ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#geo> xsd:anyURI) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#geo>)) ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#timeZone> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#timeZone>)) ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#language> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#language>)) ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#sortAs> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#sortAs>))))
+
+# Class: <http://www.w3.org/2006/vcard/ns#Explanatory> (Explanatory)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/vcard/ns#Explanatory> "These properties are concerned with additional explanations, such as that related to informational notes or revisions specific to the  vCard")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#Explanatory> "Explanatory"@en)
+EquivalentClasses(<http://www.w3.org/2006/vcard/ns#Explanatory> ObjectUnionOf(ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#geo> xsd:anyURI) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#geo>)) ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#timeZone> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#timeZone>)) ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#language> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#language>)) ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#sortAs> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#sortAs>))))
+
+# Class: <http://www.w3.org/2006/vcard/ns#Geo> (Geo)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/vcard/ns#Geo> "Used to indicate global positioning  information that is specific to an address")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#Geo> "Geo"@en)
+EquivalentClasses(<http://www.w3.org/2006/vcard/ns#Geo> ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#geo> xsd:anyURI) DataMinCardinality(1 <http://www.w3.org/2006/vcard/ns#geo>)))
+SubClassOf(<http://www.w3.org/2006/vcard/ns#Geo> <http://www.w3.org/2006/vcard/ns#Geographical>)
+
+# Class: <http://www.w3.org/2006/vcard/ns#Geographical> (Geographical)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/vcard/ns#Geographical> "These properties are concerned with information associated with  geographical positions or regions associated with the object the vCard represents")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#Geographical> "Geographical"@en)
+EquivalentClasses(<http://www.w3.org/2006/vcard/ns#Geographical> ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#sortAs> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#sortAs>)))
+
+# Class: <http://www.w3.org/2006/vcard/ns#Identification> (Identification)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/vcard/ns#Identification> "These types are used to capture information associated with the identification and naming of the entity associated with the vCard")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#Identification> "Identification"@en)
+EquivalentClasses(<http://www.w3.org/2006/vcard/ns#Identification> ObjectUnionOf(ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#geo> xsd:anyURI) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#geo>)) ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#timeZone> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#timeZone>)) ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#language> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#language>)) ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#sortAs> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#sortAs>))))
+
+# Class: <http://www.w3.org/2006/vcard/ns#Language> (Language)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/vcard/ns#Language> "To specify the language(s) that may be used for contacting the entity associated with the vCard.")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#Language> "Language"@en)
+EquivalentClasses(<http://www.w3.org/2006/vcard/ns#Language> ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#language> xsd:string) DataExactCardinality(1 <http://www.w3.org/2006/vcard/ns#language>)))
+SubClassOf(<http://www.w3.org/2006/vcard/ns#Language> <http://www.w3.org/2006/vcard/ns#Communication>)
+
+# Class: <http://www.w3.org/2006/vcard/ns#Organizational> (Organizational)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/vcard/ns#Organizational> "These properties are concerned with information associated with characteristics of the organization or organizational units of the object that the vCard represents")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#Organizational> "Organizational"@en)
+EquivalentClasses(<http://www.w3.org/2006/vcard/ns#Organizational> ObjectIntersectionOf(ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#geo> xsd:anyURI) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#geo>)) ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#timeZone> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#timeZone>)) ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#language> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#language>)) ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#sortAs> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#sortAs>))))
+
+# Class: <http://www.w3.org/2006/vcard/ns#Security> (Security)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/vcard/ns#Security> "Contains all the Security related Classes")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#Security> "Security"@en)
+EquivalentClasses(<http://www.w3.org/2006/vcard/ns#Security> ObjectIntersectionOf(ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#geo> xsd:anyURI) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#geo>)) ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#timeZone> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#timeZone>)) ObjectIntersectionOf(DataAllValuesFrom(<http://www.w3.org/2006/vcard/ns#sortAs> xsd:string) DataMaxCardinality(1 <http://www.w3.org/2006/vcard/ns#sortAs>))))
+
+# Class: <http://www.w3.org/2006/vcard/ns#TimeZone> (Time Zone)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2006/vcard/ns#TimeZone> "Used to indicate time zone information that is specific to a location or address")
+AnnotationAssertion(rdfs:label <http://www.w3.org/2006/vcard/ns#TimeZone> "Time Zone"@en)
+EquivalentClasses(<http://www.w3.org/2006/vcard/ns#TimeZone> ObjectIntersectionOf(DataSomeValuesFrom(<http://www.w3.org/2006/vcard/ns#timeZone> xsd:string) DataMinCardinality(1 <http://www.w3.org/2006/vcard/ns#timeZone>)))
+SubClassOf(<http://www.w3.org/2006/vcard/ns#TimeZone> <http://www.w3.org/2006/vcard/ns#Geographical>)
+
+
 )

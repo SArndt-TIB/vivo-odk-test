@@ -10,7 +10,7 @@
 # More information: https://github.com/INCATools/ontology-development-kit/
 
 # Fingerprint of the configuration file when this Makefile was last generated
-CONFIG_HASH=                4933408263ebb42a4c029f41d4f30605b7f49878f5b16903e0473f2af3549ce2
+CONFIG_HASH=                b5131cd4c4922a4b50e98609e97e87087d930ccd8c7666c7aa7c588b159d6cca
 
 
 # ----------------------------------------
@@ -21,7 +21,7 @@ CONFIG_HASH=                4933408263ebb42a4c029f41d4f30605b7f49878f5b16903e047
 OBOBASE=                    http://purl.obolibrary.org/obo
 URIBASE=                    http://purl.obolibrary.org/obo
 ONT=                        vivotest
-ONTBASE=                    http://purl.obolibrary.org/obo/
+ONTBASE=                    http://purl.obolibrary.org/obo//vivotest
 EDIT_FORMAT=                owl
 SRC =                       $(ONT)-edit.$(EDIT_FORMAT)
 MAKE_FAST=                  $(MAKE) IMP=false PAT=false COMP=false MIR=false
@@ -187,7 +187,7 @@ all_main: $(MAIN_FILES)
 # ----------------------------------------
 
 
-IMPORTS =  ro skos skos2 dcterms bibo doap vann ns geopolitical vitro statistics study_protocol
+IMPORTS =  ro skos dcterms bibo doap vann ns geopolitical vitro statistics study_protocol
 
 IMPORT_ROOTS = $(patsubst %, $(IMPORTDIR)/%_import, $(IMPORTS))
 IMPORT_OWL_FILES = $(foreach n,$(IMPORT_ROOTS), $(n).owl)
@@ -454,13 +454,6 @@ mirror-ro: | $(TMPDIR)
 .PRECIOUS: $(MIRRORDIR)/skos.owl
 mirror-skos: | $(TMPDIR)
 	$(ROBOT) convert -I http://www.w3.org/2009/08/skos-reference/skos.rdf -o $(TMPDIR)/$@.owl
-
-
-## ONTOLOGY: skos2
-.PHONY: mirror-skos2
-.PRECIOUS: $(MIRRORDIR)/skos2.owl
-mirror-skos2: | $(TMPDIR)
-	$(ROBOT) convert -I http://www.w3.org/2008/05/skos -o $(TMPDIR)/$@.owl
 
 
 ## ONTOLOGY: dcterms

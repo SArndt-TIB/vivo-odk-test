@@ -1,0 +1,9 @@
+http://purl.org/net/OCRe/study_protocol.owl#develop_comment
+http://purl.org/net/OCRe/research.owl#Interventional_study
+http://purl.org/net/OCRe/study_design.owl#OCRE100038
+http://purl.org/net/OCRe/study_design.owl#Phase_0
+http://purl.org/net/OCRe/study_design.owl#Phase_1
+http://purl.org/net/OCRe/study_design.owl#Phase_2
+http://purl.org/net/OCRe/study_design.owl#Phase_3
+http://purl.org/net/OCRe/study_design.owl#Phase_4
+http://purl.org/net/OCRe/study_design.owl#Single_group_study

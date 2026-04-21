@@ -1,4 +1,4 @@
-Prefix(:=<http://purl.obolibrary.org/obo//imports/ns_import.owl#>)
+Prefix(:=<http://purl.obolibrary.org/obo//vivotest/imports/ns_import.owl#>)
 Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
 Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
 Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
@@ -6,9 +6,24 @@ Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
 Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
 
 
-Ontology(<http://purl.obolibrary.org/obo//imports/ns_import.owl>
-<http://purl.obolibrary.org/obo//releases/2026-03-23/imports/ns_import.owl>
-Annotation(owl:versionInfo "2026-03-23")
+Ontology(<http://purl.obolibrary.org/obo//vivotest/imports/ns_import.owl>
+<http://purl.obolibrary.org/obo//vivotest/releases/2026-04-21/imports/ns_import.owl>
+Annotation(owl:versionInfo "2026-04-21")
+
+Declaration(AnnotationProperty(<http://purl.org/vocab/vann/preferredNamespacePrefix>))
+Declaration(AnnotationProperty(<http://purl.org/vocab/vann/preferredNamespaceUri>))
+Declaration(AnnotationProperty(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status>))
+Declaration(Datatype(xsd:date))
+############################
+#   Annotation Properties
+############################
+
+# Annotation Property: <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> (term status)
+
+AnnotationAssertion(rdfs:comment <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "the status of a vocabulary term, expressed as a short symbolic string; known values include 'unstable','testing', 'stable' and 'archaic'")
+AnnotationAssertion(rdfs:isDefinedBy <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://www.w3.org/2003/06/sw-vocab-status/ns#>)
+AnnotationAssertion(rdfs:label <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "term status")
+AnnotationAssertion(<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable")
 
 
 
