@@ -6314,7 +6314,7 @@ See also core:localAwardId.
         <rdfs:subPropertyOf rdf:resource="http://vivoweb.org/ontology/core#identifier"/>
         <obo:IAO_0000111 xml:lang="en">Wikidata ID</obo:IAO_0000111>
         <obo:IAO_0000112>Identifiers can be used as standalone in human-readable text: for instance, Q28136655 = &quot;VIVO&quot;. They can be combined with the proper URI prefix to get the corresponding Wikidata URI, which always resolves to an URL: for instance, https://www.wikidata.org/wiki/Q28136655 . The URIs can be shortened using a namespace prefix: for instance, wd:Q28136655; this is the preferred writing for expressing statements in Turtle triples, in SPARQL queries, etc.</obo:IAO_0000112>
-        <obo:IAO_0000115>Identifier for an entity on Wikidata</obo:IAO_0000115>
+        <obo:IAO_0000115>Identifier for the entity on Wikidata</obo:IAO_0000115>
         <obo:IAO_0000118 xml:lang="en">Wikidata entity ID</obo:IAO_0000118>
         <obo:IAO_0000118 xml:lang="en">Wikidata identifier</obo:IAO_0000118>
         <obo:IAO_0000119 rdf:resource="https://www.wikidata.org/wiki/Q111513370"/>
