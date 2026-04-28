@@ -6453,7 +6453,7 @@ See also core:localAwardId.
         <rdfs:domain rdf:resource="http://www.w3.org/2006/vcard/ns#Name"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment>Called Family Name in vCard</rdfs:comment>
-        <rdfs:label xml:lang="en">has last name</rdfs:label>
+        <rdfs:label xml:lang="en">has family name</rdfs:label>
     </owl:DatatypeProperty>
     
 
