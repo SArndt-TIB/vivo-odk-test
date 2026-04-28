@@ -11286,6 +11286,7 @@ This class allows for linking an author to a publication while indicating inform
     <owl:Class rdf:about="http://vivoweb.org/ontology/core#FacultyMember">
         <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
         <obo:IAO_0000115>A person with at least one academic appointment to a specific faculty of a university or institution of higher learning.</obo:IAO_0000115>
+        <obo:IAO_0000118 xml:lang="en">Academic Staff</obo:IAO_0000118>
         <vitro:descriptionAnnot>Definition from here: http://research.carleton.ca/htr/defs.php.</vitro:descriptionAnnot>
         <rdfs:label xml:lang="en">Faculty Member</rdfs:label>
     </owl:Class>
