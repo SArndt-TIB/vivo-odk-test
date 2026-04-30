@@ -31,15 +31,12 @@ jobs:
           EXIT_CODE=${PIPESTATUS[0]}
 
           if [ $EXIT_CODE -ne 0 ]; then
-            # Write a formatted Job Summary
             echo "## ❌ Ontology QC Failed" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "### Make output (last 40 lines)" >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
             tail -40 "$LOG_FILE" >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
-
-            # Re-run the failing ROBOT command with -vvv for full stack trace
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "### 🔍 ROBOT verbose diagnostic (-vvv)" >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
@@ -48,7 +45,6 @@ jobs:
               --format ofn \
               --output /tmp/preprocess-debug.owl 2>&1 || true >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
-
             echo "qc_failed=true" >> $GITHUB_OUTPUT
           else
             echo "## ✅ Ontology QC Passed" >> $GITHUB_STEP_SUMMARY
