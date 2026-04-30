@@ -19,6 +19,7 @@ jobs:
 
       - name: Run ontology QC checks
         id: qc
+        shell: bash
         env:
           DEFAULT_BRANCH: main
         run: |
@@ -94,7 +95,7 @@ ${log}
 - Broken namespace declaration in the ontology header
 - Duplicate \`owl:Ontology\` declarations
 
-📖 See [ROBOT error docs](http://robot.obolibrary.org/errors#invalid-ontology-file-error) · Run \`robot -vvv ...\` locally for a full Java stack trace.`;
+📖 See [ROBOT error docs](http://robot.obolibrary.org/errors#invalid-ontology-file-error) · Run \`robot -vvv ...\` locally for a full Java stack trace.`;git 
 
             await github.rest.issues.createComment({
               owner: context.repo.owner,
