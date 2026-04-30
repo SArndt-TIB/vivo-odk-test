@@ -2,32 +2,111 @@
 
 name: CI
 
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-
-  # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "ontology_qc"
   ontology_qc:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
     container: obolibrary/odkfull:v1.6.1
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
 
       - name: Run ontology QC checks
+        id: qc
         env:
           DEFAULT_BRANCH: main
-        run: cd src/ontology && make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' test IMP=false PAT=false MIR=false
+        run: |
+          set +e
+          LOG_FILE=/tmp/qc_output.txt
 
+          cd src/ontology
+          make ROBOT_ENV='ROBOT_JAVA_ARGS=-Xmx6G' test IMP=false PAT=false MIR=false 2>&1 | tee "$LOG_FILE"
+          EXIT_CODE=${PIPESTATUS[0]}
+
+          if [ $EXIT_CODE -ne 0 ]; then
+            # Write a formatted Job Summary
+            echo "## ❌ Ontology QC Failed" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### Make output (last 40 lines)" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            tail -40 "$LOG_FILE" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+
+            # Re-run the failing ROBOT command with -vvv for full stack trace
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### 🔍 ROBOT verbose diagnostic (-vvv)" >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+            robot -vvv --catalog catalog-v001.xml convert \
+              --input vivotest-edit.owl \
+              --format ofn \
+              --output /tmp/preprocess-debug.owl 2>&1 || true >> $GITHUB_STEP_SUMMARY
+            echo '```' >> $GITHUB_STEP_SUMMARY
+
+            echo "qc_failed=true" >> $GITHUB_OUTPUT
+          else
+            echo "## ✅ Ontology QC Passed" >> $GITHUB_STEP_SUMMARY
+            echo "All checks passed successfully." >> $GITHUB_STEP_SUMMARY
+            echo "qc_failed=false" >> $GITHUB_OUTPUT
+          fi
+
+          exit $EXIT_CODE
+
+      - name: Post PR comment with error details
+        if: failure() && github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          script: |
+            const fs = require('fs');
+            let log = '';
+            try {
+              const raw = fs.readFileSync('/tmp/qc_output.txt', 'utf8');
+              log = raw.split('\n').slice(-60).join('\n');
+            } catch(e) {
+              log = 'Could not read log file.';
+            }
+
+            const body = `## ❌ Ontology QC Failed
+
+The ontology failed validation for this pull request.  
+Please fix \`vivotest-edit.owl\` before merging.
+
+<details>
+<summary>📋 Error output (click to expand)</summary>
+
+\`\`\`
+${log}
+\`\`\`
+
+</details>
+
+---
+**Common causes of \`INVALID ONTOLOGY FILE ERROR\`:**
+- Missing closing \`/>\` in a tag (e.g., \`<owl:AnnotationProperty rdf:about="..."/\` without the final \`>\`)
+- Invalid IRI or URI in an \`rdf:about\` attribute
+- Broken namespace declaration in the ontology header
+- Duplicate \`owl:Ontology\` declarations
+
+📖 See [ROBOT error docs](http://robot.obolibrary.org/errors#invalid-ontology-file-error) · Run \`robot -vvv ...\` locally for a full Java stack trace.`;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: body
+            });
+
+      - name: Upload QC log as downloadable artifact
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: qc-error-log
+          path: /tmp/qc_output.txt
+          retention-days: 7
