@@ -54,11 +54,9 @@ jobs:
 
           exit $EXIT_CODE
 
-      - name: Post PR comment with error details
+            - name: Post PR comment with error details
         if: failure() && github.event_name == 'pull_request'
         uses: actions/github-script@v7
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           script: |
             const fs = require('fs');
@@ -70,34 +68,36 @@ jobs:
               log = 'Could not read log file.';
             }
 
-            const body = `## ❌ Ontology QC Failed
-
-The ontology failed validation for this pull request.  
-Please fix \`vivotest-edit.owl\` before merging.
-
-<details>
-<summary>📋 Error output (click to expand)</summary>
-
-\`\`\`
-${log}
-\`\`\`
-
-</details>
-
----
-**Common causes of \`INVALID ONTOLOGY FILE ERROR\`:**
-- Missing closing \`/>\` in a tag (e.g., \`<owl:AnnotationProperty rdf:about="..."/\` without the final \`>\`)
-- Invalid IRI or URI in an \`rdf:about\` attribute
-- Broken namespace declaration in the ontology header
-- Duplicate \`owl:Ontology\` declarations
-
-📖 See [ROBOT error docs](http://robot.obolibrary.org/errors#invalid-ontology-file-error) · Run \`robot -vvv ...\` locally for a full Java stack trace.`;git 
+            const lines = [
+              '## \u274C Ontology QC Failed',
+              '',
+              'The ontology failed validation for this pull request.',
+              'Please fix `vivotest-edit.owl` before merging.',
+              '',
+              '<details>',
+              '<summary>\uD83D\uDCCB Error output (click to expand)</summary>',
+              '',
+              '```',
+              log,
+              '```',
+              '',
+              '</details>',
+              '',
+              '---',
+              '**Common causes of `INVALID ONTOLOGY FILE ERROR`:**',
+              '- Missing closing `/>` in a tag',
+              '- Invalid IRI or URI in an `rdf:about` attribute',
+              '- Broken namespace declaration in the ontology header',
+              '- Duplicate `owl:Ontology` declarations',
+              '',
+              '\uD83D\uDCD6 See [ROBOT error docs](http://robot.obolibrary.org/errors#invalid-ontology-file-error) \u00B7 Run `robot -vvv ...` locally for a full stack trace.'
+            ];
 
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: body
+              body: lines.join('\n')
             });
 
       - name: Upload QC log as downloadable artifact
