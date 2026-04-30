@@ -54,7 +54,7 @@ jobs:
 
           exit $EXIT_CODE
 
-            - name: Post PR comment with error details
+      - name: Post PR comment with error details
         if: failure() && github.event_name == 'pull_request'
         uses: actions/github-script@v7
         with:
@@ -68,14 +68,14 @@ jobs:
               log = 'Could not read log file.';
             }
 
-            const lines = [
-              '## \u274C Ontology QC Failed',
+            const body = [
+              '## ❌ Ontology QC Failed',
               '',
-              'The ontology failed validation for this pull request.',
+              'The ontology failed validation for this pull request.  ',
               'Please fix `vivotest-edit.owl` before merging.',
               '',
               '<details>',
-              '<summary>\uD83D\uDCCB Error output (click to expand)</summary>',
+              '<summary>📋 Error output (click to expand)</summary>',
               '',
               '```',
               log,
@@ -85,19 +85,19 @@ jobs:
               '',
               '---',
               '**Common causes of `INVALID ONTOLOGY FILE ERROR`:**',
-              '- Missing closing `/>` in a tag',
+              '- Missing closing `/>` in a tag (e.g. `<owl:AnnotationProperty rdf:about="..."/` without final `>`)',
               '- Invalid IRI or URI in an `rdf:about` attribute',
               '- Broken namespace declaration in the ontology header',
               '- Duplicate `owl:Ontology` declarations',
               '',
-              '\uD83D\uDCD6 See [ROBOT error docs](http://robot.obolibrary.org/errors#invalid-ontology-file-error) \u00B7 Run `robot -vvv ...` locally for a full stack trace.'
-            ];
+              '📖 See [ROBOT error docs](http://robot.obolibrary.org/errors#invalid-ontology-file-error) · Run `robot -vvv ...` locally for a full stack trace.'
+            ].join('\n');
 
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
               issue_number: context.issue.number,
-              body: lines.join('\n')
+              body: body
             });
 
       - name: Upload QC log as downloadable artifact
