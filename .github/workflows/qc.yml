@@ -30,15 +30,12 @@ jobs:
           EXIT_CODE=${PIPESTATUS[0]}
 
           if [ $EXIT_CODE -ne 0 ]; then
-            # Write a formatted Job Summary
             echo "## ❌ Ontology QC Failed" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "### Make output (last 40 lines)" >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
             tail -40 "$LOG_FILE" >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
-
-            # Re-run the failing ROBOT command with -vvv for full stack trace
             echo "" >> $GITHUB_STEP_SUMMARY
             echo "### 🔍 ROBOT verbose diagnostic (-vvv)" >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
@@ -47,7 +44,6 @@ jobs:
               --format ofn \
               --output /tmp/preprocess-debug.owl 2>&1 || true >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
-
             echo "qc_failed=true" >> $GITHUB_OUTPUT
           else
             echo "## ✅ Ontology QC Passed" >> $GITHUB_STEP_SUMMARY
@@ -72,30 +68,30 @@ jobs:
             } catch(e) {
               log = 'Could not read log file.';
             }
-
-            const body = `## ❌ Ontology QC Failed
-
-The ontology failed validation for this pull request.  
-Please fix \`vivotest-edit.owl\` before merging.
-
-<details>
-<summary>📋 Error output (click to expand)</summary>
-
-\`\`\`
-${log}
-\`\`\`
-
-</details>
-
----
-**Common causes of \`INVALID ONTOLOGY FILE ERROR\`:**
-- Missing closing \`/>\` in a tag (e.g., \`<owl:AnnotationProperty rdf:about="..."/\` without the final \`>\`)
-- Invalid IRI or URI in an \`rdf:about\` attribute
-- Broken namespace declaration in the ontology header
-- Duplicate \`owl:Ontology\` declarations
-
-📖 See [ROBOT error docs](http://robot.obolibrary.org/errors#invalid-ontology-file-error) · Run \`robot -vvv ...\` locally for a full Java stack trace.`;
-
+            const body = [
+              '## ❌ Ontology QC Failed',
+              '',
+              'The ontology failed validation for this pull request.',
+              'Please fix `vivotest-edit.owl` before merging.',
+              '',
+              '<details>',
+              '<summary>📋 Error output (click to expand)</summary>',
+              '',
+              '```',
+              log,
+              '```',
+              '',
+              '</details>',
+              '',
+              '---',
+              '**Common causes of `INVALID ONTOLOGY FILE ERROR`:**',
+              '- Missing closing `/>` in a tag',
+              '- Invalid IRI or URI in an `rdf:about` attribute',
+              '- Broken namespace declaration in the ontology header',
+              '- Duplicate `owl:Ontology` declarations',
+              '',
+              '📖 See [ROBOT error docs](http://robot.obolibrary.org/errors#invalid-ontology-file-error)'
+            ].join('\n');
             await github.rest.issues.createComment({
               owner: context.repo.owner,
               repo: context.repo.repo,
