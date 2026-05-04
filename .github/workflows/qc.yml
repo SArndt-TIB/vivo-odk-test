@@ -46,7 +46,7 @@ jobs:
               --input vivotest-edit.owl \
               --format ofn \
               --output /tmp/preprocess-debug.owl > /tmp/vvv_output.txt 2>&1 || true
-            grep -A 10 "INVALID ONTOLOGY FILE ERROR\|UnparsableOntologyException\|\[line=[0-9]\|\[Line [0-9]" /tmp/vvv_output.txt | head -80 >> $GITHUB_STEP_SUMMARY
+            tail -50 /tmp/vvv_output.txt >> "$GITHUB_STEP_SUMMARY"
             echo '```' >> $GITHUB_STEP_SUMMARY
 
             echo "qc_failed=true" >> $GITHUB_OUTPUT
@@ -77,9 +77,8 @@ jobs:
             let vvvSnippet = '';
             try {
               const vvv = fs.readFileSync('/tmp/vvv_output.txt', 'utf8');
-              vvvSnippet = vvv.split('\n')
-                .filter(l => /INVALID|UnparsableOntology|line=[0-9]|Line [0-9]|Attribute not found|Expecting an object|column=[0-9]/.test(l))
-                .slice(0, 20).join('\n');
+              const lines = vvv.split('\n');
+              vvvSnippet = lines.slice(-50).join('\n');
             } catch(e) {
               vvvSnippet = 'Verbose log not available.';
             }
