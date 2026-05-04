@@ -22,8 +22,6 @@ jobs:
       - name: Run ontology QC checks
         id: qc
         shell: bash
-        env:
-          DEFAULT_BRANCH: main
         run: |
           set +e
           LOG_FILE=/tmp/qc_output.txt
@@ -35,18 +33,22 @@ jobs:
           if [ $EXIT_CODE -ne 0 ]; then
             echo "## ❌ Ontology QC Failed" >> $GITHUB_STEP_SUMMARY
             echo "" >> $GITHUB_STEP_SUMMARY
-            echo "### Make output (last 40 lines)" >> $GITHUB_STEP_SUMMARY
+
+            echo "### Make output (errors only)" >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
-            tail -40 "$LOG_FILE" >> $GITHUB_STEP_SUMMARY
+            grep -E "ERROR|Error|make: \*\*\*|INVALID|Could not|failed" "$LOG_FILE" | head -20 >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
+
             echo "" >> $GITHUB_STEP_SUMMARY
-            echo "### 🔍 ROBOT verbose diagnostic (-vvv)" >> $GITHUB_STEP_SUMMARY
+            echo "### 🔍 ROBOT verbose diagnostic (key errors only)" >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
-            ( robot -vvv --catalog catalog-v001.xml convert \
+            robot -vvv --catalog catalog-v001.xml convert \
               --input vivotest-edit.owl \
               --format ofn \
-              --output /tmp/preprocess-debug.owl 2>&1 ) >> $GITHUB_STEP_SUMMARY || true
+              --output /tmp/preprocess-debug.owl > /tmp/vvv_output.txt 2>&1 || true
+            grep -A 10 "INVALID ONTOLOGY FILE ERROR\|UnparsableOntologyException\|\[line=[0-9]\|\[Line [0-9]" /tmp/vvv_output.txt | head -80 >> $GITHUB_STEP_SUMMARY
             echo '```' >> $GITHUB_STEP_SUMMARY
+
             echo "qc_failed=true" >> $GITHUB_OUTPUT
           else
             echo "## ✅ Ontology QC Passed" >> $GITHUB_STEP_SUMMARY
@@ -65,19 +67,31 @@ jobs:
             let log = '';
             try {
               const raw = fs.readFileSync('/tmp/qc_output.txt', 'utf8');
-              log = raw.split('\n').slice(-60).join('\n');
+              log = raw.split('\n')
+                .filter(l => /ERROR|Error|make: \*\*\*|INVALID|Could not/.test(l))
+                .slice(0, 30).join('\n');
             } catch(e) {
-              log = 'Could not read log file.';
+              log = 'Could not read log.';
+            }
+
+            let vvvSnippet = '';
+            try {
+              const vvv = fs.readFileSync('/tmp/vvv_output.txt', 'utf8');
+              vvvSnippet = vvv.split('\n')
+                .filter(l => /INVALID|UnparsableOntology|line=[0-9]|Line [0-9]|Attribute not found|Expecting an object|column=[0-9]/.test(l))
+                .slice(0, 20).join('\n');
+            } catch(e) {
+              vvvSnippet = 'Verbose log not available.';
             }
 
             const body = [
               '## ❌ Ontology QC Failed',
               '',
-              'The ontology failed validation for this pull request.  ',
+              'The ontology failed validation for this pull request.',
               'Please fix `vivotest-edit.owl` before merging.',
               '',
               '<details>',
-              '<summary>📋 Error output (click to expand)</summary>',
+              '<summary>📋 Error lines from make (click to expand)</summary>',
               '',
               '```',
               log,
@@ -85,14 +99,22 @@ jobs:
               '',
               '</details>',
               '',
+              '<details>',
+              '<summary>🔍 ROBOT parser diagnostic — line/column of error (click to expand)</summary>',
+              '',
+              '```',
+              vvvSnippet,
+              '```',
+              '',
+              '</details>',
+              '',
               '---',
               '**Common causes of `INVALID ONTOLOGY FILE ERROR`:**',
-              '- Missing closing `/>` in a tag (e.g. `<owl:AnnotationProperty rdf:about="..."/` without final `>`)',
-              '- Invalid IRI or URI in an `rdf:about` attribute',
+              '- Missing closing `/>` or `>` in a tag',
+              '- Invalid character in an `rdf:about` IRI (e.g. unencoded `<`, `>`, or space)',
               '- Broken namespace declaration in the ontology header',
-              '- Duplicate `owl:Ontology` declarations',
               '',
-              '📖 See [ROBOT error docs](http://robot.obolibrary.org/errors#invalid-ontology-file-error) · Run `robot -vvv ...` locally for a full stack trace.'
+              '📖 [ROBOT error docs](http://robot.obolibrary.org/errors#invalid-ontology-file-error)'
             ].join('\n');
 
             await github.rest.issues.createComment({
@@ -107,5 +129,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: qc-error-log
-          path: /tmp/qc_output.txt
+          path: |
+            /tmp/qc_output.txt
+            /tmp/vvv_output.txt
           retention-days: 7
