@@ -56,10 +56,9 @@ jobs:
               --input vivotest-edit.owl \
               --format ofn \
               --output /tmp/preprocess-debug.owl > "$VVV_FILE" 2>&1 || true
-            grep -A 15 "RDFXMLParser\|SAXParseException\|lineNumber\|columnNumber" "$VVV_FILE" \
-              | head -50 >> "$GITHUB_STEP_SUMMARY" \
-              || echo "(no RDF/XML parser details found)" >> "$GITHUB_STEP_SUMMARY"
-            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            grep -m1 "must not contain\|Expecting an object element\|line=.*column="
+            "$VVV_FILE" >> "$GITHUB_STEP_SUMMARY" || echo "(no RDF/XML parser details found)" 
+            >> "$GITHUB_STEP_SUMMARY"
 
             echo "qc_failed=true" >> $GITHUB_OUTPUT
           else
@@ -93,6 +92,14 @@ jobs:
             } catch(e) {
               xmlSnippet = 'XML parse output not available.';
             }
+            let robotDetail = '';
+            try {
+              const vvv = fs.readFileSync('/tmp/vvv_output.txt', 'utf8');
+              const match = vvv.split('\n').find(l => l.includes('must not contain'));
+              robotDetail = match ? match.trim() : 'No RDF/XML attribute detail found.';
+            } catch(e) {
+              robotDetail = 'ROBOT detail not available.';
+            }
             const body = [
               '## Ontology QC Failed',
               '',
@@ -116,6 +123,16 @@ jobs:
               '',
               '</details>',
               '',
+              '<details open>',
+              '<summary>ROBOT RDF/XML detail</summary>',
+              '',
+              '```',
+              robotDetail,
+              '```',
+              '',
+              '</details>',
+              '',
+              '---',
               '---',
               '**Common causes of `INVALID ONTOLOGY FILE ERROR`:**',
               '- Missing closing `/>` or `>` in a tag',
