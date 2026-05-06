@@ -44,17 +44,17 @@ jobs:
             echo "" >> "$GITHUB_STEP_SUMMARY"
             echo "### 🔍 XML parse check — exact line/column" >> "$GITHUB_STEP_SUMMARY"
             echo '```' >> "$GITHUB_STEP_SUMMARY"
-            python3 << 'PYEOF'
+            cat > /tmp/check_xml.py << 'PYEOF'
 import xml.etree.ElementTree as ET
 try:
     ET.parse("vivotest-edit.owl")
-    print("XML is well-formed — error may be semantic rather than syntactic.")
+    print("XML is well-formed - error may be semantic rather than syntactic.")
 except ET.ParseError as e:
     line, col = e.position
     print("XML parse error at line " + str(line) + ", column " + str(col) + ":")
     print("  " + str(e))
 PYEOF
-            tee "$XML_FILE" < /dev/stdin || true
+            python3 /tmp/check_xml.py 2>&1 | tee "$XML_FILE"
             cat "$XML_FILE" >> "$GITHUB_STEP_SUMMARY"
             echo '```' >> "$GITHUB_STEP_SUMMARY"
 
