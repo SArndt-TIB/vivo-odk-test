@@ -44,16 +44,17 @@ jobs:
             echo "" >> "$GITHUB_STEP_SUMMARY"
             echo "### 🔍 XML parse check — exact line/column" >> "$GITHUB_STEP_SUMMARY"
             echo '```' >> "$GITHUB_STEP_SUMMARY"
-            python3 -c "
+            python3 << 'PYEOF'
 import xml.etree.ElementTree as ET
 try:
-    ET.parse('vivotest-edit.owl')
-    print('XML is well-formed — error may be semantic rather than syntactic.')
+    ET.parse("vivotest-edit.owl")
+    print("XML is well-formed — error may be semantic rather than syntactic.")
 except ET.ParseError as e:
     line, col = e.position
-    print(f'XML parse error at line {line}, column {col}:')
-    print(f'  {e}')
-" 2>&1 | tee "$XML_FILE"
+    print("XML parse error at line " + str(line) + ", column " + str(col) + ":")
+    print("  " + str(e))
+PYEOF
+            tee "$XML_FILE" < /dev/stdin || true
             cat "$XML_FILE" >> "$GITHUB_STEP_SUMMARY"
             echo '```' >> "$GITHUB_STEP_SUMMARY"
 
@@ -152,7 +153,7 @@ except ET.ParseError as e:
               '',
               '---',
               '**Common causes of `INVALID ONTOLOGY FILE ERROR`:**',
-              '- Missing closing `/>` or `>` in a tag (e.g. `<owl:AnnotationProperty rdf:about="..."/` without final `>`)',
+              '- Missing closing `/>` or `>` in a tag',
               '- Invalid character in an `rdf:about` IRI (unencoded `<`, `>`, or space)',
               '- Broken namespace declaration in the ontology header',
               '- Duplicate `owl:Ontology` declarations',
