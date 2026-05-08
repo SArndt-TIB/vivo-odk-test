@@ -56,9 +56,11 @@ jobs:
               --input vivotest-edit.owl \
               --format ofn \
               --output /tmp/preprocess-debug.owl > "$VVV_FILE" 2>&1 || true
-            grep -m1 "must not contain\|Expecting an object element\|line=.*column="
-            "$VVV_FILE" >> "$GITHUB_STEP_SUMMARY" || echo "(no RDF/XML parser details found)" 
-            >> "$GITHUB_STEP_SUMMARY"
+            grep -E "SAXParseException|RDFParseException|must be followed|lineNumber|columnNumber" \
+              "$VVV_FILE" \
+              | grep -v "createSAXParseException\|ErrorHandlerWrapper\|XMLErrorReporter" \
+              | head -6 >> "$GITHUB_STEP_SUMMARY" \
+              || echo "(no RDF/XML parser details found)" >> "$GITHUB_STEP_SUMMARY"
 
             echo "qc_failed=true" >> $GITHUB_OUTPUT
           else
@@ -95,8 +97,12 @@ jobs:
             let robotDetail = '';
             try {
               const vvv = fs.readFileSync('/tmp/vvv_output.txt', 'utf8');
-              const match = vvv.split('\n').find(l => l.includes('must not contain'));
-              robotDetail = match ? match.trim() : 'No RDF/XML attribute detail found.';
+              const lines = vvv.split('\n');
+              const relevant = lines.filter(l =>
+                /SAXParseException|RDFParseException|must be followed|lineNumber|columnNumber/.test(l) &&
+                !/createSAXParseException|ErrorHandlerWrapper|XMLErrorReporter/.test(l)
+              ).slice(0, 6);
+              robotDetail = relevant.length > 0 ? relevant.join('\n') : 'No RDF/XML attribute detail found.';
             } catch(e) {
               robotDetail = 'ROBOT detail not available.';
             }
