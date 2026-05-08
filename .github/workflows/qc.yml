@@ -50,17 +50,29 @@ jobs:
             echo '```' >> "$GITHUB_STEP_SUMMARY"
             echo "" >> "$GITHUB_STEP_SUMMARY"
 
-            echo "### ROBOT verbose (-vvv)" >> "$GITHUB_STEP_SUMMARY"
-            echo '```' >> "$GITHUB_STEP_SUMMARY"
             robot -vvv --catalog catalog-v001.xml convert \
               --input vivotest-edit.owl \
               --format ofn \
               --output /tmp/preprocess-debug.owl > "$VVV_FILE" 2>&1 || true
+
+            echo "### ROBOT primary parser error" >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
             grep -E "SAXParseException|RDFParseException|must be followed|lineNumber|columnNumber" \
               "$VVV_FILE" \
               | grep -v "createSAXParseException\|ErrorHandlerWrapper\|XMLErrorReporter" \
               | head -6 >> "$GITHUB_STEP_SUMMARY" \
               || echo "(no RDF/XML parser details found)" >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+
+            echo "<details>" >> "$GITHUB_STEP_SUMMARY"
+            echo "<summary>Full -vvv stack trace (click to expand)</summary>" >> "$GITHUB_STEP_SUMMARY"
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            cat "$VVV_FILE" >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            echo "</details>" >> "$GITHUB_STEP_SUMMARY"
+            echo "" >> "$GITHUB_STEP_SUMMARY"
 
             echo "qc_failed=true" >> $GITHUB_OUTPUT
           else
