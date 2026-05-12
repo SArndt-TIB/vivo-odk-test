@@ -51,7 +51,6 @@
         <owl:imports
     rdf:resource="http://purl.obolibrary.org/obo/vivotest/imports/vitro_import.owl"/>
 </owl:Ontology>
-    </owl:Ontology>
     
 
 
