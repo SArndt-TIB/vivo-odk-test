@@ -48,7 +48,12 @@ VIOLATION_QUERIES = owldef-self-reference \
                     iri-range \
                     label-with-iri \
                     multiple-replaced_by \
-                    dc-properties
+                    dc-properties \
+                    missing-label \
+                    duplicate-label \
+                    missing-definition \
+                    deprecated-no-replacement \
+                    rdfs-comment-instead-of-def
 
 .PHONY: violation-reports
 violation-reports: $(patsubst %, $(REPORTDIR)/%-violation.tsv, $(VIOLATION_QUERIES))
