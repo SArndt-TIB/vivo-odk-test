@@ -1,0 +1,9 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+SELECT ?label (COUNT(?entity) AS ?count) (GROUP_CONCAT(?entity; separator=", ") AS ?entities)
+WHERE {
+  ?entity rdfs:label ?label .
+  FILTER(isIRI(?entity))
+}
+GROUP BY ?label
+HAVING (COUNT(?entity) > 1)
+ORDER BY ?label
