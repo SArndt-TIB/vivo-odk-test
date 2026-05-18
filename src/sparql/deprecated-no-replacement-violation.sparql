@@ -1,0 +1,8 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX oboInOwl: <http://www.geneontology.org/formats/oboInOwl#>
+SELECT ?entity WHERE {
+  ?entity owl:deprecated true .
+  FILTER NOT EXISTS { ?entity oboInOwl:replacedBy ?r }
+  FILTER NOT EXISTS { ?entity oboInOwl:consider ?c }
+}
+ORDER BY ?entity
