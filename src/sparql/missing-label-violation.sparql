@@ -1,0 +1,10 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT ?entity WHERE {
+  { ?entity a owl:Class } UNION { ?entity a owl:ObjectProperty }
+    UNION { ?entity a owl:AnnotationProperty }
+  FILTER(isIRI(?entity))
+  FILTER NOT EXISTS { ?entity rdfs:label ?label }
+  FILTER(!STRSTARTS(STR(?entity), "http://www.w3.org/"))
+}
+ORDER BY ?entity
