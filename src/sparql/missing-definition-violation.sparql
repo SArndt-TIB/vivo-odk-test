@@ -1,0 +1,10 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX IAO: <http://purl.obolibrary.org/obo/IAO_>
+SELECT ?entity ?label WHERE {
+  ?entity a owl:Class .
+  FILTER(STRSTARTS(STR(?entity), "http://purl.obolibrary.org/obo/VIVOTEST_"))
+  OPTIONAL { ?entity rdfs:label ?label }
+  FILTER NOT EXISTS { ?entity IAO:0000115 ?def }
+}
+ORDER BY ?entity
