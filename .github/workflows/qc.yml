@@ -50,13 +50,15 @@ jobs:
             echo '```' >> "$GITHUB_STEP_SUMMARY"
             echo "" >> "$GITHUB_STEP_SUMMARY"
 
+            echo "### ROBOT RDF/XML detail" >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
             robot -vvv --catalog catalog-v001.xml convert \
               --input vivotest-edit.owl \
               --format ofn \
               --output /tmp/preprocess-debug.owl > "$VVV_FILE" 2>&1 || true
-            grep -m1 "must not contain\|Expecting an object element\|line=.*column="
-            "$VVV_FILE" >> "$GITHUB_STEP_SUMMARY" || echo "(no RDF/XML parser details found)" 
-            >> "$GITHUB_STEP_SUMMARY"
+            grep -m1 "must not contain\|Expecting an object element\|line=.*column=" "$VVV_FILE" >> "$GITHUB_STEP_SUMMARY" || echo "(no RDF/XML parser details found)" >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            echo "" >> "$GITHUB_STEP_SUMMARY"
 
             echo "qc_failed=true" >> $GITHUB_OUTPUT
           else
@@ -130,7 +132,6 @@ jobs:
               '',
               '</details>',
               '',
-              '---',
               '---',
               '**Common causes of `INVALID ONTOLOGY FILE ERROR`:**',
               '- Missing closing `/>` or `>` in a tag',
