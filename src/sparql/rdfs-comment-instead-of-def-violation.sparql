@@ -1,8 +1,17 @@
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+# Only check terms that are defined in the vivotest edit file itself.
+# Without the GRAPH filter this query would also match rdfs:comment
+# annotations that come from imported ontologies (ERO, bibo, BFO, etc.),
+# producing thousands of false positives that are not ours to fix.
+
 SELECT ?entity ?comment WHERE {
+  GRAPH <http://purl.obolibrary.org/obo/vivotest.owl> {
+    ?entity rdfs:comment ?comment .
+  }
   { ?entity a owl:Class } UNION { ?entity a owl:ObjectProperty }
-  ?entity rdfs:comment ?comment .
+    UNION { ?entity a owl:AnnotationProperty }
   FILTER(isIRI(?entity))
   FILTER(!STRSTARTS(STR(?entity), "http://www.w3.org/"))
 }
