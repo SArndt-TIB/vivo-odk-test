@@ -93,10 +93,20 @@ jobs:
             let log = '';
             try {
               const raw = fs.readFileSync('/tmp/qc_output.txt', 'utf8');
-              log = raw.split('\n')
-                .filter(l => /ERROR|Error|make: \*\*\*|INVALID|Could not/.test(l))
-                .slice(0, 30)
-                .join('\n');
+              const lines = raw.split('\n');
+              // Capture FAIL Rule blocks (line + next 5 lines)
+              let sparqlViolations = [];
+              lines.forEach((l, i) => {
+                if (l.includes('FAIL Rule')) {
+                  sparqlViolations.push(...lines.slice(i, i + 6));
+                  sparqlViolations.push('');
+                }
+              });
+              // Fallback to error lines if no SPARQL violations found
+              log = sparqlViolations.length > 0
+                ? sparqlViolations.join('\n')
+                : lines.filter(l => /ERROR|Error|make: \*\*\*|INVALID|Could
+              not/.test(l)).slice(0, 30).join('\n');
             } catch(e) {
               log = 'Could not read log.';
             }
