@@ -36,11 +36,25 @@ jobs:
             echo "## Ontology QC Failed" >> "$GITHUB_STEP_SUMMARY"
             echo "" >> "$GITHUB_STEP_SUMMARY"
 
-            echo "### Make output (errors only)" >> "$GITHUB_STEP_SUMMARY"
-            echo '```' >> "$GITHUB_STEP_SUMMARY"
-            grep -E "ERROR|Error|make: \*\*\*|INVALID|Could not|failed" "$LOG_FILE" | head -20 >> "$GITHUB_STEP_SUMMARY"
-            echo '```' >> "$GITHUB_STEP_SUMMARY"
-            echo "" >> "$GITHUB_STEP_SUMMARY"
+            # SPARQL violations block (the actually useful part)
+            SPARQL_BLOCK=$(grep -A 5 "FAIL Rule" "$LOG_FILE" || true)
+            if [ -n "$SPARQL_BLOCK" ]; then
+              echo "### SPARQL Violations" >> "$GITHUB_STEP_SUMMARY"
+              echo '```' >> "$GITHUB_STEP_SUMMARY"
+              echo "$SPARQL_BLOCK" >> "$GITHUB_STEP_SUMMARY"
+              echo '```' >> "$GITHUB_STEP_SUMMARY"
+              echo "" >> "$GITHUB_STEP_SUMMARY"
+            fi
+
+            # ROBOT errors block
+            ROBOT_ERRORS=$(grep -E "ERROR|INVALID|Could not|failed" "$LOG_FILE" | head -20 || true)
+            if [ -n "$ROBOT_ERRORS" ]; then
+              echo "### ROBOT / Make Errors" >> "$GITHUB_STEP_SUMMARY"
+              echo '```' >> "$GITHUB_STEP_SUMMARY"
+              echo "$ROBOT_ERRORS" >> "$GITHUB_STEP_SUMMARY"
+              echo '```' >> "$GITHUB_STEP_SUMMARY"
+              echo "" >> "$GITHUB_STEP_SUMMARY"
+            fi
 
             echo "### XML parse check" >> "$GITHUB_STEP_SUMMARY"
             echo '```' >> "$GITHUB_STEP_SUMMARY"
