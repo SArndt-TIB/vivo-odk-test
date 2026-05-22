@@ -10,6 +10,7 @@ SELECT ?entity WHERE {
   GRAPH <http://purl.obolibrary.org/obo/vivotest.owl> {
     { ?entity a owl:Class } UNION { ?entity a owl:ObjectProperty }
       UNION { ?entity a owl:AnnotationProperty }
+      UNION { ?entity a owl:DatatypeProperty }
   }
   FILTER(isIRI(?entity))
   FILTER NOT EXISTS { ?entity rdfs:label ?label }
