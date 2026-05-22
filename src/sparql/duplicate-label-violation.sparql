@@ -4,6 +4,9 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 # edit file itself. Without the GRAPH filter, label collisions that
 # originate entirely within imported ontologies would be reported even
 # though we cannot fix them here.
+#
+# Language-tag aware: only English ("en") and untagged plain literals
+# are compared. A label 'Foo'@en and 'Foo'@de are not a collision.
 
 SELECT ?label (COUNT(?entity) AS ?count) (GROUP_CONCAT(?entity; separator=", ") AS ?entities)
 WHERE {
@@ -11,6 +14,7 @@ WHERE {
     ?entity rdfs:label ?label .
   }
   FILTER(isIRI(?entity))
+  FILTER(LANG(?label) = "en" || LANG(?label) = "")
 }
 GROUP BY ?label
 HAVING (COUNT(?entity) > 1)
