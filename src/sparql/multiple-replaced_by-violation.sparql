@@ -1,15 +1,10 @@
-PREFIX replaced_by: <http://purl.obolibrary.org/obo/IAO_0100001>
-
-# Flag VIVOTEST entities that carry more than one replaced_by value.
-# Scoped to the VIVOTEST_ namespace to avoid false positives from imports.
-
 SELECT DISTINCT ?entity ?property ?value WHERE {
-  VALUES ?property {
-    replaced_by:
+  GRAPH <http://purl.obolibrary.org/obo/vivotest.owl> {
+    VALUES ?property { replaced_by: }
+    ?entity ?property ?value1 .
+    ?entity ?property ?value2 .
   }
-  ?entity ?property ?value1 .
-  ?entity ?property ?value2 .
   FILTER(?value1 != ?value2)
-  FILTER(STRSTARTS(STR(?entity), "http://purl.obolibrary.org/obo/VIVOTEST_"))
+  FILTER(isIRI(?entity))
   BIND(CONCAT(str(?value1), CONCAT("|", str(?value2))) as ?value)
 }

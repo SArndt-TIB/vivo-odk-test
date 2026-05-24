@@ -1,15 +1,8 @@
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX IAO: <http://purl.obolibrary.org/obo/IAO_>
-
-# Flag VIVOTEST entities that are marked deprecated but have no
-# replacement (IAO:0100001) and no 'consider' suggestion.
-# Scoped to the VIVOTEST_ namespace to avoid false positives from
-# imported ontologies (BFO, ERO, bibo, etc.).
-
 SELECT ?entity WHERE {
-  ?entity owl:deprecated true .
-  FILTER(STRSTARTS(STR(?entity), "http://purl.obolibrary.org/obo/VIVOTEST_"))
+  GRAPH <http://purl.obolibrary.org/obo/vivotest.owl> {
+    ?entity owl:deprecated true .
+  }
+  FILTER(isIRI(?entity))
   FILTER NOT EXISTS { ?entity IAO:0100001 ?replacement }
   FILTER NOT EXISTS { ?entity <http://www.geneontology.org/formats/oboInOwl#consider> ?c }
 }
-ORDER BY ?entity
