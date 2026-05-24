@@ -1,14 +1,9 @@
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-# Flag VIVOTEST entities whose rdfs:label value contains a URL.
-# A URL in a label is almost always a copy-paste mistake.
-#
-# Fix: corrected regex from 'http[s]?[:]' to 'https?:'
-# (the character class around ':' was redundant).
-
-SELECT ?term ?value
-WHERE {
-  ?term rdfs:label ?value .
-  FILTER (REGEX(?value, "https?:"))
-  FILTER(isIRI(?term) && (STRSTARTS(str(?term), "http://purl.obolibrary.org/obo/VIVOTEST_")))
+SELECT ?term ?value WHERE {
+  GRAPH <http://purl.obolibrary.org/obo/vivotest.owl> {
+    ?term rdfs:label ?value .
+  }
+  FILTER(isIRI(?term))
+  FILTER(REGEX(?value, "https?:"))
 }

@@ -1,13 +1,10 @@
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 
-# Flag VIVOTEST terms that still use the deprecated DC Elements 1.1
-# namespace (http://purl.org/dc/elements/1.1/) instead of the
-# recommended DC Terms namespace (http://purl.org/dc/terms/).
-# See also: https://github.com/oborel/obo-relations/pull/692
-
 SELECT ?term ?predicate WHERE {
-  ?term ?predicate ?value .
+  GRAPH <http://purl.obolibrary.org/obo/vivotest.owl> {
+    ?term ?predicate ?value .
+  }
+  FILTER(isIRI(?term))
   FILTER(STRSTARTS(STR(?predicate), STR(dc:)))
-  FILTER(isIRI(?term) && STRSTARTS(STR(?term), "http://purl.obolibrary.org/obo/VIVOTEST_"))
 }
