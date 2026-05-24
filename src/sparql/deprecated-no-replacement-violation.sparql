@@ -1,3 +1,6 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX IAO: <http://purl.obolibrary.org/obo/IAO_>
+
 SELECT ?entity WHERE {
   GRAPH <http://purl.obolibrary.org/obo/vivotest.owl> {
     ?entity owl:deprecated true .
@@ -6,3 +9,4 @@ SELECT ?entity WHERE {
   FILTER NOT EXISTS { ?entity IAO:0100001 ?replacement }
   FILTER NOT EXISTS { ?entity <http://www.geneontology.org/formats/oboInOwl#consider> ?c }
 }
+ORDER BY ?entity

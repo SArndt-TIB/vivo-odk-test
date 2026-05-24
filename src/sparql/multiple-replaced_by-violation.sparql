@@ -1,3 +1,5 @@
+PREFIX replaced_by: <http://purl.obolibrary.org/obo/IAO_0100001>
+
 SELECT DISTINCT ?entity ?property ?value WHERE {
   GRAPH <http://purl.obolibrary.org/obo/vivotest.owl> {
     VALUES ?property { replaced_by: }
