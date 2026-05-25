@@ -4,9 +4,9 @@ PREFIX IAO: <http://purl.obolibrary.org/obo/IAO_>
 SELECT ?entity WHERE {
   GRAPH <http://purl.obolibrary.org/obo/vivotest.owl> {
     ?entity owl:deprecated true .
+    FILTER NOT EXISTS { ?entity IAO:0100001 ?replacement }
+    FILTER NOT EXISTS { ?entity <http://www.geneontology.org/formats/oboInOwl#consider> ?c }
   }
   FILTER(isIRI(?entity))
-  FILTER NOT EXISTS { ?entity IAO:0100001 ?replacement }
-  FILTER NOT EXISTS { ?entity <http://www.geneontology.org/formats/oboInOwl#consider> ?c }
 }
 ORDER BY ?entity
