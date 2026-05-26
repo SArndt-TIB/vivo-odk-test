@@ -115,7 +115,11 @@ jobs:
             let robotDetail = '';
             try {
               const vvv = fs.readFileSync('/tmp/vvv_output.txt', 'utf8');
-              const match = vvv.split('\n').find(l => l.includes('must not contain') || l.includes('Unresolved prefixed name') || l.includes('QUERY PARSE ERROR'));
+              const match = vvv.split('\n').find(function(l) {
+                return l.includes('must not contain') ||
+                       l.includes('Unresolved prefixed name') ||
+                       l.includes('QUERY PARSE ERROR');
+              });
               robotDetail = match ? match.trim() : 'No RDF/XML attribute detail found.';
             } catch(e) {
               robotDetail = 'ROBOT detail not available.';
