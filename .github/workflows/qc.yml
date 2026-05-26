@@ -80,7 +80,7 @@ jobs:
 
           exit $EXIT_CODE
 
-            - name: Post PR comment with error details
+      - name: Post PR comment with error details
         if: failure() && github.event_name == 'pull_request'
         continue-on-error: true
         uses: actions/github-script@v7
