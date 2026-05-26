@@ -36,7 +36,7 @@ jobs:
             echo "## Ontology QC Failed" >> "$GITHUB_STEP_SUMMARY"
             echo "" >> "$GITHUB_STEP_SUMMARY"
 
-            # SPARQL violations block (the actually useful part)
+            # SPARQL violations block 
             SPARQL_BLOCK=$(grep -A 5 "FAIL Rule" "$LOG_FILE" || true)
             if [ -n "$SPARQL_BLOCK" ]; then
               echo "### SPARQL Violations" >> "$GITHUB_STEP_SUMMARY"
@@ -46,15 +46,12 @@ jobs:
               echo "" >> "$GITHUB_STEP_SUMMARY"
             fi
 
-            # ROBOT errors block
-            ROBOT_ERRORS=$(grep -E "ERROR|INVALID|Could not|failed" "$LOG_FILE" | head -20 || true)
-            if [ -n "$ROBOT_ERRORS" ]; then
-              echo "### ROBOT / Make Errors" >> "$GITHUB_STEP_SUMMARY"
-              echo '```' >> "$GITHUB_STEP_SUMMARY"
-              echo "$ROBOT_ERRORS" >> "$GITHUB_STEP_SUMMARY"
-              echo '```' >> "$GITHUB_STEP_SUMMARY"
-              echo "" >> "$GITHUB_STEP_SUMMARY"
-            fi
+            # Full Make output
+            echo "### Full Make / ROBOT Output" >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            cat "$LOG_FILE" >> "$GITHUB_STEP_SUMMARY"
+            echo '```' >> "$GITHUB_STEP_SUMMARY"
+            echo "" >> "$GITHUB_STEP_SUMMARY"
 
             echo "### XML parse check" >> "$GITHUB_STEP_SUMMARY"
             echo '```' >> "$GITHUB_STEP_SUMMARY"
@@ -90,7 +87,8 @@ jobs:
         with:
           script: |
             const fs = require('fs');
-            let log = '';
+            let fullLog = '';
+            let sparqlBlock = '';
             try {
               const raw = fs.readFileSync('/tmp/qc_output.txt', 'utf8');
               const lines = raw.split('\n');
@@ -102,13 +100,11 @@ jobs:
                   sparqlViolations.push('');
                 }
               });
-              // Fallback to error lines if no SPARQL violations found
-              log = sparqlViolations.length > 0
-                ? sparqlViolations.join('\n')
-                : lines.filter(l => /ERROR|Error|make: \*\*\*|INVALID|Could
-              not/.test(l)).slice(0, 30).join('\n');
+              sparqlBlock = sparqlViolations.join('\n');
+              // Full log (no grep filtering — everything visible)
+              fullLog = raw;
             } catch(e) {
-              log = 'Could not read log.';
+              fullLog = 'Could not read log.';
             }
             let xmlSnippet = '';
             try {
@@ -119,7 +115,11 @@ jobs:
             let robotDetail = '';
             try {
               const vvv = fs.readFileSync('/tmp/vvv_output.txt', 'utf8');
-              const match = vvv.split('\n').find(l => l.includes('must not contain'));
+              const match = vvv.split('\n').find(function(l) {
+                return l.includes('must not contain') ||
+                       l.includes('Unresolved prefixed name') ||
+                       l.includes('QUERY PARSE ERROR');
+              });
               robotDetail = match ? match.trim() : 'No RDF/XML attribute detail found.';
             } catch(e) {
               robotDetail = 'ROBOT detail not available.';
@@ -129,17 +129,17 @@ jobs:
               '',
               'The ontology failed validation. Please fix `vivotest-edit.owl` before merging.',
               '',
-              '<details>',
-              '<summary>Error lines from make (click to expand)</summary>',
+              sparqlBlock ? '<details open>' : '<details>',
+              '<summary>SPARQL Violations</summary>',
               '',
               '```',
-              log,
+              sparqlBlock || '(no SPARQL violations found)',
               '```',
               '',
               '</details>',
               '',
               '<details open>',
-              '<summary>XML parse check - exact line/column</summary>',
+              '<summary>XML parse check</summary>',
               '',
               '```',
               xmlSnippet,
@@ -156,13 +156,22 @@ jobs:
               '',
               '</details>',
               '',
-              '---',
-              '**Common causes of `INVALID ONTOLOGY FILE ERROR`:**',
-              '- Missing closing `/>` or `>` in a tag',
-              '- Invalid character in an `rdf:about` IRI',
-              '- Broken namespace declaration',
+              '<details>',
+              '<summary>Full Make / ROBOT output (click to expand)</summary>',
               '',
-              '[ROBOT error docs](http://robot.obolibrary.org/errors#invalid-ontology-file-error)'
+              '```',
+              fullLog,
+              '```',
+              '',
+              '</details>',
+              '',
+              '---',
+              '**Common causes of failures:**',
+              '- `QUERY PARSE ERROR` → missing PREFIX declaration in a SPARQL file',
+              '- `INVALID ONTOLOGY FILE ERROR` → broken XML in `vivotest-edit.owl`',
+              '- `missing closing /` → unescaped slash in a literal or IRI',
+              '',
+              '[ROBOT error docs](http://robot.obolibrary.org/errors)'
             ].join('\n');
             await github.rest.issues.createComment({
               owner: context.repo.owner,
