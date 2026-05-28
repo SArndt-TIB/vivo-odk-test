@@ -14,7 +14,9 @@ jobs:
     runs-on: ubuntu-latest
     container: obolibrary/odkfull:v1.6.1
     permissions:
+      issues: write
       pull-requests: write
+      contents: read
 
     steps:
       - uses: actions/checkout@v4
